@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "language_default": "fi",
+  "herbs": [
+    {
+      "id": "nettle",
+      "name": { "fi": "Nokkonen", "en": "Nettle" },
+      "scientific_name": "Urtica dioica",
+      "images": ["./images/nettle.jpg"],
+      "origin": { "native_in_finland": true, "store_bought": false },
+      "status": { "collectable_in_finland": true },
+      "summary": { "fi": "Ravinnerikas villiyrtti.", "en": "Nutrient-dense wild herb." },
+      "uses": [ { "fi": "Vireys", "en": "Energy" }, { "fi": "Hiuspohja", "en": "Scalp" } ],
+      "recipes": [],
+      "safety": { "fi": "Käytä hanskoja.", "en": "Use gloves." },
+      "legal": { "fi": "", "en": "" },
+      "tags": ["wild","finland"]
+    },
+    {
+      "id": "lavender",
+      "name": { "fi": "Laventeli", "en": "Lavender" },
+      "scientific_name": "Lavandula angustifolia",
+      "images": ["./images/lavender.jpg"],
+      "origin": { "native_in_finland": false, "store_bought": true },
+      "status": { "collectable_in_finland": false },
+      "summary": { "fi": "Rauhoittava yrtti uneen.", "en": "Calming herb for sleep." },
+      "uses": [ { "fi": "Uni", "en": "Sleep" }, { "fi": "Rentoutus", "en": "Relaxation" } ],
+      "recipes": [],
+      "safety": { "fi": "", "en": "" },
+      "legal": { "fi": "", "en": "" },
+      "tags": ["store","sleep"]
+    }
+  ]
+}
