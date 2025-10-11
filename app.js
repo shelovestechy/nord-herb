@@ -1,100 +1,170 @@
-let DATA = null;
-let CURRENT_LANG = 'fi';
+import { useEffect, useState } from "react";
+import { Image, SafeAreaView, ScrollView, Text, TouchableOpacity, View } from "react-native";
+import * as ImagePicker from "expo-image-picker";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
-const grid = document.getElementById('grid');
-const searchInput = document.getElementById('search');
-const langSelect = document.getElementById('lang');
-const filterNative = document.getElementById('filter-native');
-const filterStore = document.getElementById('filter-store');
-const exportBtn = document.getElementById('export-json');
-const importInput = document.getElementById('import-json');
+import { classifyImageAsync } from "@/ml/stub-classifier";
+import { ResultCard } from "@/components/ResultCard";
+import LanguageSelectScreen from "@/screens/LanguageSelectScreen";
+import { InfoMenu } from "@/components/InfoMenu";
+import { theme } from "@/theme";
 
-async function loadData() {
-  const res = await fetch('./data/herbs.json');
-  DATA = await res.json();
-  CURRENT_LANG = DATA.language_default || 'fi';
-  langSelect.value = CURRENT_LANG;
-  render();
-}
+export default function App() {
+  const [imgUri, setImgUri] = useState<string | null>(null);
+  const [busy, setBusy] = useState(false);
+  const [preds, setPreds] = useState([] as Awaited<ReturnType<typeof classifyImageAsync>>);
+  const [error, setError] = useState<string | null>(null);
+  const [lang, setLang] = useState<"fi" | "en" | null>(null);
+  const [infoOpen, setInfoOpen] = useState(false);
 
-function t(obj) {
-  if (!obj) return '';
-  return obj[CURRENT_LANG] ?? obj['fi'] ?? obj['en'] ?? '';
-}
+  // Load saved language once on startup
+  useEffect(() => {
+    (async () => {
+      const saved = await AsyncStorage.getItem("lang");
+      setLang((saved as "fi" | "en" | null) ?? null);
+    })();
+  }, []);
 
-function matchesFilters(herb, q) {
-  const hay = [
-    t(herb.name),
-    herb.scientific_name,
-    t(herb.summary),
-    ...(herb.uses || []).map(t),
-    ...(herb.tags || [])
-  ].join(' ').toLowerCase();
-
-  const okQuery = q ? hay.includes(q) : true;
-  const okNative = !filterNative.checked || (herb.origin?.native_in_finland === true);
-  const okStore  = !filterStore.checked  || (herb.origin?.store_bought === true);
-  return okQuery && okNative && okStore;
-}
-
-function render() {
-  if (!DATA) return;
-  const q = (searchInput.value || '').trim().toLowerCase();
-  const herbs = (DATA.herbs || []).filter(h => matchesFilters(h, q));
-  grid.innerHTML = herbs.map(h => cardHTML(h)).join('') || `<p style="opacity:.8">Ei tuloksia / No results.</p>`;
-}
-
-function cardHTML(h) {
-  const img = (h.images && h.images[0]) || '';
-  const native = h.origin?.native_in_finland ? `<span class="badge">🇫🇮 Native</span>` : ``;
-  const store  = h.origin?.store_bought ? `<span class="badge">🛒 Store</span>` : ``;
-
-  const uses = (h.uses || []).slice(0, 3).map(t).filter(Boolean);
-  return `
-    <article class="card">
-      ${img ? `<img src="${img}" alt="${t(h.name)}" loading="lazy" />` : ``}
-      <div class="body">
-        <strong>${t(h.name)}</strong>
-        <small><em>${h.scientific_name || ''}</em></small>
-        <p>${t(h.summary)}</p>
-        <div class="badges">${native}${store}</div>
-        ${uses.length ? `<small>• ${uses.join(' • ')}</small>` : ``}
-      </div>
-    </article>
-  `;
-}
-
-// Handlers
-searchInput.addEventListener('input', render);
-langSelect.addEventListener('change', () => { CURRENT_LANG = langSelect.value; render(); });
-filterNative.addEventListener('change', render);
-filterStore.addEventListener('change', render);
-
-// Import/Export (works on phone)
-exportBtn.addEventListener('click', () => {
-  if (!DATA) return;
-  const blob = new Blob([JSON.stringify(DATA, null, 2)], { type: 'application/json' });
-  const url = URL.createObjectURL(blob);
-  const a = Object.assign(document.createElement('a'), { href: url, download: 'herbs.json' });
-  document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
-});
-
-importInput.addEventListener('change', async (e) => {
-  const file = e.target.files?.[0];
-  if (!file) return;
-  try {
-    const text = await file.text();
-    const json = JSON.parse(text);
-    if (!json || !Array.isArray(json.herbs)) throw new Error('Invalid data: "herbs" array missing.');
-    DATA = json;
-    CURRENT_LANG = DATA.language_default || 'fi';
-    langSelect.value = CURRENT_LANG;
-    render();
-  } catch (err) {
-    alert('JSON import failed: ' + err.message);
-  } finally {
-    importInput.value = '';
+  // If language not chosen yet, show the first-launch picker
+  if (!lang) {
+    return <LanguageSelectScreen onSelect={(l) => setLang(l)} />;
   }
-});
 
-loadData();
+  async function pickImage() {
+    setError(null);
+    const perm = await ImagePicker.requestMediaLibraryPermissionsAsync();
+    if (!perm.granted) {
+      setError(lang === "fi" ? "Tarvitaan lupa valokuviin." : "Permission to access photos is required.");
+      return;
+    }
+    const res = await ImagePicker.launchImageLibraryAsync({
+      mediaTypes: ImagePicker.MediaTypeOptions.Images,
+      quality: 0.8
+    });
+    if (!res.canceled) {
+      const uri = res.assets[0].uri;
+      setImgUri(uri);
+      await runClassifier(uri);
+    }
+  }
+
+  async function takePhoto() {
+    setError(null);
+    const perm = await ImagePicker.requestCameraPermissionsAsync();
+    if (!perm.granted) {
+      setError(lang === "fi" ? "Tarvitaan lupa kameralle." : "Camera permission is required.");
+      return;
+    }
+    const res = await ImagePicker.launchCameraAsync({ quality: 0.8 });
+    if (!res.canceled) {
+      const uri = res.assets[0].uri;
+      setImgUri(uri);
+      await runClassifier(uri);
+    }
+  }
+
+  async function runClassifier(uri: string) {
+    setBusy(true);
+    try {
+      const out = await classifyImageAsync(uri);
+      setPreds(out);
+    } catch (e: any) {
+      setError(e?.message ?? (lang === "fi" ? "Luokittelu epäonnistui" : "Classification failed"));
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  return (
+    <SafeAreaView style={{ flex: 1, backgroundColor: theme.colors.bg }}>
+      <ScrollView contentContainerStyle={{ padding: 16 }}>
+        {/* Header */}
+        <View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
+          <Text style={{ color: theme.colors.text, fontSize: 22, fontWeight: "700", marginBottom: 8 }}>
+            {lang === "fi" ? "Yrttitunnistin (MVP)" : "Herb Recognizer (MVP)"}
+          </Text>
+          <TouchableOpacity onPress={() => setInfoOpen(true)} style={{ padding: 8 }}>
+            <Text style={{ color: theme.colors.subtext, fontWeight: "800" }}>ℹ️</Text>
+          </TouchableOpacity>
+        </View>
+
+        {/* Subtitle */}
+        <Text style={{ color: theme.colors.subtext, marginBottom: 12 }}>
+          {lang === "fi"
+            ? "Ota kuva kasvista ja saat todennäköisiä ehdotuksia. Älä koskaan syö kasvia pelkän kuvan perusteella."
+            : "Snap a plant to get likely matches. Never eat a plant based on a single photo."}
+        </Text>
+
+        {/* Action buttons */}
+        <View style={{ flexDirection: "row", gap: 12, marginBottom: 12 }}>
+          <Button
+            text={busy ? (lang === "fi" ? "Työstetään…" : "Working…") : (lang === "fi" ? "Ota kuva" : "Take Photo")}
+            onPress={takePhoto}
+            disabled={busy}
+          />
+          <Button
+            text={lang === "fi" ? "Valitse galleriasta" : "Pick from Gallery"}
+            onPress={pickImage}
+            disabled={busy}
+          />
+        </View>
+
+        {/* Selected image preview */}
+        {imgUri ? (
+          <Image
+            source={{ uri: imgUri }}
+            style={{ width: "100%", aspectRatio: 4 / 3, borderRadius: 16, borderWidth: 1, borderColor: "#1f2a44", marginBottom: 12 }}
+            resizeMode="cover"
+          />
+        ) : null}
+
+        {/* Errors */}
+        {error ? <Text style={{ color: theme.colors.danger, marginBottom: 12 }}>⚠ {error}</Text> : null}
+
+        {/* Predictions */}
+        {preds.map((p, i) => (
+          <ResultCard key={i} p={p} lang={lang as "fi" | "en"} />
+        ))}
+
+        {/* Safety blurb */}
+        <View style={{ marginTop: 14 }}>
+          <Text style={{ color: "#60a5fa", fontWeight: "600" }}>
+            {lang === "fi" ? "Maastoturva" : "Field safety"}
+          </Text>
+          <Text style={{ color: "#cbd5e1", marginTop: 6 }}>
+            {lang === "fi"
+              ? "Älä koskaan syö kasvia yhden piirteen tai kuvan perusteella. Vahvista lehti, varsi, kukka, tuoksu, elinympäristö ja vuodenaika."
+              : "Never ingest a plant from a single photo. Confirm leaf, stem, flower, scent, habitat, and season."}
+          </Text>
+        </View>
+      </ScrollView>
+
+      {/* Info / Settings modal (contains language switch) */}
+      <InfoMenu
+        visible={infoOpen}
+        onClose={() => setInfoOpen(false)}
+        lang={lang as "fi" | "en"}
+        setLang={(l) => setLang(l)}
+      />
+    </SafeAreaView>
+  );
+}
+
+function Button({ text, onPress, disabled }: { text: string; onPress: () => void; disabled?: boolean }) {
+  return (
+    <TouchableOpacity
+      onPress={onPress}
+      disabled={!!disabled}
+      style={{
+        backgroundColor: disabled ? "#1f2a44" : "#1e293b",
+        paddingHorizontal: 14,
+        paddingVertical: 12,
+        borderRadius: 12,
+        borderWidth: 1,
+        borderColor: "#334155"
+      }}
+    >
+      <Text style={{ color: "#e2e8f0", fontWeight: "600" }}>{text}</Text>
+    </TouchableOpacity>
+  );
+}
