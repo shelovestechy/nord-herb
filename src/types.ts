@@ -1,6 +1,7 @@
 export type Lang = "fi" | "en";
 export type L<T = string> = { fi: T; en: T };
 export type HerbSource = "wild" | "store";
+export type Toxicity = "safe" | "caution" | "poison"; // <- NEW
 
 export type Recipe = {
   title: L;
@@ -8,9 +9,9 @@ export type Recipe = {
 };
 
 export type Herb = {
-  id: string;                 // e.g. "stinging_nettle"
-  source: HerbSource;         // "wild" | "store"
-  commonName: L;              // { fi, en }
+  id: string;
+  source: HerbSource;
+  commonName: L;
   latinName: string;
   edibleParts?: L<string[]>;
   medicinalNotes: L;
@@ -18,8 +19,7 @@ export type Herb = {
   caution?: L;
   uses?: L<string[]>;
   recipes?: Recipe[];
-  images?: string[];          // optional URLs
+  images?: string[];
+  toxicity?: Toxicity; // <- NEW (default “safe” if omitted)
 };
-
-// If you want strong typing on the DB map:
 export type HerbDB = Record<string, Herb>;
