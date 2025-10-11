@@ -1,9 +1,14 @@
 import type { HerbDB } from "@/types";
 
 export const HERB_DB: HerbDB = {
+  // ----------------------------------------
+  // SAFE / COMMON HERBS (existing ones)
+  // ----------------------------------------
+
   dandelion: {
     id: "dandelion",
     source: "wild",
+    toxicity: "safe",
     commonName: { fi: "Voikukka", en: "Dandelion" },
     latinName: "Taraxacum officinale",
     edibleParts: { fi: ["lehdet", "kukat", "juuret"], en: ["leaves", "flowers", "roots"] },
@@ -14,7 +19,7 @@ export const HERB_DB: HerbDB = {
     lookalikes: { fi: ["kissankeltto"], en: ["cat's ear"] },
     caution: {
       fi: "Vältä teiden varret/käsitellyt nurmikot. Vahvista tunnistus useasta piirteestä.",
-      en: "Avoid roadsides/treated lawns. Confirm ID via multiple features."
+      en: "Avoid roadsides/treated lawns. Confirm ID with multiple features."
     },
     uses: { fi: ["tee", "salaatti (nuoret lehdet)", "juuripaahde"], en: ["tea", "salad (young leaves)", "roasted root"] },
     recipes: [
@@ -25,12 +30,14 @@ export const HERB_DB: HerbDB = {
           en: ["Wash & chop roots", "Roast 150°C ~25 min", "Simmer 10 min"]
         }
       }
-    ]
+    ],
+    images: []
   },
 
   stinging_nettle: {
     id: "stinging_nettle",
     source: "wild",
+    toxicity: "safe",
     commonName: { fi: "Nokkonen", en: "Stinging Nettle" },
     latinName: "Urtica dioica",
     edibleParts: { fi: ["nuoret versot", "lehdet (keitettynä)", "siemenet"], en: ["young tops", "leaves (cooked)", "seeds"] },
@@ -48,18 +55,20 @@ export const HERB_DB: HerbDB = {
           en: ["Blanch 1–2 min", "Blend with butter/cream", "Season"]
         }
       }
-    ]
+    ],
+    images: []
   },
 
   lavender: {
     id: "lavender",
     source: "store",
+    toxicity: "safe",
     commonName: { fi: "Laventeli", en: "Lavender" },
     latinName: "Lavandula angustifolia",
     edibleParts: { fi: ["kukat (vähän)"], en: ["flowers (small amounts)"] },
     medicinalNotes: {
       fi: "Rauhoittava tuoksu; teehen, kylpyyn ja salvoihin.",
-      en: "Calming aroma; for tea, baths, salves."
+      en: "Calming aroma; for tea, baths, and salves."
     },
     uses: { fi: ["uni-tee", "kylpy", "ihosalva"], en: ["sleep tea", "bath", "skin salve"] },
     recipes: [
@@ -70,12 +79,14 @@ export const HERB_DB: HerbDB = {
           en: ["1 tsp dried flowers/cup", "Steep 5–7 min", "Sweeten with honey"]
         }
       }
-    ]
+    ],
+    images: []
   },
 
   turmeric: {
     id: "turmeric",
     source: "store",
+    toxicity: "safe",
     commonName: { fi: "Kurkuma", en: "Turmeric" },
     latinName: "Curcuma longa",
     medicinalNotes: {
@@ -91,17 +102,19 @@ export const HERB_DB: HerbDB = {
           en: ["Warm milk", "Add 1/2 tsp turmeric + pinch pepper", "Sweeten"]
         }
       }
-    ]
+    ],
+    images: []
   },
 
   ginger: {
     id: "ginger",
     source: "store",
+    toxicity: "safe",
     commonName: { fi: "Inkivääri", en: "Ginger" },
     latinName: "Zingiber officinale",
     medicinalNotes: {
-      fi: "Lämmittävä juurakko; perinteinen pahoinvointiin/ flunssaan.",
-      en: "Warming rhizome; traditional for nausea/colds."
+      fi: "Lämmittävä juurakko; perinteinen pahoinvointiin ja flunssaan.",
+      en: "Warming rhizome; traditional for nausea and colds."
     },
     uses: { fi: ["tee", "siirappi"], en: ["tea", "syrup"] },
     recipes: [
@@ -112,29 +125,102 @@ export const HERB_DB: HerbDB = {
           en: ["Simmer slices 10 min", "Add sugar 1:1", "Boil 5 min & bottle"]
         }
       }
-    ]
+    ],
+    images: []
+  },
+
+  // ----------------------------------------
+  // POISONOUS / DO-NOT-TOUCH (new)
+  // ----------------------------------------
+
+  kielo: {
+    id: "kielo",
+    source: "wild",
+    toxicity: "poison",
+    commonName: { fi: "Kielo", en: "Lily-of-the-valley" },
+    latinName: "Convallaria majalis",
+    medicinalNotes: {
+      fi: "Myrkyllinen koko kasvi. Valkoiset kellokukat; tyypillisesti kaksi leveää lehteä.",
+      en: "Entire plant is poisonous. White bell flowers; typically two broad leaves."
+    },
+    lookalikes: {
+      fi: ["Villi valkosipuli (karhunlaukka) – tuoksu selvästi valkosipulinen"],
+      en: ["Wild garlic (ramsons) – strong garlic smell"]
+    },
+    caution: {
+      fi: "Älä koske silmiin kosketuksen jälkeen. Älä sekoita villiin valkosipuliin.",
+      en: "Do not touch eyes after contact. Do not confuse with wild garlic."
+    },
+    images: []
+  },
+
+  myrkkykeiso: {
+    id: "myrkkykeiso",
+    source: "wild",
+    toxicity: "poison",
+    commonName: { fi: "Myrkkykeiso", en: "Cowbane / Water hemlock" },
+    latinName: "Cicuta virosa",
+    medicinalNotes: {
+      fi: "Erittäin myrkyllinen. Märät rannat; ontto juurakko; sateenvarjomaiset kukinnot.",
+      en: "Extremely poisonous. Wet banks; hollow root; umbrella-shaped umbels."
+    },
+    lookalikes: { fi: ["Koiranputki, karhunputket"], en: ["Parsley-family lookalikes"] },
+    caution: {
+      fi: "ÄLÄ KOSKE TAI SYÖ. Pieni määrä voi olla tappava.",
+      en: "DO NOT TOUCH OR EAT. Small amounts can be fatal."
+    },
+    images: []
+  },
+
+  sudenmarja: {
+    id: "sudenmarja",
+    source: "wild",
+    toxicity: "poison",
+    commonName: { fi: "Sudenmarja", en: "Herb Paris" },
+    latinName: "Paris quadrifolia",
+    medicinalNotes: {
+      fi: "Yksi musta marja neljän lehden keskellä. Myrkyllinen.",
+      en: "Single black berry centered by four leaves. Poisonous."
+    },
+    lookalikes: { fi: ["Jotkin orkideat (eri kukinta)"], en: ["Some orchids (different flowers)"] },
+    caution: {
+      fi: "Älä koske/älä syö. Pidä lapset ja lemmikit loitolla.",
+      en: "Do not touch/eat. Keep children and pets away."
+    },
+    images: []
+  },
+
+  ukonhattu: {
+    id: "ukonhattu",
+    source: "wild",
+    toxicity: "poison",
+    commonName: { fi: "Ukonhattu", en: "Monkshood / Aconite" },
+    latinName: "Aconitum napellus",
+    medicinalNotes: {
+      fi: "Syvän violetti 'huppu'-kukka. Erittäin myrkyllinen myös ihon kautta.",
+      en: "Deep violet 'hood' flower. Highly poisonous; can absorb through skin."
+    },
+    caution: {
+      fi: "Käytä hanskoja puutarhassa. Vältä kasvinesteeseen koskemista.",
+      en: "Wear gloves in gardens. Avoid sap contact."
+    },
+    images: []
+  },
+
+  jattiputki: {
+    id: "jattiputki",
+    source: "wild",
+    toxicity: "poison",
+    commonName: { fi: "Jättiputki", en: "Giant Hogweed" },
+    latinName: "Heracleum mantegazzianum",
+    medicinalNotes: {
+      fi: "Fototoksinen: mehu aiheuttaa palovamman auringossa.",
+      en: "Phototoxic: sap causes burns in sunlight."
+    },
+    caution: {
+      fi: "ÄLÄ KOSKE. Ilmoita esiintymät viranomaisille.",
+      en: "DO NOT TOUCH. Report sightings to authorities."
+    },
+    images: []
   }
 };
-
-// ---------- TEMPLATE TO ADD MORE ----------
-// Copy one block below, change fields, then paste inside HERB_DB { ... } above.
-/*
-new_herb_id: {
-  id: "new_herb_id",
-  source: "wild", // or "store"
-  commonName: { fi: "Suomenkielinen", en: "English" },
-  latinName: "Genus species",
-  edibleParts: { fi: ["..."], en: ["..."] },
-  medicinalNotes: { fi: "lyhyt kuvaus", en: "short description" },
-  lookalikes: { fi: ["..."], en: ["..."] },
-  caution: { fi: "varoitus", en: "caution" },
-  uses: { fi: ["tee","salva"], en: ["tea","salve"] },
-  recipes: [
-    {
-      title: { fi: "Nimi", en: "Name" },
-      steps: { fi: ["Vaihe 1","Vaihe 2"], en: ["Step 1","Step 2"] }
-    }
-  ],
-  images: ["https://.../photo.jpg"]
-},
-*/
