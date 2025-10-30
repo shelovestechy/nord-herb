@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Herb App</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <span class="leaf" aria-hidden="true">🍃</span>
+      <h1>Herb App</h1>
+    </div>
+
+    <div class="controls">
+      <label class="search-wrap" aria-label="Haku">
+        <input id="search" type="search" placeholder="Hae yrttejä / Search herbs" autocomplete="off" />
+      </label>
+
+      <button id="langToggle" class="btn" aria-label="Vaihda kieli">FI</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="toolbar">
+      <div id="resultCount" class="muted">—</div>
+      <div class="filters">
+        <label class="check">
+          <input type="checkbox" id="filterNative" />
+          <span data-i18n="filter_native">Vain Suomessa luonnonvaraiset</span>
+        </label>
+        <label class="check">
+          <input type="checkbox" id="filterStore" />
+          <span data-i18n="filter_store">Vain kauppayrtit</span>
+        </label>
+      </div>
+    </div>
+
+    <section id="cards" class="grid" aria-live="polite"></section>
+  </main>
+
+  <footer class="footer">
+    <small id="footNote" class="muted">
+      Data: <code>/data/herbs.json</code> • Offline-ready once cached (GitHub Pages)
+    </small>
+  </footer>
+
+  <script src="./script.js" defer></script>
+</body>
+</html>
