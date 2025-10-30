@@ -1,0 +1,6131 @@
+{
+  "version": 2,
+  "language_default": "fi",
+  "herbs": [
+    {
+      "id": "urtica-dioica",
+      "name": {
+        "fi": "Nokkonen",
+        "en": "Nettle"
+      },
+      "scientific_name": "Urtica dioica",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Leaves tea 2Ð3 g/250 ml, 1Ð3?/day; iron/mineral rich. Use gloves harvesting.\"",
+        "en": "\"Leaves tea 2Ð3 g/250 ml, 1Ð3?/day; iron/mineral rich. Use gloves harvesting.\""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "taraxacum-officinale",
+      "name": {
+        "fi": "Voikukka",
+        "en": "Dandelion"
+      },
+      "scientific_name": "Taraxacum officinale",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Leaf/root tea 2Ð4 g/250 ml 1Ð2?/day; supports digestion.\"",
+        "en": "\"Leaf/root tea 2Ð4 g/250 ml 1Ð2?/day; supports digestion.\""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "plantago-major",
+      "name": {
+        "fi": "Piharatamo",
+        "en": "Plantain"
+      },
+      "scientific_name": "Plantago major",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Crushed fresh leaf on bites; tea 2 g/250 ml up to 3?/day.\"",
+        "en": "\"Crushed fresh leaf on bites; tea 2 g/250 ml up to 3?/day.\""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "plantago-lanceolata",
+      "name": {
+        "fi": "HeinŠratamo/RŠtvŠnŠ",
+        "en": "Ribwort Plantain"
+      },
+      "scientific_name": "Plantago lanceolata",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "Cough tea 2 g/250 ml up to 3?/day.",
+        "en": "Cough tea 2 g/250 ml up to 3?/day."
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "achillea-millefolium",
+      "name": {
+        "fi": "SiankŠrsŠmš",
+        "en": "Yarrow"
+      },
+      "scientific_name": "Achillea millefolium",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Cramps/fever; 1Ð2 g/250 ml 1Ð2?/day. Avoid in pregnancy.\"",
+        "en": "\"Cramps/fever; 1Ð2 g/250 ml 1Ð2?/day. Avoid in pregnancy.\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "matricaria-chamomilla",
+      "name": {
+        "fi": "Kamomilla",
+        "en": "German Chamomile"
+      },
+      "scientific_name": "Matricaria chamomilla",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "naturalized",
+      "category": "medicinal",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "Calming tea 1Ð2 g/250 ml up to 3?/day. Aster allergy caution.",
+        "en": "Calming tea 1Ð2 g/250 ml up to 3?/day. Aster allergy caution."
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "melissa-officinalis",
+      "name": {
+        "fi": "Sitruunamelissa",
+        "en": "Lemon Balm"
+      },
+      "scientific_name": "Melissa officinalis",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "garden",
+      "category": "medicinal",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "Sleep/anxiety tea 1Ð2 g/250 ml evening.",
+        "en": "Sleep/anxiety tea 1Ð2 g/250 ml evening."
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "mentha-piperita",
+      "name": {
+        "fi": "Piparminttu",
+        "en": "Peppermint"
+      },
+      "scientific_name": "Mentha ? piperita",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "garden",
+      "category": "medicinal",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Nausea/IBS; 1Ð2 g/250 ml up to 3?/day. Reflux caution.\"",
+        "en": "\"Nausea/IBS; 1Ð2 g/250 ml up to 3?/day. Reflux caution.\""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "origanum-vulgare",
+      "name": {
+        "fi": "Oregano/Meirami",
+        "en": "Oregano"
+      },
+      "scientific_name": "Origanum vulgare",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "naturalized",
+      "category": "medicinal",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Carminative; 1Ð2 g/250 ml up to 3?/day.\"",
+        "en": "\"Carminative; 1Ð2 g/250 ml up to 3?/day.\""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "thymus-vulgaris",
+      "name": {
+        "fi": "Timjami",
+        "en": "Thyme"
+      },
+      "scientific_name": "Thymus vulgaris",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "garden",
+      "category": "medicinal",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Cough/culinary; 1Ð2 g/250 ml up to 3?/day.\"",
+        "en": "\"Cough/culinary; 1Ð2 g/250 ml up to 3?/day.\""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "salvia-officinalis",
+      "name": {
+        "fi": "Salvia",
+        "en": "Sage"
+      },
+      "scientific_name": "Salvia officinalis",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "garden",
+      "category": "medicinal",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Gargle/tea 1Ð2 g/250 ml 1Ð2?/day; avoid high dose in pregnancy; may reduce milk supply.\"",
+        "en": "\"Gargle/tea 1Ð2 g/250 ml 1Ð2?/day; avoid high dose in pregnancy; may reduce milk supply.\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "salvia-rosmarinus-syn-rosmarinus-officinalis",
+      "name": {
+        "fi": "Rosmariini",
+        "en": "Rosemary"
+      },
+      "scientific_name": "Salvia rosmarinus (syn. Rosmarinus officinalis)",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "garden",
+      "category": "medicinal",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Circulation; 1Ð2 g/250 ml 1Ð2?/day; avoid large doses in pregnancy.\"",
+        "en": "\"Circulation; 1Ð2 g/250 ml 1Ð2?/day; avoid large doses in pregnancy.\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "ocimum-basilicum",
+      "name": {
+        "fi": "Basilika",
+        "en": "Basil"
+      },
+      "scientific_name": "Ocimum basilicum",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "garden",
+      "category": "culinary",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Culinary; mild tea 1Ð2 g/250 ml.\"",
+        "en": "\"Culinary; mild tea 1Ð2 g/250 ml.\""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "hypericum-perforatum",
+      "name": {
+        "fi": "MŠkikuisma",
+        "en": "St. JohnÕs Wort"
+      },
+      "scientific_name": "Hypericum perforatum",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "caution",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Mood support; 2Ð4 g/250 ml 1?/day. **Many drug interactions; sun sensitivity.**\"",
+        "en": "\"Mood support; 2Ð4 g/250 ml 1?/day. **Many drug interactions; sun sensitivity.**\""
+      },
+      "safety": {
+        "fi": "Varoitus: caution.",
+        "en": "Caution: caution."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "filipendula-ulmaria",
+      "name": {
+        "fi": "Mesiangervo",
+        "en": "Meadowsweet"
+      },
+      "scientific_name": "Filipendula ulmaria",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Headache/fever; 1Ð2 g/250 ml 1Ð2?/day; salicylate allergy caution.\"",
+        "en": "\"Headache/fever; 1Ð2 g/250 ml 1Ð2?/day; salicylate allergy caution.\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "trifolium-pratense",
+      "name": {
+        "fi": "Puna-apila",
+        "en": "Red Clover"
+      },
+      "scientific_name": "Trifolium pratense",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"WomenÕs tonic; 1Ð2 g/250 ml 1Ð2?/day; hormone-sensitive conditions: caution.\"",
+        "en": "\"WomenÕs tonic; 1Ð2 g/250 ml 1Ð2?/day; hormone-sensitive conditions: caution.\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "alchemilla-vulgaris",
+      "name": {
+        "fi": "Poimulehti",
+        "en": "LadyÕs Mantle"
+      },
+      "scientific_name": "Alchemilla vulgaris",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Astringent; 2 g/250 ml 1Ð2?/day.\"",
+        "en": "\"Astringent; 2 g/250 ml 1Ð2?/day.\""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "chamerion-angustifolium-syn-epilobium-angustifol",
+      "name": {
+        "fi": "Horsma",
+        "en": "Fireweed"
+      },
+      "scientific_name": "Chamerion angustifolium (syn. Epilobium angustifolium)",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "Digestive/soothing tea 2 g/250 ml 1Ð2?/day.",
+        "en": "Digestive/soothing tea 2 g/250 ml 1Ð2?/day."
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "valeriana-officinalis",
+      "name": {
+        "fi": "Valeriaana (Rohtovirmajuuri)",
+        "en": "Valerian"
+      },
+      "scientific_name": "Valeriana officinalis",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Root for sleep/stress; tea 1Ð2 g/250 ml in evening (extracts are stronger).\"",
+        "en": "\"Root for sleep/stress; tea 1Ð2 g/250 ml in evening (extracts are stronger).\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "juniperus-communis",
+      "name": {
+        "fi": "Kataja",
+        "en": "Juniper"
+      },
+      "scientific_name": "Juniperus communis",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Chew 1Ð3 berries or light tea; avoid pregnancy/kidney issues and long-term/high dose.\"",
+        "en": "\"Chew 1Ð3 berries or light tea; avoid pregnancy/kidney issues and long-term/high dose.\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "picea-abies-tips",
+      "name": {
+        "fi": "KuusenkerkŠt",
+        "en": "Spruce tips"
+      },
+      "scientific_name": "Picea abies (tips)",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Cough syrup/tea 1Ð2 g tips/250 ml; resin allergy possible.\"",
+        "en": "\"Cough syrup/tea 1Ð2 g tips/250 ml; resin allergy possible.\""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "sorbus-aucuparia",
+      "name": {
+        "fi": "Pihlaja",
+        "en": "Rowan"
+      },
+      "scientific_name": "Sorbus aucuparia",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Cooked berry syrup; leaf/berry tea 2 g/250 ml.\"",
+        "en": "\"Cooked berry syrup; leaf/berry tea 2 g/250 ml.\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "vaccinium-myrtillus",
+      "name": {
+        "fi": "Mustikka",
+        "en": "Bilberry"
+      },
+      "scientific_name": "Vaccinium myrtillus",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "Dried berry tea 5Ð10 g/250 ml for diarrhea.",
+        "en": "Dried berry tea 5Ð10 g/250 ml for diarrhea."
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "vaccinium-vitis-idaea",
+      "name": {
+        "fi": "Puolukka",
+        "en": "Lingonberry"
+      },
+      "scientific_name": "Vaccinium vitis-idaea",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Leaf tea 1Ð2 g/250 ml 1Ð2?/day; berries as food.\"",
+        "en": "\"Leaf tea 1Ð2 g/250 ml 1Ð2?/day; berries as food.\""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "calluna-vulgaris",
+      "name": {
+        "fi": "Kanerva",
+        "en": "Heather"
+      },
+      "scientific_name": "Calluna vulgaris",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "Mild diuretic tea 2 g/250 ml 1Ð2?/day.",
+        "en": "Mild diuretic tea 2 g/250 ml 1Ð2?/day."
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "oxalis-acetosella",
+      "name": {
+        "fi": "KŠenkaali",
+        "en": "Wood Sorrel"
+      },
+      "scientific_name": "Oxalis acetosella",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "caution",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Tart; small amounts only (oxalates).\"",
+        "en": "\"Tart; small amounts only (oxalates).\""
+      },
+      "safety": {
+        "fi": "Varoitus: caution.",
+        "en": "Caution: caution."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "equisetum-arvense",
+      "name": {
+        "fi": "Korte (Peltokorte)",
+        "en": "Horsetail"
+      },
+      "scientific_name": "Equisetum arvense",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "caution",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Traditional tea 1Ð2 g/250 ml; avoid long use; kidney caution; **do not confuse with E. palustre**.\"",
+        "en": "\"Traditional tea 1Ð2 g/250 ml; avoid long use; kidney caution; **do not confuse with E. palustre**.\""
+      },
+      "safety": {
+        "fi": "Varoitus: caution.",
+        "en": "Caution: caution."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "rubus-idaeus",
+      "name": {
+        "fi": "Vadelman lehti",
+        "en": "Raspberry leaf"
+      },
+      "scientific_name": "Rubus idaeus",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "Leaf tea 2 g/250 ml 1Ð2?/day (3rd-trimester tradition).",
+        "en": "Leaf tea 2 g/250 ml 1Ð2?/day (3rd-trimester tradition)."
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "allium-ursinum",
+      "name": {
+        "fi": "Karhunlaukka",
+        "en": "Wild Garlic"
+      },
+      "scientific_name": "Allium ursinum",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Edible leaves; pesto; verify vs. **kielo** lookalike.\"",
+        "en": "\"Edible leaves; pesto; verify vs. **kielo** lookalike.\""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "solidago-virgaurea",
+      "name": {
+        "fi": "Kultapiisku",
+        "en": "Goldenrod"
+      },
+      "scientific_name": "Solidago virgaurea",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Diuretic; 2 g/250 ml 1Ð2?/day; allergy possible.\"",
+        "en": "\"Diuretic; 2 g/250 ml 1Ð2?/day; allergy possible.\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "malva-spp",
+      "name": {
+        "fi": "Myskimalva (Malva spp.)",
+        "en": "Musk/Common Mallow"
+      },
+      "scientific_name": "Malva spp.",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "naturalized",
+      "category": "medicinal",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Mucilage for throat/skin; up to 5 g dried/day (tea/gargle); mildly laxative.\"",
+        "en": "\"Mucilage for throat/skin; up to 5 g dried/day (tea/gargle); mildly laxative.\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "zingiber-officinale",
+      "name": {
+        "fi": "InkivŠŠri",
+        "en": "Ginger"
+      },
+      "scientific_name": "Zingiber officinale",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": true
+      },
+      "availability": "store",
+      "category": "culinary",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Cold tea 2Ð3 g fresh slices/250 ml up to 3?/day; may irritate stomach (large doses).\"",
+        "en": "\"Cold tea 2Ð3 g fresh slices/250 ml up to 3?/day; may irritate stomach (large doses).\""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "curcuma-longa",
+      "name": {
+        "fi": "Kurkuma",
+        "en": "Turmeric"
+      },
+      "scientific_name": "Curcuma longa",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": true
+      },
+      "availability": "store",
+      "category": "culinary",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Golden milk; 1Ð2 g powder/day with fat + pepper; gallbladder/bile-duct issues: caution.\"",
+        "en": "\"Golden milk; 1Ð2 g powder/day with fat + pepper; gallbladder/bile-duct issues: caution.\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "cinnamomum-verum",
+      "name": {
+        "fi": "Kaneli (aito)",
+        "en": "Ceylon Cinnamon"
+      },
+      "scientific_name": "Cinnamomum verum",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": true
+      },
+      "availability": "store",
+      "category": "culinary",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Warming; 0.5Ð1 g/day in tea/food. (Cassia has higher coumarin.)\"",
+        "en": "\"Warming; 0.5Ð1 g/day in tea/food. (Cassia has higher coumarin.)\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "elettaria-cardamomum",
+      "name": {
+        "fi": "Kardemumma",
+        "en": "Cardamom"
+      },
+      "scientific_name": "Elettaria cardamomum",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": true
+      },
+      "availability": "store",
+      "category": "culinary",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Crushed seed carminative; 1Ð2 g/250 ml infusion.\"",
+        "en": "\"Crushed seed carminative; 1Ð2 g/250 ml infusion.\""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "syzygium-aromaticum",
+      "name": {
+        "fi": "Neilikka",
+        "en": "Clove"
+      },
+      "scientific_name": "Syzygium aromaticum",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": true
+      },
+      "availability": "store",
+      "category": "culinary",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Strong; 1Ð2 buds/250 ml; topical mouth use traditional; GI irritation if overused.\"",
+        "en": "\"Strong; 1Ð2 buds/250 ml; topical mouth use traditional; GI irritation if overused.\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "piper-nigrum",
+      "name": {
+        "fi": "Mustapippuri",
+        "en": "Black Pepper"
+      },
+      "scientific_name": "Piper nigrum",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": true
+      },
+      "availability": "store",
+      "category": "culinary",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Thermogenic; pinch with turmeric (boosts absorption); may irritate GI.\"",
+        "en": "\"Thermogenic; pinch with turmeric (boosts absorption); may irritate GI.\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "cymbopogon-citratus",
+      "name": {
+        "fi": "Sitruunaruoho",
+        "en": "Lemongrass"
+      },
+      "scientific_name": "Cymbopogon citratus",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": true
+      },
+      "availability": "store",
+      "category": "culinary",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Calming tea 1Ð2 g/250 ml up to 3?/day; high-dose pregnancy caution.\"",
+        "en": "\"Calming tea 1Ð2 g/250 ml up to 3?/day; high-dose pregnancy caution.\""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "illicium-verum",
+      "name": {
+        "fi": "TŠhti-anis",
+        "en": "Star Anise"
+      },
+      "scientific_name": "Illicium verum",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": true
+      },
+      "availability": "store",
+      "category": "culinary",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Spice tea; 1 pod/250 ml; ensure true I. verum (Japanese star anise I. anisatum is toxic).\"",
+        "en": "\"Spice tea; 1 pod/250 ml; ensure true I. verum (Japanese star anise I. anisatum is toxic).\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "vanilla-planifolia",
+      "name": {
+        "fi": "Vanilja",
+        "en": "Vanilla"
+      },
+      "scientific_name": "Vanilla planifolia",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": true
+      },
+      "availability": "store",
+      "category": "culinary",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Flavoring; tiny amounts; not used medicinally here.\"",
+        "en": "\"Flavoring; tiny amounts; not used medicinally here.\""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "hibiscus-sabdariffa",
+      "name": {
+        "fi": "Hibiscus",
+        "en": "Hibiscus"
+      },
+      "scientific_name": "Hibiscus sabdariffa",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": true
+      },
+      "availability": "store",
+      "category": "medicinal",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Tart tea 2Ð3 g calyx/250 ml up to 3?/day; can slightly lower blood pressure.\"",
+        "en": "\"Tart tea 2Ð3 g calyx/250 ml up to 3?/day; can slightly lower blood pressure.\""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "aspalathus-linearis",
+      "name": {
+        "fi": "Roibos",
+        "en": "Rooibos"
+      },
+      "scientific_name": "Aspalathus linearis",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": true
+      },
+      "availability": "store",
+      "category": "medicinal",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Caffeine-free; 2Ð3 g/250 ml up to 3?/day.\"",
+        "en": "\"Caffeine-free; 2Ð3 g/250 ml up to 3?/day.\""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "camellia-sinensis",
+      "name": {
+        "fi": "VihreŠ tee",
+        "en": "Green Tea"
+      },
+      "scientific_name": "Camellia sinensis",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": true
+      },
+      "availability": "store",
+      "category": "medicinal",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Stimulating; 2Ð3 g/250 ml infusion; avoid late evening if sensitive.\"",
+        "en": "\"Stimulating; 2Ð3 g/250 ml infusion; avoid late evening if sensitive.\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "convallaria-majalis",
+      "name": {
+        "fi": "Kielo",
+        "en": "Lily of the Valley"
+      },
+      "scientific_name": "Convallaria majalis",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "poisonous",
+      "toxicity": "high",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"All parts toxic (cardiac glycosides). No ingestion; lookalike risk with wild garlic.\"",
+        "en": "\"All parts toxic (cardiac glycosides). No ingestion; lookalike risk with wild garlic.\""
+      },
+      "safety": {
+        "fi": "Varoitus: high.",
+        "en": "Caution: high."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "paris-quadrifolia",
+      "name": {
+        "fi": "Sudenmarja",
+        "en": "Herb Paris"
+      },
+      "scientific_name": "Paris quadrifolia",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "poisonous",
+      "toxicity": "high",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "Toxic. No ingestion.",
+        "en": "Toxic. No ingestion."
+      },
+      "safety": {
+        "fi": "Varoitus: high.",
+        "en": "Caution: high."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "conium-maculatum",
+      "name": {
+        "fi": "Myrkkykatko",
+        "en": "Poison Hemlock"
+      },
+      "scientific_name": "Conium maculatum",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "naturalized",
+      "category": "poisonous",
+      "toxicity": "high",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Deadly. Do not ingest; handle with gloves (sap can irritate).\"",
+        "en": "\"Deadly. Do not ingest; handle with gloves (sap can irritate).\""
+      },
+      "safety": {
+        "fi": "Varoitus: high.",
+        "en": "Caution: high."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "cicuta-virosa",
+      "name": {
+        "fi": "Myrkkykeiso",
+        "en": "Cowbane / Water Hemlock"
+      },
+      "scientific_name": "Cicuta virosa",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "poisonous",
+      "toxicity": "high",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "Deadly. Wet habitats (ditches, shores).",
+        "en": "Deadly. Wet habitats (ditches, shores)."
+      },
+      "safety": {
+        "fi": "Varoitus: high.",
+        "en": "Caution: high."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "aconitum-napellus",
+      "name": {
+        "fi": "Ukonhattu",
+        "en": "Monkshood"
+      },
+      "scientific_name": "Aconitum napellus",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "garden",
+      "category": "poisonous",
+      "toxicity": "high",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Deadly. Alkaloids can absorb via skin; avoid handling.\"",
+        "en": "\"Deadly. Alkaloids can absorb via skin; avoid handling.\""
+      },
+      "safety": {
+        "fi": "Varoitus: high.",
+        "en": "Caution: high."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "digitalis-purpurea",
+      "name": {
+        "fi": "Sormustinkukka",
+        "en": "Foxglove"
+      },
+      "scientific_name": "Digitalis purpurea",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "garden",
+      "category": "poisonous",
+      "toxicity": "high",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "Deadly. Cardiac glycosides. No internal use.",
+        "en": "Deadly. Cardiac glycosides. No internal use."
+      },
+      "safety": {
+        "fi": "Varoitus: high.",
+        "en": "Caution: high."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "daphne-mezereum",
+      "name": {
+        "fi": "NŠsiŠ",
+        "en": "Mezereum"
+      },
+      "scientific_name": "Daphne mezereum",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "poisonous",
+      "toxicity": "high",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Toxic bark/berries; skin blistering possible.\"",
+        "en": "\"Toxic bark/berries; skin blistering possible.\""
+      },
+      "safety": {
+        "fi": "Varoitus: high.",
+        "en": "Caution: high."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "solanum-dulcamara",
+      "name": {
+        "fi": "Punakoiso",
+        "en": "Bittersweet Nightshade"
+      },
+      "scientific_name": "Solanum dulcamara",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "poisonous",
+      "toxicity": "high",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "Toxic berries. No ingestion.",
+        "en": "Toxic berries. No ingestion."
+      },
+      "safety": {
+        "fi": "Varoitus: high.",
+        "en": "Caution: high."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "solanum-nigrum",
+      "name": {
+        "fi": "Mustakoiso",
+        "en": "Black Nightshade"
+      },
+      "scientific_name": "Solanum nigrum",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "naturalized",
+      "category": "poisonous",
+      "toxicity": "moderate",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Unripe berries toxic; avoid ingestion.\"",
+        "en": "\"Unripe berries toxic; avoid ingestion.\""
+      },
+      "safety": {
+        "fi": "Varoitus: moderate.",
+        "en": "Caution: moderate."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "actaea-spicata",
+      "name": {
+        "fi": "Konnanmarja",
+        "en": "Baneberry"
+      },
+      "scientific_name": "Actaea spicata",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "poisonous",
+      "toxicity": "high",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "Toxic berries. No ingestion.",
+        "en": "Toxic berries. No ingestion."
+      },
+      "safety": {
+        "fi": "Varoitus: high.",
+        "en": "Caution: high."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "colchicum-autumnale",
+      "name": {
+        "fi": "Syysmyrkkylilja",
+        "en": "Autumn Crocus"
+      },
+      "scientific_name": "Colchicum autumnale",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "garden",
+      "category": "poisonous",
+      "toxicity": "high",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "Deadly. No internal use.",
+        "en": "Deadly. No internal use."
+      },
+      "safety": {
+        "fi": "Varoitus: high.",
+        "en": "Caution: high."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "lilium-martagon",
+      "name": {
+        "fi": "Varjolilja",
+        "en": "Martagon Lily"
+      },
+      "scientific_name": "Lilium martagon",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "poisonous",
+      "toxicity": "moderate",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Bulb/pollen issues; pets (cats) highly sensitive.\"",
+        "en": "\"Bulb/pollen issues; pets (cats) highly sensitive.\""
+      },
+      "safety": {
+        "fi": "Varoitus: moderate.",
+        "en": "Caution: moderate."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "caltha-palustris",
+      "name": {
+        "fi": "Rentukka",
+        "en": "Marsh Marigold"
+      },
+      "scientific_name": "Caltha palustris",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "poisonous",
+      "toxicity": "moderate",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Raw parts irritant; do not ingest raw.\"",
+        "en": "\"Raw parts irritant; do not ingest raw.\""
+      },
+      "safety": {
+        "fi": "Varoitus: moderate.",
+        "en": "Caution: moderate."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "frangula-alnus",
+      "name": {
+        "fi": "Paatsama",
+        "en": "Alder Buckthorn"
+      },
+      "scientific_name": "Frangula alnus",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "poisonous",
+      "toxicity": "moderate",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Fresh bark purgative/toxic; only aged bark used historically.\"",
+        "en": "\"Fresh bark purgative/toxic; only aged bark used historically.\""
+      },
+      "safety": {
+        "fi": "Varoitus: moderate.",
+        "en": "Caution: moderate."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "euphorbia-pulcherrima",
+      "name": {
+        "fi": "JoulutŠhti",
+        "en": "Poinsettia"
+      },
+      "scientific_name": "Euphorbia pulcherrima",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": true
+      },
+      "availability": "store",
+      "category": "poisonous",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Sap irritating; mild GI upset if ingested; keep from kids/pets.\"",
+        "en": "\"Sap irritating; mild GI upset if ingested; keep from kids/pets.\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "hippeastrum-spp",
+      "name": {
+        "fi": "Amaryllis (joulukukka)",
+        "en": "Amaryllis"
+      },
+      "scientific_name": "Hippeastrum spp.",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": true
+      },
+      "availability": "store",
+      "category": "poisonous",
+      "toxicity": "moderate",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Bulb toxic; GI upset; keep from pets/kids.\"",
+        "en": "\"Bulb toxic; GI upset; keep from pets/kids.\""
+      },
+      "safety": {
+        "fi": "Varoitus: moderate.",
+        "en": "Caution: moderate."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "narcissus-spp",
+      "name": {
+        "fi": "Narsissi",
+        "en": "Daffodil"
+      },
+      "scientific_name": "Narcissus spp.",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": true
+      },
+      "availability": "store",
+      "category": "poisonous",
+      "toxicity": "moderate",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Bulb toxic; do not ingest.\"",
+        "en": "\"Bulb toxic; do not ingest.\""
+      },
+      "safety": {
+        "fi": "Varoitus: moderate.",
+        "en": "Caution: moderate."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "hyacinthus-orientalis",
+      "name": {
+        "fi": "Hyasintti",
+        "en": "Hyacinth"
+      },
+      "scientific_name": "Hyacinthus orientalis",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": true
+      },
+      "availability": "store",
+      "category": "poisonous",
+      "toxicity": "moderate",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Bulb irritant; avoid ingestion.\"",
+        "en": "\"Bulb irritant; avoid ingestion.\""
+      },
+      "safety": {
+        "fi": "Varoitus: moderate.",
+        "en": "Caution: moderate."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "tulipa-spp",
+      "name": {
+        "fi": "Tulppaani",
+        "en": "Tulip"
+      },
+      "scientific_name": "Tulipa spp.",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": true
+      },
+      "availability": "store",
+      "category": "poisonous",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Bulb dermatitis; avoid ingestion.\"",
+        "en": "\"Bulb dermatitis; avoid ingestion.\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "rhododendron-azalea",
+      "name": {
+        "fi": "Atsalea",
+        "en": "Azalea"
+      },
+      "scientific_name": "Rhododendron (Azalea)",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "garden",
+      "category": "poisonous",
+      "toxicity": "high",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "Leaves/nectar toxic (grayanotoxins). Do not ingest.",
+        "en": "Leaves/nectar toxic (grayanotoxins). Do not ingest."
+      },
+      "safety": {
+        "fi": "Varoitus: high.",
+        "en": "Caution: high."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "rhododendron-spp",
+      "name": {
+        "fi": "Alppiruusu",
+        "en": "Rhododendron"
+      },
+      "scientific_name": "Rhododendron spp.",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "garden",
+      "category": "poisonous",
+      "toxicity": "high",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Toxic honey/leaf; no internal use.\"",
+        "en": "\"Toxic honey/leaf; no internal use.\""
+      },
+      "safety": {
+        "fi": "Varoitus: high.",
+        "en": "Caution: high."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "taxus-baccata",
+      "name": {
+        "fi": "Marjakuusi",
+        "en": "Yew"
+      },
+      "scientific_name": "Taxus baccata",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "garden",
+      "category": "poisonous",
+      "toxicity": "high",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "Deadly. Seeds/needles toxic (red aril not).",
+        "en": "Deadly. Seeds/needles toxic (red aril not)."
+      },
+      "safety": {
+        "fi": "Varoitus: high.",
+        "en": "Caution: high."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "aegopodium-podagraria",
+      "name": {
+        "fi": "Vuohenputki",
+        "en": "Ground Elder"
+      },
+      "scientific_name": "Aegopodium podagraria",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Young leaves as spring greens/tea; mild diuretic; ensure correct ID (hemlock lookalike caution).\"",
+        "en": "\"Young leaves as spring greens/tea; mild diuretic; ensure correct ID (hemlock lookalike caution).\""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "matricaria-discoidea",
+      "name": {
+        "fi": "Pihasaunio",
+        "en": "Pineapple Weed"
+      },
+      "scientific_name": "Matricaria discoidea",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "naturalized",
+      "category": "medicinal",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Fragrant heads for calming tea; 1Ð2 g/250 ml; Asteraceae allergy caution.\"",
+        "en": "\"Fragrant heads for calming tea; 1Ð2 g/250 ml; Asteraceae allergy caution.\""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "fragaria-vesca-leaf",
+      "name": {
+        "fi": "Ahomansikka (lehti)",
+        "en": "Wild Strawberry leaf"
+      },
+      "scientific_name": "Fragaria vesca (leaf)",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Astringent leaf tea 1Ð2 g/250 ml; berries as food.\"",
+        "en": "\"Astringent leaf tea 1Ð2 g/250 ml; berries as food.\""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "oxalis-acetosella",
+      "name": {
+        "fi": "KetunleipŠ (Oxalis)",
+        "en": "Wood Sorrel"
+      },
+      "scientific_name": "Oxalis acetosella",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "caution",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Tart; small amounts only (oxalates).\"",
+        "en": "\"Tart; small amounts only (oxalates).\""
+      },
+      "safety": {
+        "fi": "Varoitus: caution.",
+        "en": "Caution: caution."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "chamerion-angustifolium-shoots",
+      "name": {
+        "fi": "Maitohorsma (juuret/versot)",
+        "en": "Fireweed shoots"
+      },
+      "scientific_name": "Chamerion angustifolium (shoots)",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "culinary",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Young shoots lightly cooked; tea 2 g/250 ml for soothing.\"",
+        "en": "\"Young shoots lightly cooked; tea 2 g/250 ml for soothing.\""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "mentha-arvensis-m-spicata",
+      "name": {
+        "fi": "Vesi- tai viherminttu",
+        "en": "Field/Spearmint"
+      },
+      "scientific_name": "Mentha arvensis / M. spicata",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "native/garden",
+      "category": "medicinal",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "Digestive tea 1Ð2 g/250 ml up to 3?/day.",
+        "en": "Digestive tea 1Ð2 g/250 ml up to 3?/day."
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "thymus-citriodorus",
+      "name": {
+        "fi": "Sitruunatimjami",
+        "en": "Lemon Thyme"
+      },
+      "scientific_name": "Thymus ? citriodorus",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "garden",
+      "category": "medicinal",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Cough/culinary; 1Ð2 g/250 ml up to 3?/day.\"",
+        "en": "\"Cough/culinary; 1Ð2 g/250 ml up to 3?/day.\""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "nepeta-cataria",
+      "name": {
+        "fi": "Kissanminttu",
+        "en": "Catnip"
+      },
+      "scientific_name": "Nepeta cataria",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "garden",
+      "category": "medicinal",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Calming tea; 1Ð2 g/250 ml; gentle for kids (mild).\"",
+        "en": "\"Calming tea; 1Ð2 g/250 ml; gentle for kids (mild).\""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "hyssopus-officinalis",
+      "name": {
+        "fi": "Iisoppi",
+        "en": "Hyssop"
+      },
+      "scientific_name": "Hyssopus officinalis",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "garden",
+      "category": "medicinal",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Respiratory tea 1Ð2 g/250 ml; epilepsy caution (tradition).\"",
+        "en": "\"Respiratory tea 1Ð2 g/250 ml; epilepsy caution (tradition).\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "satureja-hortensis",
+      "name": {
+        "fi": "Kynteli",
+        "en": "Summer Savory"
+      },
+      "scientific_name": "Satureja hortensis",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "garden",
+      "category": "culinary",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Carminative; 1Ð2 g/250 ml infusion.\"",
+        "en": "\"Carminative; 1Ð2 g/250 ml infusion.\""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "artemisia-dracunculus",
+      "name": {
+        "fi": "Rakuuna",
+        "en": "Tarragon"
+      },
+      "scientific_name": "Artemisia dracunculus",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "garden",
+      "category": "culinary",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Culinary; small tea 0.5Ð1 g/250 ml; avoid high dose in pregnancy.\"",
+        "en": "\"Culinary; small tea 0.5Ð1 g/250 ml; avoid high dose in pregnancy.\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "coriandrum-sativum",
+      "name": {
+        "fi": "Korianteri",
+        "en": "Coriander"
+      },
+      "scientific_name": "Coriandrum sativum",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "garden",
+      "category": "culinary",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Seed tea 1Ð2 g/250 ml; carminative.\"",
+        "en": "\"Seed tea 1Ð2 g/250 ml; carminative.\""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "foeniculum-vulgare",
+      "name": {
+        "fi": "Fenkoli",
+        "en": "Fennel"
+      },
+      "scientific_name": "Foeniculum vulgare",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "garden",
+      "category": "medicinal",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Seed tea 1Ð2 g/250 ml; infantsÕ colic traditional; avoid high dose in pregnancy.\"",
+        "en": "\"Seed tea 1Ð2 g/250 ml; infantsÕ colic traditional; avoid high dose in pregnancy.\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "pimpinella-anisum",
+      "name": {
+        "fi": "Anis",
+        "en": "Anise"
+      },
+      "scientific_name": "Pimpinella anisum",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "garden",
+      "category": "medicinal",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "Carminative tea 1Ð2 g/250 ml.",
+        "en": "Carminative tea 1Ð2 g/250 ml."
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "carum-carvi",
+      "name": {
+        "fi": "Kumina",
+        "en": "Caraway"
+      },
+      "scientific_name": "Carum carvi",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "native/garden",
+      "category": "medicinal",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Digestion; 1Ð2 g seed/250 ml after meals.\"",
+        "en": "\"Digestion; 1Ð2 g seed/250 ml after meals.\""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "petroselinum-crispum",
+      "name": {
+        "fi": "Persilja",
+        "en": "Parsley"
+      },
+      "scientific_name": "Petroselinum crispum",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "garden",
+      "category": "medicinal",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Diuretic; 1Ð2 g/250 ml 1?/day; avoid high dose in pregnancy.\"",
+        "en": "\"Diuretic; 1Ð2 g/250 ml 1?/day; avoid high dose in pregnancy.\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "anethum-graveolens",
+      "name": {
+        "fi": "Tilli",
+        "en": "Dill"
+      },
+      "scientific_name": "Anethum graveolens",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "garden",
+      "category": "medicinal",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Carminative; 1Ð2 g seed/250 ml.\"",
+        "en": "\"Carminative; 1Ð2 g seed/250 ml.\""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "allium-schoenoprasum",
+      "name": {
+        "fi": "Ruohosipuli",
+        "en": "Chives"
+      },
+      "scientific_name": "Allium schoenoprasum",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "garden",
+      "category": "culinary",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Fresh greens; tea uncommon.\"",
+        "en": "\"Fresh greens; tea uncommon.\""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "levisticum-officinale",
+      "name": {
+        "fi": "Lipstikka",
+        "en": "Lovage"
+      },
+      "scientific_name": "Levisticum officinale",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "garden",
+      "category": "medicinal",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Digestive tea 1Ð2 g/250 ml; pregnancy caution.\"",
+        "en": "\"Digestive tea 1Ð2 g/250 ml; pregnancy caution.\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "origanum-majorana",
+      "name": {
+        "fi": "Meirami",
+        "en": "Marjoram"
+      },
+      "scientific_name": "Origanum majorana",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "garden",
+      "category": "culinary",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Calming; 1Ð2 g/250 ml infusion.\"",
+        "en": "\"Calming; 1Ð2 g/250 ml infusion.\""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "cetraria-islandica",
+      "name": {
+        "fi": "IslanninjŠkŠlŠ",
+        "en": "Iceland Moss"
+      },
+      "scientific_name": "Cetraria islandica",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "native/saprotic",
+      "category": "medicinal",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Soothing cough mucilage; decoct 1Ð2 g/250 ml; bitter.\"",
+        "en": "\"Soothing cough mucilage; decoct 1Ð2 g/250 ml; bitter.\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "verbascum-thapsus",
+      "name": {
+        "fi": "Ukontulikukka",
+        "en": "Mullein"
+      },
+      "scientific_name": "Verbascum thapsus",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "naturalized",
+      "category": "medicinal",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Cough tea 1Ð2 g/250 ml; **filter well** (hairs irritate).\"",
+        "en": "\"Cough tea 1Ð2 g/250 ml; **filter well** (hairs irritate).\""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "artemisia-absinthium",
+      "name": {
+        "fi": "Koiruoho",
+        "en": "Wormwood"
+      },
+      "scientific_name": "Artemisia absinthium",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "garden",
+      "category": "medicinal",
+      "toxicity": "caution",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Very bitter; tiny doses only (0.5Ð1 g/250 ml); avoid pregnancy/long use.\"",
+        "en": "\"Very bitter; tiny doses only (0.5Ð1 g/250 ml); avoid pregnancy/long use.\""
+      },
+      "safety": {
+        "fi": "Varoitus: caution.",
+        "en": "Caution: caution."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "artemisia-vulgaris",
+      "name": {
+        "fi": "Pujo",
+        "en": "Mugwort"
+      },
+      "scientific_name": "Artemisia vulgaris",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "caution",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Digestive bitter; ~1 g/250 ml; allergy risk (pollen/cross-reactivity); avoid pregnancy.\"",
+        "en": "\"Digestive bitter; ~1 g/250 ml; allergy risk (pollen/cross-reactivity); avoid pregnancy.\""
+      },
+      "safety": {
+        "fi": "Varoitus: caution.",
+        "en": "Caution: caution."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "matricaria-discoidea",
+      "name": {
+        "fi": "Kamomillasaunio",
+        "en": "Pineapple Chamomile"
+      },
+      "scientific_name": "Matricaria discoidea",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "naturalized",
+      "category": "medicinal",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"As Pihasaunio; calming heads, 1Ð2 g/250 ml.\"",
+        "en": "\"As Pihasaunio; calming heads, 1Ð2 g/250 ml.\""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "tanacetum-vulgare",
+      "name": {
+        "fi": "Pietaryrtti",
+        "en": "Tansy"
+      },
+      "scientific_name": "Tanacetum vulgare",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal/noxious",
+      "toxicity": "caution",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Strong; **no internal use**; external repellent; thujone toxicity.\"",
+        "en": "\"Strong; **no internal use**; external repellent; thujone toxicity.\""
+      },
+      "safety": {
+        "fi": "Varoitus: caution.",
+        "en": "Caution: caution."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "barbarea-vulgaris",
+      "name": {
+        "fi": "Peltokanankaali",
+        "en": "Wintercress"
+      },
+      "scientific_name": "Barbarea vulgaris",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "culinary",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Young leaves as mustardy greens; small amounts.\"",
+        "en": "\"Young leaves as mustardy greens; small amounts.\""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "nasturtium-officinale",
+      "name": {
+        "fi": "Vesikrassi",
+        "en": "Watercress"
+      },
+      "scientific_name": "Nasturtium officinale",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "naturalized",
+      "category": "culinary",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Spicy salad herb; ensure clean water sources.\"",
+        "en": "\"Spicy salad herb; ensure clean water sources.\""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "taraxacum-officinale-root",
+      "name": {
+        "fi": "Voikukan juuri",
+        "en": "Dandelion root"
+      },
+      "scientific_name": "Taraxacum officinale (root)",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Roasted root drink; decoct 2Ð4 g/250 ml 1Ð2?/day.\"",
+        "en": "\"Roasted root drink; decoct 2Ð4 g/250 ml 1Ð2?/day.\""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "betula-pendula-bud",
+      "name": {
+        "fi": "Koivun silmu",
+        "en": "Birch bud"
+      },
+      "scientific_name": "Betula pendula (bud)",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Bud tea 1Ð2 g/250 ml; diuretic; pollen allergy caution.\"",
+        "en": "\"Bud tea 1Ð2 g/250 ml; diuretic; pollen allergy caution.\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "salix-spp-bark",
+      "name": {
+        "fi": "Pajun kuori",
+        "en": "Willow bark"
+      },
+      "scientific_name": "Salix spp. (bark)",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Salicylates; decoct 1Ð2 g/250 ml; salicylate allergy caution.\"",
+        "en": "\"Salicylates; decoct 1Ð2 g/250 ml; salicylate allergy caution.\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "salix-spp-leaf",
+      "name": {
+        "fi": "Pajulaji (raudus/paju)",
+        "en": "Willow leaf"
+      },
+      "scientific_name": "Salix spp. (leaf)",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "Mild astringent tea 1Ð2 g/250 ml.",
+        "en": "Mild astringent tea 1Ð2 g/250 ml."
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "arctium-minus",
+      "name": {
+        "fi": "Pikkutakiainen",
+        "en": "Burdock"
+      },
+      "scientific_name": "Arctium minus",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "native/mixed",
+      "category": "medicinal",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Root decoction 2Ð4 g/250 ml; digestive/skin support.\"",
+        "en": "\"Root decoction 2Ð4 g/250 ml; digestive/skin support.\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "arctium-lappa-root",
+      "name": {
+        "fi": "Takiaisjuuri",
+        "en": "Burdock root"
+      },
+      "scientific_name": "Arctium lappa (root)",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "naturalized",
+      "category": "medicinal",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"As above; food/tea; diuretic.\"",
+        "en": "\"As above; food/tea; diuretic.\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "linum-usitatissimum",
+      "name": {
+        "fi": "Peltopellava",
+        "en": "Flax (seed)"
+      },
+      "scientific_name": "Linum usitatissimum",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": true
+      },
+      "availability": "store",
+      "category": "medicinal",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Seed mucilage drink; 1Ð2 tsp soaked; increase water intake.\"",
+        "en": "\"Seed mucilage drink; 1Ð2 tsp soaked; increase water intake.\""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "alchemilla-vulgaris-flower",
+      "name": {
+        "fi": "Poimulehti (kukinto)",
+        "en": "LadyÕs Mantle (flower)"
+      },
+      "scientific_name": "Alchemilla vulgaris (flower)",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "Astringent tea 1Ð2 g/250 ml.",
+        "en": "Astringent tea 1Ð2 g/250 ml."
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "populus-tremula",
+      "name": {
+        "fi": "Haavan lehti",
+        "en": "Aspen leaf"
+      },
+      "scientific_name": "Populus tremula",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Mild salicylates; leaf tea 1Ð2 g/250 ml; limited evidence.\"",
+        "en": "\"Mild salicylates; leaf tea 1Ð2 g/250 ml; limited evidence.\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "juniperus-communis-twig",
+      "name": {
+        "fi": "Katajan verso",
+        "en": "Juniper twig"
+      },
+      "scientific_name": "Juniperus communis (twig)",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "caution",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Strong aromatic; external bath/sauna infusion; avoid internal high dose.\"",
+        "en": "\"Strong aromatic; external bath/sauna infusion; avoid internal high dose.\""
+      },
+      "safety": {
+        "fi": "Varoitus: caution.",
+        "en": "Caution: caution."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "ribes-nigrum-leaf",
+      "name": {
+        "fi": "Mustaherukan lehti",
+        "en": "Blackcurrant leaf"
+      },
+      "scientific_name": "Ribes nigrum (leaf)",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "garden/some wild",
+      "category": "medicinal",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Leaf tea 2 g/250 ml; berries as food.\"",
+        "en": "\"Leaf tea 2 g/250 ml; berries as food.\""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "ribes-rubrum-leaf",
+      "name": {
+        "fi": "Punaherukan lehti",
+        "en": "Redcurrant leaf"
+      },
+      "scientific_name": "Ribes rubrum (leaf)",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "garden",
+      "category": "medicinal",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Leaf tea 2 g/250 ml; berries as food.\"",
+        "en": "\"Leaf tea 2 g/250 ml; berries as food.\""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "gooseberry",
+      "name": {
+        "fi": "Karviainen Gooseberry",
+        "en": "Ribes uva-crispa"
+      },
+      "scientific_name": "Gooseberry",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "'garden'",
+      "category": "medicinal",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Leaf tea mild; berries food; thorn caution.\"",
+        "en": "\"Leaf tea mild; berries food; thorn caution.\""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "vaccinium-oxycoccos",
+      "name": {
+        "fi": "Karpalo (suokarpalo)",
+        "en": "Cranberry"
+      },
+      "scientific_name": "Vaccinium oxycoccos",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Berries for juice; leaf tea small amounts; urinary support (traditional).\"",
+        "en": "\"Berries for juice; leaf tea small amounts; urinary support (traditional).\""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "vaccinium-macrocarpon",
+      "name": {
+        "fi": "Isokarpalo (puutarha)",
+        "en": "American Cranberry"
+      },
+      "scientific_name": "Vaccinium macrocarpon",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": true
+      },
+      "availability": "store/garden",
+      "category": "medicinal",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Juice/syrup; standardized products common.\"",
+        "en": "\"Juice/syrup; standardized products common.\""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "rubus-arcticus",
+      "name": {
+        "fi": "Mesimarja",
+        "en": "Arctic Bramble"
+      },
+      "scientific_name": "Rubus arcticus",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "culinary/medicinal",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Berries as delicacy; leaf tea mild astringent.\"",
+        "en": "\"Berries as delicacy; leaf tea mild astringent.\""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "rubus-idaeus-berry",
+      "name": {
+        "fi": "MetsŠvadelma",
+        "en": "Raspberry (wild)"
+      },
+      "scientific_name": "Rubus idaeus (berry)",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "culinary/medicinal",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Berries food; leaf tea as listed elsewhere.\"",
+        "en": "\"Berries food; leaf tea as listed elsewhere.\""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "trifolium-repens",
+      "name": {
+        "fi": "Valkoapila",
+        "en": "White Clover"
+      },
+      "scientific_name": "Trifolium repens",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "native/mixed",
+      "category": "medicinal",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Mild tea 1Ð2 g/250 ml; ferment clover ÒhoneyÓ; allergy caution.\"",
+        "en": "\"Mild tea 1Ð2 g/250 ml; ferment clover ÒhoneyÓ; allergy caution.\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "vaccinium-vitis-idaea-leaf",
+      "name": {
+        "fi": "KetunhŠntŠ (Puolatee?)",
+        "en": "Tea from lingon leaf"
+      },
+      "scientific_name": "Vaccinium vitis-idaea (leaf)",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"As already listed; astringent; 1Ð2 g/250 ml 1Ð2?/day.\"",
+        "en": "\"As already listed; astringent; 1Ð2 g/250 ml 1Ð2?/day.\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "equisetum-arvense",
+      "name": {
+        "fi": "Peltokorte (ulkoisesti)",
+        "en": "Horsetail (external)"
+      },
+      "scientific_name": "Equisetum arvense",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "caution",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"External baths/soaks; internal use limited; avoid long-term.\"",
+        "en": "\"External baths/soaks; internal use limited; avoid long-term.\""
+      },
+      "safety": {
+        "fi": "Varoitus: caution.",
+        "en": "Caution: caution."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "anthriscus-sylvestris",
+      "name": {
+        "fi": "Koiranputki",
+        "en": "Cow Parsley"
+      },
+      "scientific_name": "Anthriscus sylvestris",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "culinary/medicinal",
+      "toxicity": "caution",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Edible but **confused with hemlock**; use only with expert ID.\"",
+        "en": "\"Edible but **confused with hemlock**; use only with expert ID.\""
+      },
+      "safety": {
+        "fi": "Varoitus: caution.",
+        "en": "Caution: caution."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "heracleum-sphondylium",
+      "name": {
+        "fi": "Karhunputki",
+        "en": "Hogweed"
+      },
+      "scientific_name": "Heracleum sphondylium",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "culinary/medicinal",
+      "toxicity": "caution",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Phototoxic sap; peel/cook stems; avoid sun exposure on sap contact.\"",
+        "en": "\"Phototoxic sap; peel/cook stems; avoid sun exposure on sap contact.\""
+      },
+      "safety": {
+        "fi": "Varoitus: caution.",
+        "en": "Caution: caution."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "heracleum-mantegazzianum",
+      "name": {
+        "fi": "JŠttiputki",
+        "en": "Giant Hogweed"
+      },
+      "scientific_name": "Heracleum mantegazzianum",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "naturalized",
+      "category": "poisonous",
+      "toxicity": "high",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"**Severe phototoxic burns**; avoid contact; invasive.\"",
+        "en": "\"**Severe phototoxic burns**; avoid contact; invasive.\""
+      },
+      "safety": {
+        "fi": "Varoitus: high.",
+        "en": "Caution: high."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "aconitum-lycoctonum",
+      "name": {
+        "fi": "Lehtoukonhattu",
+        "en": "Yellow Monkshood"
+      },
+      "scientific_name": "Aconitum lycoctonum",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "poisonous",
+      "toxicity": "high",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Deadly alkaloids; no handling/ingestion.\"",
+        "en": "\"Deadly alkaloids; no handling/ingestion.\""
+      },
+      "safety": {
+        "fi": "Varoitus: high.",
+        "en": "Caution: high."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "chelidonium-majus",
+      "name": {
+        "fi": "Keltamo",
+        "en": "Greater Celandine"
+      },
+      "scientific_name": "Chelidonium majus",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "naturalized",
+      "category": "medicinal/poisonous",
+      "toxicity": "caution",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Latex for warts (external); **no internal use**; hepatotoxicity risk.\"",
+        "en": "\"Latex for warts (external); **no internal use**; hepatotoxicity risk.\""
+      },
+      "safety": {
+        "fi": "Varoitus: caution.",
+        "en": "Caution: caution."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "lythrum-salicaria",
+      "name": {
+        "fi": "Rantakukka",
+        "en": "Purple Loosestrife"
+      },
+      "scientific_name": "Lythrum salicaria",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "native/mixed",
+      "category": "medicinal",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Astringent tea 1Ð2 g/250 ml; limited evidence.\"",
+        "en": "\"Astringent tea 1Ð2 g/250 ml; limited evidence.\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "plantago-media",
+      "name": {
+        "fi": "Soikkoratamo",
+        "en": "Hoary Plantain"
+      },
+      "scientific_name": "Plantago media",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "native/mixed",
+      "category": "medicinal",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Similar to Plantago major; leaf poultice/tea 1Ð2 g/250 ml.\"",
+        "en": "\"Similar to Plantago major; leaf poultice/tea 1Ð2 g/250 ml.\""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "filipendula-ulmaria-flower",
+      "name": {
+        "fi": "Mesiangervon kukka",
+        "en": "Meadowsweet flower"
+      },
+      "scientific_name": "Filipendula ulmaria (flower)",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"As meadowsweet; salicylates; allergy caution.\"",
+        "en": "\"As meadowsweet; salicylates; allergy caution.\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "tanacetum-vulgare",
+      "name": {
+        "fi": "Pietaryrtti (ulkoisesti)",
+        "en": "Tansy (external)"
+      },
+      "scientific_name": "Tanacetum vulgare",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "caution",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"External only (repellent); **no internal use**.\"",
+        "en": "\"External only (repellent); **no internal use**.\""
+      },
+      "safety": {
+        "fi": "Varoitus: caution.",
+        "en": "Caution: caution."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "vaccinium-vitis-idaea-twig",
+      "name": {
+        "fi": "Puolukan varpu",
+        "en": "Lingonberry twig"
+      },
+      "scientific_name": "Vaccinium vitis-idaea (twig)",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "Astringent decoction small amounts.",
+        "en": "Astringent decoction small amounts."
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "calluna-vulgaris-flower",
+      "name": {
+        "fi": "Kanervan kukka",
+        "en": "Heather flower"
+      },
+      "scientific_name": "Calluna vulgaris (flower)",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"As heather; diuretic; 2 g/250 ml.\"",
+        "en": "\"As heather; diuretic; 2 g/250 ml.\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "achillea-millefolium-flower",
+      "name": {
+        "fi": "SiankŠrsŠmšn kukka",
+        "en": "Yarrow flower"
+      },
+      "scientific_name": "Achillea millefolium (flower)",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"As yarrow; cramps/fever; avoid in pregnancy.\"",
+        "en": "\"As yarrow; cramps/fever; avoid in pregnancy.\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "alchemilla-vulgaris-leaf",
+      "name": {
+        "fi": "Poimulehden lehti",
+        "en": "LadyÕs Mantle leaf"
+      },
+      "scientific_name": "Alchemilla vulgaris (leaf)",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "Astringent tea 2 g/250 ml.",
+        "en": "Astringent tea 2 g/250 ml."
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "sorbus-aucuparia-berry",
+      "name": {
+        "fi": "Pihlajanmarja",
+        "en": "Rowan berry"
+      },
+      "scientific_name": "Sorbus aucuparia (berry)",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "culinary/medicinal",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Cook into syrup/jelly; raw can irritate GI.\"",
+        "en": "\"Cook into syrup/jelly; raw can irritate GI.\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "hippophae-rhamnoides",
+      "name": {
+        "fi": "Tyrni (lehti + marja)",
+        "en": "Sea Buckthorn leaf/berry"
+      },
+      "scientific_name": "Hippophae rhamnoides",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "native/garden",
+      "category": "medicinal",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Berry juice 50Ð100 ml/day; leaf tea mild.\"",
+        "en": "\"Berry juice 50Ð100 ml/day; leaf tea mild.\""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "rosa-spp-petal",
+      "name": {
+        "fi": "Ruusun terŠlehti",
+        "en": "Rose petal"
+      },
+      "scientific_name": "Rosa spp. (petal)",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "garden",
+      "category": "medicinal",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Petal tea/syrup; ensure **no pesticides**.\"",
+        "en": "\"Petal tea/syrup; ensure **no pesticides**.\""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "rosa-spp-hip-shell",
+      "name": {
+        "fi": "Ruusunmarja (kuori)",
+        "en": "Rosehip shell"
+      },
+      "scientific_name": "Rosa spp. (hip shell)",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "native/garden",
+      "category": "medicinal",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Vitamin C tea; 2Ð3 g/250 ml up to 3?/day.\"",
+        "en": "\"Vitamin C tea; 2Ð3 g/250 ml up to 3?/day.\""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "sambucus-nigra-flower",
+      "name": {
+        "fi": "Seljan kukka",
+        "en": "Elderflower"
+      },
+      "scientific_name": "Sambucus nigra (flower)",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "garden",
+      "category": "medicinal",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Sweat tea for colds 2 g/250 ml; raw green parts toxic.\"",
+        "en": "\"Sweat tea for colds 2 g/250 ml; raw green parts toxic.\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "sambucus-nigra-berry",
+      "name": {
+        "fi": "Seljan marja (keitetty)",
+        "en": "Elderberry (cooked)"
+      },
+      "scientific_name": "Sambucus nigra (berry)",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "garden",
+      "category": "medicinal",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Syrup 10Ð20 ml 1Ð3?/day; cook thoroughly.\"",
+        "en": "\"Syrup 10Ð20 ml 1Ð3?/day; cook thoroughly.\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "centaurea-jacea",
+      "name": {
+        "fi": "Ahdekaunokki",
+        "en": "Knapweed"
+      },
+      "scientific_name": "Centaurea jacea",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "native/mixed",
+      "category": "medicinal",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Mild bitter tea 1Ð2 g/250 ml; Asteraceae caution.\"",
+        "en": "\"Mild bitter tea 1Ð2 g/250 ml; Asteraceae caution.\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "stellaria-media",
+      "name": {
+        "fi": "PihatŠhtimš",
+        "en": "Chickweed"
+      },
+      "scientific_name": "Stellaria media",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "safe",
+      "category": "medicinal/naturalized",
+      "toxicity": "\"Edible greens; soothing poultice; tea 1Ð2 g/250 ml.\"",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "",
+        "en": ""
+      },
+      "safety": {
+        "fi": "Varoitus: \"Edible greens; soothing poultice; tea 1Ð2 g/250 ml.\".",
+        "en": "Caution: \"Edible greens; soothing poultice; tea 1Ð2 g/250 ml.\"."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "viola-tricolor",
+      "name": {
+        "fi": "Keto-orvokki",
+        "en": "Field Pansy"
+      },
+      "scientific_name": "Viola tricolor",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "native/mixed",
+      "category": "medicinal",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Skin/respiratory tea 1Ð2 g/250 ml; salicylates mild.\"",
+        "en": "\"Skin/respiratory tea 1Ð2 g/250 ml; salicylates mild.\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "filipendula-vulgaris",
+      "name": {
+        "fi": "Sikoangervo",
+        "en": "Yarrow-leaved Meadowsweet"
+      },
+      "scientific_name": "Filipendula vulgaris",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "native/mixed",
+      "category": "medicinal",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Similar to meadowsweet; use sparingly.\"",
+        "en": "\"Similar to meadowsweet; use sparingly.\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "solidago-virgaurea-flower",
+      "name": {
+        "fi": "Kultapiiskun kukka",
+        "en": "Goldenrod flower"
+      },
+      "scientific_name": "Solidago virgaurea (flower)",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"As goldenrod; diuretic 2 g/250 ml.\"",
+        "en": "\"As goldenrod; diuretic 2 g/250 ml.\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "maianthemum-bifolium",
+      "name": {
+        "fi": "Oravanmarja",
+        "en": "May Lily (False lily-of-the-valley)"
+      },
+      "scientific_name": "Maianthemum bifolium",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "poisonous",
+      "toxicity": "moderate",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Berries mildly toxic; **do not ingest**; easy to confuse in understory.\"",
+        "en": "\"Berries mildly toxic; **do not ingest**; easy to confuse in understory.\""
+      },
+      "safety": {
+        "fi": "Varoitus: moderate.",
+        "en": "Caution: moderate."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "andromeda-polifolia",
+      "name": {
+        "fi": "Suokukka",
+        "en": "Bog-rosemary"
+      },
+      "scientific_name": "Andromeda polifolia",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "poisonous",
+      "toxicity": "high",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"**Highly toxic (grayanotoxins)**; no ingestion.\"",
+        "en": "\"**Highly toxic (grayanotoxins)**; no ingestion.\""
+      },
+      "safety": {
+        "fi": "Varoitus: high.",
+        "en": "Caution: high."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "persicaria-bistorta",
+      "name": {
+        "fi": "Konnantatar",
+        "en": "Common Bistort"
+      },
+      "scientific_name": "Persicaria bistorta",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "native/mixed",
+      "category": "medicinal",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Astringent root; small decoctions; limited modern use.\"",
+        "en": "\"Astringent root; small decoctions; limited modern use.\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "myricaria-gale-myrica-gale",
+      "name": {
+        "fi": "Suomyrtti",
+        "en": "Sweet Gale"
+      },
+      "scientific_name": "Myricaria gale / Myrica gale",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "caution",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Traditional spice; tiny amounts only; pregnancy caution.\"",
+        "en": "\"Traditional spice; tiny amounts only; pregnancy caution.\""
+      },
+      "safety": {
+        "fi": "Varoitus: caution.",
+        "en": "Caution: caution."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "arum-maculatum",
+      "name": {
+        "fi": "Vehkan juuri",
+        "en": "Common Arum (Cuckoo-pint)"
+      },
+      "scientific_name": "Arum maculatum",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "naturalized",
+      "category": "poisonous",
+      "toxicity": "moderate",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Calcium oxalate crystals; mouth/throat irritation; no internal use.\"",
+        "en": "\"Calcium oxalate crystals; mouth/throat irritation; no internal use.\""
+      },
+      "safety": {
+        "fi": "Varoitus: moderate.",
+        "en": "Caution: moderate."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "ranunculus-acris",
+      "name": {
+        "fi": "Leinikki (niittyleinikki)",
+        "en": "Buttercup"
+      },
+      "scientific_name": "Ranunculus acris",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "poisonous",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Irritating sap; no internal use.\"",
+        "en": "\"Irritating sap; no internal use.\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "convallaria-majalis-vs-allium-ursinum",
+      "name": {
+        "fi": "Kielo",
+        "en": "Lily of the Valley vs. wild garlic"
+      },
+      "scientific_name": "Convallaria majalis vs. Allium ursinum",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "safety",
+      "toxicity": "high",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"**Lookalike warning:** never rely on smell alone; verify leaf/flower.\"",
+        "en": "\"**Lookalike warning:** never rely on smell alone; verify leaf/flower.\""
+      },
+      "safety": {
+        "fi": "Varoitus: high.",
+        "en": "Caution: high."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "mentha-arvensis",
+      "name": {
+        "fi": "Ahominttu",
+        "en": "Field Mint"
+      },
+      "scientific_name": "Mentha arvensis",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Digestive tea 1Ð2 g/250 ml; cooling effect; avoid high dose in reflux.\"",
+        "en": "\"Digestive tea 1Ð2 g/250 ml; cooling effect; avoid high dose in reflux.\""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "campanula-rotundifolia",
+      "name": {
+        "fi": "Harakankello",
+        "en": "Harebell"
+      },
+      "scientific_name": "Campanula rotundifolia",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "ornamental/folk",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Edible petals small amounts; folklore use decorative.\"",
+        "en": "\"Edible petals small amounts; folklore use decorative.\""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "dianthus-deltoides",
+      "name": {
+        "fi": "Ketoneilikka",
+        "en": "Field Pink"
+      },
+      "scientific_name": "Dianthus deltoides",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "ornamental",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Edible petals; decorative salads.\"",
+        "en": "\"Edible petals; decorative salads.\""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "allium-sativum",
+      "name": {
+        "fi": "Valkosipuli",
+        "en": "Garlic"
+      },
+      "scientific_name": "Allium sativum",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": true
+      },
+      "availability": "store/garden",
+      "category": "culinary",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"1Ð2 fresh cloves/day supports immunity; may thin blood.\"",
+        "en": "\"1Ð2 fresh cloves/day supports immunity; may thin blood.\""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "rheum-rhabarbarum",
+      "name": {
+        "fi": "Raparperi",
+        "en": "Rhubarb"
+      },
+      "scientific_name": "Rheum rhabarbarum",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "garden",
+      "category": "culinary",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Only stems edible; leaves toxic (oxalates).\"",
+        "en": "\"Only stems edible; leaves toxic (oxalates).\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "capsicum-spp",
+      "name": {
+        "fi": "Chili",
+        "en": "Chili Pepper"
+      },
+      "scientific_name": "Capsicum spp.",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": true
+      },
+      "availability": "store/garden",
+      "category": "culinary",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Stimulating; avoid eye/skin contact; heartburn possible.\"",
+        "en": "\"Stimulating; avoid eye/skin contact; heartburn possible.\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "cucurbita-pepo",
+      "name": {
+        "fi": "Kurpitsa",
+        "en": "Pumpkin"
+      },
+      "scientific_name": "Cucurbita pepo",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "garden",
+      "category": "culinary",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Beta-carotene rich; seeds antiparasitic.\"",
+        "en": "\"Beta-carotene rich; seeds antiparasitic.\""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "cucurbita-pepo-var-cylindrica",
+      "name": {
+        "fi": "KesŠkurpitsa",
+        "en": "Zucchini"
+      },
+      "scientific_name": "Cucurbita pepo var. cylindrica",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "garden",
+      "category": "culinary",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Edible cooked or raw; bitter taste = toxic cucurbitacins, avoid.\"",
+        "en": "\"Edible cooked or raw; bitter taste = toxic cucurbitacins, avoid.\""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "daucus-carota-ssp-sativus",
+      "name": {
+        "fi": "Porkkana",
+        "en": "Carrot"
+      },
+      "scientific_name": "Daucus carota ssp. sativus",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "garden",
+      "category": "culinary",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Root food; leaf tea mild (ensure cultivated form, not wild).\"",
+        "en": "\"Root food; leaf tea mild (ensure cultivated form, not wild).\""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "daucus-carota-ssp-carota",
+      "name": {
+        "fi": "Villirusokki (JŠttilauha)",
+        "en": "Wild Carrot"
+      },
+      "scientific_name": "Daucus carota ssp. carota",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "caution",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Aromatic seed diuretic; similar to hemlock appearance Ð expert ID only.\"",
+        "en": "\"Aromatic seed diuretic; similar to hemlock appearance Ð expert ID only.\""
+      },
+      "safety": {
+        "fi": "Varoitus: caution.",
+        "en": "Caution: caution."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "pastinaca-sativa",
+      "name": {
+        "fi": "Palsternakka",
+        "en": "Parsnip"
+      },
+      "scientific_name": "Pastinaca sativa",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "garden",
+      "category": "culinary",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Cooked root edible; raw sap phototoxic; wear gloves harvesting.\"",
+        "en": "\"Cooked root edible; raw sap phototoxic; wear gloves harvesting.\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "hippophae-rhamnoides-leaf",
+      "name": {
+        "fi": "Tyrnin lehti",
+        "en": "Sea Buckthorn leaf"
+      },
+      "scientific_name": "Hippophae rhamnoides (leaf)",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "native/garden",
+      "category": "medicinal",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "Tea mild anti-inflammatory.",
+        "en": "Tea mild anti-inflammatory."
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "ledum-palustre",
+      "name": {
+        "fi": "Suopursu",
+        "en": "Labrador Tea"
+      },
+      "scientific_name": "Ledum palustre",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal/poisonous",
+      "toxicity": "caution",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Strong aroma; small tea traditionally for cough; **large dose toxic**.\"",
+        "en": "\"Strong aroma; small tea traditionally for cough; **large dose toxic**.\""
+      },
+      "safety": {
+        "fi": "Varoitus: caution.",
+        "en": "Caution: caution."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "calluna-vulgaris-stem",
+      "name": {
+        "fi": "Kanervan varpu",
+        "en": "Heather stem"
+      },
+      "scientific_name": "Calluna vulgaris (stem)",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"As heather; diuretic; external baths.\"",
+        "en": "\"As heather; diuretic; external baths.\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "mentha-aquatica",
+      "name": {
+        "fi": "Rantaminttu",
+        "en": "Water Mint"
+      },
+      "scientific_name": "Mentha aquatica",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Aromatic tea; digestive; grows near wetlands.\"",
+        "en": "\"Aromatic tea; digestive; grows near wetlands.\""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "filipendula-ulmaria-root",
+      "name": {
+        "fi": "Mesiangervo (juuri)",
+        "en": "Meadowsweet root"
+      },
+      "scientific_name": "Filipendula ulmaria (root)",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "native/mixed",
+      "category": "medicinal",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Astringent decoction; salicylate caution.\"",
+        "en": "\"Astringent decoction; salicylate caution.\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "mentha-arvensis-leaf",
+      "name": {
+        "fi": "Ahominttu (lisŠ)",
+        "en": "Field Mint leaf"
+      },
+      "scientific_name": "Mentha arvensis (leaf)",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "safe",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "Tea 1Ð2 g/250 ml 1Ð3?/day.",
+        "en": "Tea 1Ð2 g/250 ml 1Ð3?/day."
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "juniperus-communis-resin",
+      "name": {
+        "fi": "Katajan pihka",
+        "en": "Juniper resin"
+      },
+      "scientific_name": "Juniperus communis (resin)",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "caution",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"External antiseptic; **no internal use**.\"",
+        "en": "\"External antiseptic; **no internal use**.\""
+      },
+      "safety": {
+        "fi": "Varoitus: caution.",
+        "en": "Caution: caution."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "picea-abies-resin",
+      "name": {
+        "fi": "Kuusen pihka",
+        "en": "Spruce resin"
+      },
+      "scientific_name": "Picea abies (resin)",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "native/mixed",
+      "category": "medicinal",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"External salve for wounds; avoid ingestion.\"",
+        "en": "\"External salve for wounds; avoid ingestion.\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "pinus-sylvestris-bud",
+      "name": {
+        "fi": "MŠnnyn silmu",
+        "en": "Pine bud"
+      },
+      "scientific_name": "Pinus sylvestris (bud)",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Tea/decoction for cough; resin allergy caution.\"",
+        "en": "\"Tea/decoction for cough; resin allergy caution.\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "pinus-sylvestris-resin",
+      "name": {
+        "fi": "MŠnnyn pihka",
+        "en": "Pine resin"
+      },
+      "scientific_name": "Pinus sylvestris (resin)",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "caution",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"External use only; antiseptic.\"",
+        "en": "\"External use only; antiseptic.\""
+      },
+      "safety": {
+        "fi": "Varoitus: caution.",
+        "en": "Caution: caution."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "filipendula-ulmaria-flower",
+      "name": {
+        "fi": "Mesiangervo (kukka)",
+        "en": "Meadowsweet flower"
+      },
+      "scientific_name": "Filipendula ulmaria (flower)",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Tea 1Ð2 g/250 ml; salicylate allergy caution.\"",
+        "en": "\"Tea 1Ð2 g/250 ml; salicylate allergy caution.\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "nxxefmhq3ws",
+      "name": {
+        "fi": "",
+        "en": ""
+      },
+      "scientific_name": "",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "",
+      "category": "",
+      "toxicity": "",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "",
+        "en": ""
+      },
+      "safety": {
+        "fi": "",
+        "en": ""
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "silene-dioica",
+      "name": {
+        "fi": "Lehtoarho",
+        "en": "Red Campion"
+      },
+      "scientific_name": "Silene dioica",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "ornamental/folk",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Roots contain saponins and were used as soap; external use; not for ingestion.\"",
+        "en": "\"Roots contain saponins and were used as soap; external use; not for ingestion.\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "symphyotrichum-novi-belgii",
+      "name": {
+        "fi": "Syysasteri",
+        "en": "Michaelmas Daisy"
+      },
+      "scientific_name": "Symphyotrichum novi-belgii",
+      "origin": {
+        "native_in_finland": false,
+        "store_bought": false
+      },
+      "availability": "garden",
+      "category": "ornamental",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "Allergic risk (Asteraceae).",
+        "en": "Allergic risk (Asteraceae)."
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "daucus-carota-ssp-carota",
+      "name": {
+        "fi": "Peltoporkkana (villiporkkana)",
+        "en": "Wild Carrot"
+      },
+      "scientific_name": "Daucus carota ssp. carota",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "caution",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Aromatic seed diuretic; very similar to poison hemlock in appearance Ñ expert ID only.\"",
+        "en": "\"Aromatic seed diuretic; very similar to poison hemlock in appearance Ñ expert ID only.\""
+      },
+      "safety": {
+        "fi": "Varoitus: caution.",
+        "en": "Caution: caution."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "vaccinium-vitis-idaea-leaf",
+      "name": {
+        "fi": "Puolukan lehti",
+        "en": "Lingonberry leaf"
+      },
+      "scientific_name": "Vaccinium vitis-idaea (leaf)",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "caution",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Astringent urinary support; 1Ð2 g/250 ml short courses only; contains arbutin (hydroquinone). Avoid pregnancy/long-term use. (Myrkytystietokeskus: small amounts rarely cause symptoms.)\"",
+        "en": "\"Astringent urinary support; 1Ð2 g/250 ml short courses only; contains arbutin (hydroquinone). Avoid pregnancy/long-term use. (Myrkytystietokeskus: small amounts rarely cause symptoms.)\""
+      },
+      "safety": {
+        "fi": "Varoitus: caution.",
+        "en": "Caution: caution."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "rhododendron-tomentosum-syn-ledum-palustre",
+      "name": {
+        "fi": "Suopursu",
+        "en": "Labrador Tea"
+      },
+      "scientific_name": "Rhododendron tomentosum (syn. Ledum palustre)",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal/poisonous",
+      "toxicity": "caution",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Strong aroma; tiny tea traditionally for cough; large dose toxic (grayanotoxins).\"",
+        "en": "\"Strong aroma; tiny tea traditionally for cough; large dose toxic (grayanotoxins).\""
+      },
+      "safety": {
+        "fi": "Varoitus: caution.",
+        "en": "Caution: caution."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "juniperus-communis-berry",
+      "name": {
+        "fi": "Katajan marja",
+        "en": "Juniper berry"
+      },
+      "scientific_name": "Juniperus communis (berry)",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Spice; mild diuretic; avoid pregnancy and long-term/high dose.\"",
+        "en": "\"Spice; mild diuretic; avoid pregnancy and long-term/high dose.\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "picea-abies-resin",
+      "name": {
+        "fi": "Kuusen pihka",
+        "en": "Spruce resin"
+      },
+      "scientific_name": "Picea abies (resin)",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"External salve for wounds; avoid ingestion.\"",
+        "en": "\"External salve for wounds; avoid ingestion.\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "populus-tremula-bark",
+      "name": {
+        "fi": "Haavan kuori",
+        "en": "Aspen bark"
+      },
+      "scientific_name": "Populus tremula (bark)",
+      "origin": {
+        "native_in_finland": true,
+        "store_bought": false
+      },
+      "availability": "native",
+      "category": "medicinal",
+      "toxicity": "mild",
+      "found": {
+        "fi": "",
+        "en": ""
+      },
+      "parts_used": {
+        "fi": "",
+        "en": ""
+      },
+      "uses_make": {
+        "fi": "\"Salicylates; decoct 2Ð4 g/250 ml; salicylate allergy caution.\"",
+        "en": "\"Salicylates; decoct 2Ð4 g/250 ml; salicylate allergy caution.\""
+      },
+      "safety": {
+        "fi": "Varoitus: mild.",
+        "en": "Caution: mild."
+      },
+      "other": {
+        "fi": "",
+        "en": ""
+      }
+    }
+  ]
+}
