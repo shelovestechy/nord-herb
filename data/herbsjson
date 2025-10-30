@@ -11,56 +11,62 @@
         "fi": "Yleinen koko Suomessa, erityisesti pihamailla ja niityillä.",
         "en": "Common throughout Finland, especially in yards and meadows."
       },
-      "parts_used": { "fi": "Nuoret lehdet, varret, siemenet, juuret.", "en": "Young leaves, stems, seeds, roots." },
+      "parts_used": {
+        "fi": ["Nuoret lehdet", "varret", "siemenet", "juuret"],
+        "en": ["Young leaves", "stems", "seeds", "roots"]
+      },
       "uses_make": {
-        "fi": "Keittoja, teetä, kasviväriä, hiushuuhdetta.",
-        "en": "Soups, teas, plant dye, hair rinse."
+        "fi": ["Keittoja", "teetä", "kasviväri", "hiushuuhde"],
+        "en": ["Soups", "teas", "plant dye", "hair rinse"]
       },
       "safety": { "fi": "Käytä hanskoja kerätessä.", "en": "Use gloves when harvesting." },
       "other": {
         "fi": "Sallittu kerätä jokamiehenoikeuksien nojalla. Runsaasti rautaa ja kivennäisaineita.",
         "en": "Allowed under Finland’s everyman’s rights. Rich in iron and minerals."
-      }
+      },
+      "tags": ["wild", "finland", "nutritive", "tea", "food"]
     },
     {
       "id": "lavender",
       "name": { "fi": "Laventeli", "en": "Lavender" },
       "scientific_name": "Lavandula angustifolia",
       "origin": { "native_in_finland": false, "store_bought": true },
-      "found": { "fi": "", "en": "" },
-      "parts_used": { "fi": "Kukat, lehdet, eteerinen öljy.", "en": "Flowers, leaves, essential oil." },
+      "found": { "fi": null, "en": null },
+      "parts_used": {
+        "fi": ["Kukat", "lehdet", "eteerinen öljy"],
+        "en": ["Flowers", "leaves", "essential oil"]
+      },
       "uses_make": {
-        "fi": "Teetä, tyynyjä, öljyjä, saippuaa.",
-        "en": "Tea, sleep sachets, oils, soaps."
+        "fi": ["Tee", "unipussit", "öljyt", "saippua"],
+        "en": ["Tea", "sleep sachets", "oils", "soaps"]
       },
       "safety": { "fi": "Vältä suuria määriä raskauden aikana.", "en": "Avoid large amounts during pregnancy." },
-      "other": {
-        "fi": "Rauhoittava ja unta edistävä kasvi.",
-        "en": "Calming plant known for improving sleep and relaxation."
-      }
+      "other": { "fi": "Rauhoittava ja unta edistävä kasvi.", "en": "Calming, supports sleep and relaxation." },
+      "tags": ["store", "calming", "aromatic", "tea"]
     },
     {
       "id": "ginger",
       "name": { "fi": "Inkivääri", "en": "Ginger" },
       "scientific_name": "Zingiber officinale",
       "origin": { "native_in_finland": false, "store_bought": true },
-      "found": { "fi": "", "en": "" },
-      "parts_used": { "fi": "Juurakko.", "en": "Root (rhizome)." },
-      "uses_make": { "fi": "Teetä, mauste, flunssajuoma.", "en": "Tea, spice, cold remedy drinks." },
+      "found": { "fi": null, "en": null },
+      "parts_used": { "fi": ["Juurakko"], "en": ["Root (rhizome)"] },
+      "uses_make": {
+        "fi": ["Tee", "mauste", "flunssajuoma"],
+        "en": ["Tea", "spice", "cold remedy drinks"]
+      },
       "safety": { "fi": "Voi ärsyttää vatsaa suurina määrinä.", "en": "May irritate stomach in large amounts." },
-      "other": {
-        "fi": "Lämmittävä ja verenkiertoa vilkastuttava juuri.",
-        "en": "Warming root that boosts circulation and digestion."
-      }
+      "other": { "fi": "Lämmittävä ja verenkiertoa vilkastuttava juuri.", "en": "Warming; boosts circulation and digestion." },
+      "tags": ["store", "warming", "spice", "tea"]
     },
     {
       "id": "turmeric",
       "name": { "fi": "Kurkuma", "en": "Turmeric" },
       "scientific_name": "Curcuma longa",
       "origin": { "native_in_finland": false, "store_bought": true },
-      "found": { "fi": "", "en": "" },
-      "parts_used": { "fi": "Juurakko, jauhe.", "en": "Root, powder." },
-      "uses_make": { "fi": "Mauste, tee, kultainen maito.", "en": "Spice, tea, golden milk." },
+      "found": { "fi": null, "en": null },
+      "parts_used": { "fi": ["Juurakko", "jauhe"], "en": ["Root", "powder"] },
+      "uses_make": { "fi": ["Mauste", "tee", "kultainen maito"], "en": ["Spice", "tea", "golden milk"] },
       "safety": {
         "fi": "Keskustele lääkärin kanssa, jos sinulla on sappivaivoja.",
         "en": "Consult a doctor if you have gallbladder issues."
@@ -68,44 +74,38 @@
       "other": {
         "fi": "Sisältää kurkumiinia, luonnollinen tulehdusta vähentävä yhdiste.",
         "en": "Contains curcumin, a natural anti-inflammatory compound."
-      }
+      },
+      "tags": ["store", "anti-inflammatory", "spice", "tea"]
     },
     {
       "id": "chamomile",
       "name": { "fi": "Kamomilla", "en": "Chamomile" },
       "scientific_name": "Matricaria chamomilla",
       "origin": { "native_in_finland": true, "store_bought": false },
-      "found": {
-        "fi": "Kasvaa aurinkoisilla pelloilla ja pientareilla.",
-        "en": "Grows in sunny fields and roadsides."
+      "found": { "fi": "Kasvaa aurinkoisilla pelloilla ja pientareilla.", "en": "Sunny fields and roadsides." },
+      "parts_used": { "fi": ["Kukat"], "en": ["Flowers"] },
+      "uses_make": {
+        "fi": ["Tee", "ihovoide", "hiushuuhde"],
+        "en": ["Tea", "skin cream", "hair rinse"]
       },
-      "parts_used": { "fi": "Kukat.", "en": "Flowers." },
-      "uses_make": { "fi": "Teetä, ihovoiteita, hiushuuhdetta.", "en": "Tea, skin creams, hair rinses." },
-      "safety": { "fi": "Vältä, jos olet allerginen asterikasveille.", "en": "Avoid if allergic to daisy family." },
-      "other": {
-        "fi": "Auttaa rauhoittumaan ja tukee ruoansulatusta.",
-        "en": "Soothes digestion and promotes relaxation."
-      }
+      "safety": { "fi": "Vältä, jos allerginen asterikasveille.", "en": "Avoid if allergic to daisy family." },
+      "other": { "fi": "Rauhoittaa ja tukee ruoansulatusta.", "en": "Soothes digestion; promotes relaxation." },
+      "tags": ["wild", "finland", "calming", "tea", "skin"]
     },
     {
       "id": "peppermint",
       "name": { "fi": "Piparminttu", "en": "Peppermint" },
       "scientific_name": "Mentha × piperita",
       "origin": { "native_in_finland": true, "store_bought": false },
-      "found": { "fi": "Kasvaa kosteilla alueilla ja puutarhoissa.", "en": "Found in gardens and moist soils." },
-      "parts_used": { "fi": "Lehdet.", "en": "Leaves." },
-      "uses_make": {
-        "fi": "Teetä, öljyä, karkkeja, ihovoiteita.",
-        "en": "Tea, oils, sweets, balms."
-      },
+      "found": { "fi": "Kasvaa kosteilla alueilla ja puutarhoissa.", "en": "Gardens and moist soils." },
+      "parts_used": { "fi": ["Lehdet"], "en": ["Leaves"] },
+      "uses_make": { "fi": ["Tee", "öljy", "karkit", "balsamit"], "en": ["Tea", "oils", "sweets", "balms"] },
       "safety": {
         "fi": "Vältä suuria määriä, jos on mahahappovaivoja.",
         "en": "Avoid excess if you have acid reflux."
       },
-      "other": {
-        "fi": "Raikastava ja virkistävä yrtti, lievittää päänsärkyä.",
-        "en": "Refreshing herb that may ease headaches and nausea."
-      }
+      "other": { "fi": "Virkistävä; voi helpottaa päänsärkyä.", "en": "Refreshing; may ease headaches and nausea." },
+      "tags": ["wild", "finland", "tea", "digestive", "headache"]
     },
     {
       "id": "lemonbalm",
@@ -116,16 +116,11 @@
         "fi": "Yleinen puutarhoissa, ei luonnonvarainen Suomessa.",
         "en": "Common in gardens; not naturally wild in Finland."
       },
-      "parts_used": { "fi": "Lehdet.", "en": "Leaves." },
-      "uses_make": {
-        "fi": "Teetä, salveja, kylpyjä.",
-        "en": "Teas, salves, baths."
-      },
-      "safety": { "fi": "Turvallinen useimmille.", "en": "Generally safe." },
-      "other": {
-        "fi": "Auttaa hermoston rauhoittamisessa ja unettomuuteen.",
-        "en": "Calms the nervous system and supports sleep."
-      }
+      "parts_used": { "fi": ["Lehdet"], "en": ["Leaves"] },
+      "uses_make": { "fi": ["Tee", "salvat", "kylvyt"], "en": ["Teas", "salves", "baths"] },
+      "safety": { "fi": "Yleensä turvallinen.", "en": "Generally safe." },
+      "other": { "fi": "Rauhoittaa hermostoa ja unettomuutta.", "en": "Calms the nervous system; supports sleep." },
+      "tags": ["garden", "calming", "tea", "sleep"]
     },
     {
       "id": "yarrow",
@@ -133,36 +128,26 @@
       "scientific_name": "Achillea millefolium",
       "origin": { "native_in_finland": true, "store_bought": false },
       "found": { "fi": "Niityillä ja teiden varsilla.", "en": "Meadows and roadsides." },
-      "parts_used": { "fi": "Kukat ja lehdet.", "en": "Flowers and leaves." },
-      "uses_make": {
-        "fi": "Teetä, haudehauteita, ihovoiteita.",
-        "en": "Teas, poultices, creams."
-      },
+      "parts_used": { "fi": ["Kukat", "lehdet"], "en": ["Flowers", "leaves"] },
+      "uses_make": { "fi": ["Tee", "haude", "voide"], "en": ["Tea", "poultice", "cream"] },
       "safety": { "fi": "Vältä raskauden aikana.", "en": "Avoid during pregnancy." },
       "other": {
-        "fi": "Perinteisesti haavojen hoitoon ja tulehduksen lievitykseen.",
-        "en": "Traditionally used to stop bleeding and reduce inflammation."
-      }
+        "fi": "Perinteisesti haavoihin ja tulehduksiin.",
+        "en": "Traditionally for bleeding and inflammation."
+      },
+      "tags": ["wild", "finland", "first-aid", "tea"]
     },
     {
       "id": "dandelion",
       "name": { "fi": "Voikukka", "en": "Dandelion" },
       "scientific_name": "Taraxacum officinale",
       "origin": { "native_in_finland": true, "store_bought": false },
-      "found": {
-        "fi": "Kasvaa kaikkialla Suomessa.",
-        "en": "Found everywhere in Finland."
-      },
-      "parts_used": { "fi": "Lehdet, juuret, kukat.", "en": "Leaves, roots, flowers." },
-      "uses_make": {
-        "fi": "Salaatteja, teetä, voikukkahunajaa.",
-        "en": "Salads, teas, dandelion syrup."
-      },
-      "safety": { "fi": "Turvallinen, mutta voi aiheuttaa allergiaa.", "en": "Safe but may cause allergy." },
-      "other": {
-        "fi": "Tukee maksan toimintaa ja ruoansulatusta.",
-        "en": "Supports liver health and digestion."
-      }
+      "found": { "fi": "Kasvaa kaikkialla Suomessa.", "en": "Everywhere in Finland." },
+      "parts_used": { "fi": ["Lehdet", "juuret", "kukat"], "en": ["Leaves", "roots", "flowers"] },
+      "uses_make": { "fi": ["Salaatit", "tee", "voikukkasiirappi"], "en": ["Salads", "teas", "dandelion syrup"] },
+      "safety": { "fi": "Yleensä turvallinen, voi allergisoida.", "en": "Generally safe; may cause allergy." },
+      "other": { "fi": "Tukee maksaa ja ruoansulatusta.", "en": "Supports liver and digestion." },
+      "tags": ["wild", "finland", "food", "liver", "tea"]
     },
     {
       "id": "plantain",
@@ -170,16 +155,14 @@
       "scientific_name": "Plantago major",
       "origin": { "native_in_finland": true, "store_bought": false },
       "found": { "fi": "Tienpientareet, pihat ja niityt.", "en": "Roadsides, lawns, meadows." },
-      "parts_used": { "fi": "Lehdet.", "en": "Leaves." },
-      "uses_make": {
-        "fi": "Haavojen hoito, tee, siirappi.",
-        "en": "Wound care, tea, syrup."
-      },
+      "parts_used": { "fi": ["Lehdet"], "en": ["Leaves"] },
+      "uses_make": { "fi": ["Haavahoito", "tee", "siirappi"], "en": ["Wound care", "tea", "syrup"] },
       "safety": { "fi": "Turvallinen ulkoiseen käyttöön.", "en": "Safe for external use." },
       "other": {
-        "fi": "Nopeuttaa ihon paranemista ja lievittää hyönteisten pistoja.",
-        "en": "Helps heal skin and relieves insect bites."
-      }
+        "fi": "Nopeuttaa ihon paranemista; helpottaa hyönteisten pistoja.",
+        "en": "Helps skin healing; relieves insect bites."
+      },
+      "tags": ["wild", "finland", "first-aid", "skin", "tea"]
     },
     {
       "id": "juniper",
@@ -187,19 +170,17 @@
       "scientific_name": "Juniperus communis",
       "origin": { "native_in_finland": true, "store_bought": false },
       "found": { "fi": "Kuivilla mäntykankailla.", "en": "Dry pine forests." },
-      "parts_used": { "fi": "Marjat, oksat, pihka.", "en": "Berries, twigs, resin." },
-      "uses_make": {
-        "fi": "Mauste, kylpysuola, öljy.",
-        "en": "Spice, bath salt, oil."
-      },
+      "parts_used": { "fi": ["Marjat", "oksat", "pihka"], "en": ["Berries", "twigs", "resin"] },
+      "uses_make": { "fi": ["Mauste", "kylpysuola", "öljy"], "en": ["Spice", "bath salt", "oil"] },
       "safety": {
-        "fi": "Ei raskauden aikana, voi ärsyttää munuaisia.",
+        "fi": "Ei raskauden aikana; voi ärsyttää munuaisia.",
         "en": "Avoid during pregnancy; may irritate kidneys."
       },
       "other": {
-        "fi": "Puhdistava ja desinfioiva kasvi, vanha suitsuke.",
-        "en": "Cleansing and disinfectant plant, used in old fumigations."
-      }
+        "fi": "Puhdistava, desinfioiva; vanha suitsuke.",
+        "en": "Cleansing, disinfectant; traditional fumigation."
+      },
+      "tags": ["wild", "finland", "aromatic", "spice"]
     },
     {
       "id": "stjohnswort",
@@ -207,70 +188,56 @@
       "scientific_name": "Hypericum perforatum",
       "origin": { "native_in_finland": true, "store_bought": false },
       "found": { "fi": "Aurinkoiset niityt ja pellonreunat.", "en": "Sunny meadows and field edges." },
-      "parts_used": { "fi": "Kukat ja varret.", "en": "Flowers and stems." },
-      "uses_make": { "fi": "Öljyä, teetä, salvoja.", "en": "Oil, tea, salves." },
+      "parts_used": { "fi": ["Kukat", "varret"], "en": ["Flowers", "stems"] },
+      "uses_make": { "fi": ["Öljy", "tee", "salva"], "en": ["Oil", "tea", "salves"] },
       "safety": {
-        "fi": "Voi vaikuttaa lääkkeiden tehoon, vältä auringossa.",
-        "en": "May affect medications; avoid direct sun exposure."
+        "fi": "Voi vaikuttaa lääkkeisiin; vältä suoraa aurinkoa.",
+        "en": "May affect medications; avoid strong sun."
       },
-      "other": {
-        "fi": "Perinteisesti mielialan ja ihon hoitoon.",
-        "en": "Used for mood balance and skin healing."
-      }
+      "other": { "fi": "Perinteisesti mielialaan ja ihoon.", "en": "Used for mood balance and skin." },
+      "tags": ["wild", "finland", "photosensitivity", "mood", "skin"]
     },
     {
       "id": "sage",
       "name": { "fi": "Salvia", "en": "Sage" },
       "scientific_name": "Salvia officinalis",
       "origin": { "native_in_finland": false, "store_bought": true },
-      "found": { "fi": "", "en": "" },
-      "parts_used": { "fi": "Lehdet.", "en": "Leaves." },
-      "uses_make": {
-        "fi": "Mauste, tee, kurlausvesi.",
-        "en": "Spice, tea, gargle solution."
+      "found": { "fi": null, "en": null },
+      "parts_used": { "fi": ["Lehdet"], "en": ["Leaves"] },
+      "uses_make": { "fi": ["Mauste", "tee", "kurlausvesi"], "en": ["Spice", "tea", "gargle"] },
+      "safety": {
+        "fi": "Vältä pitkää käyttöä raskauden aikana.",
+        "en": "Avoid long-term use in pregnancy."
       },
-      "safety": { "fi": "Vältä pitkää käyttöä raskauden aikana.", "en": "Avoid long-term use in pregnancy." },
-      "other": {
-        "fi": "Puhdistava ja antiseptinen yrtti.",
-        "en": "Cleansing and antiseptic herb."
-      }
+      "other": { "fi": "Puhdistava ja antiseptinen.", "en": "Cleansing and antiseptic." },
+      "tags": ["store", "spice", "antiseptic", "tea"]
     },
     {
       "id": "basil",
       "name": { "fi": "Basilika", "en": "Basil" },
       "scientific_name": "Ocimum basilicum",
       "origin": { "native_in_finland": false, "store_bought": true },
-      "found": { "fi": "", "en": "" },
-      "parts_used": { "fi": "Lehdet.", "en": "Leaves." },
-      "uses_make": {
-        "fi": "Pestoa, mausteita, teetä.",
-        "en": "Pesto, spices, tea."
-      },
-      "safety": { "fi": "Turvallinen ruoan mausteena.", "en": "Safe as food spice." },
-      "other": {
-        "fi": "Raikas, ruoansulatusta tukeva yrtti.",
-        "en": "Fresh herb supporting digestion."
-      }
+      "found": { "fi": null, "en": null },
+      "parts_used": { "fi": ["Lehdet"], "en": ["Leaves"] },
+      "uses_make": { "fi": ["Pesto", "mauste", "tee"], "en": ["Pesto", "spice", "tea"] },
+      "safety": { "fi": "Turvallinen ruoan mausteena.", "en": "Safe as a food spice." },
+      "other": { "fi": "Raikas; tukee ruoansulatusta.", "en": "Fresh; supports digestion." },
+      "tags": ["store", "spice", "food", "tea"]
     },
     {
       "id": "rosemary",
       "name": { "fi": "Rosmariini", "en": "Rosemary" },
       "scientific_name": "Rosmarinus officinalis",
       "origin": { "native_in_finland": false, "store_bought": true },
-      "found": { "fi": "", "en": "" },
-      "parts_used": { "fi": "Lehdet ja varret.", "en": "Leaves and stems." },
-      "uses_make": {
-        "fi": "Öljyjä, mausteita, hiushuuhdetta.",
-        "en": "Oils, seasoning, hair rinse."
-      },
+      "found": { "fi": null, "en": null },
+      "parts_used": { "fi": ["Lehdet", "varret"], "en": ["Leaves", "stems"] },
+      "uses_make": { "fi": ["Öljy", "mauste", "hiushuuhde"], "en": ["Oil", "seasoning", "hair rinse"] },
       "safety": {
         "fi": "Vältä suuria määriä raskauden aikana.",
         "en": "Avoid large doses during pregnancy."
       },
-      "other": {
-        "fi": "Parantaa muistia ja verenkiertoa.",
-        "en": "Improves memory and circulation."
-      }
+      "other": { "fi": "Voi tukea muistia ja verenkiertoa.", "en": "May support memory and circulation." },
+      "tags": ["store", "spice", "aromatic", "hair"]
     },
     {
       "id": "oregano",
@@ -278,30 +245,26 @@
       "scientific_name": "Origanum vulgare",
       "origin": { "native_in_finland": true, "store_bought": false },
       "found": { "fi": "Kuivilla niityillä ja kallioilla.", "en": "Dry meadows and rocky areas." },
-      "parts_used": { "fi": "Lehdet ja kukinnot.", "en": "Leaves and flowers." },
-      "uses_make": { "fi": "Mauste, tee, öljy.", "en": "Spice, tea, oil." },
+      "parts_used": { "fi": ["Lehdet", "kukinnot"], "en": ["Leaves", "flowers"] },
+      "uses_make": { "fi": ["Mauste", "tee", "öljy"], "en": ["Spice", "tea", "oil"] },
       "safety": { "fi": "Turvallinen ruoan yhteydessä.", "en": "Safe in food use." },
-      "other": {
-        "fi": "Antibakteerinen ja ruoansulatusta tukeva.",
-        "en": "Antibacterial and supports digestion."
-      }
+      "other": { "fi": "Antibakteerinen; tukee ruoansulatusta.", "en": "Antibacterial; supports digestion." },
+      "tags": ["wild", "finland", "spice", "tea", "digestive"]
     },
     {
       "id": "thyme",
       "name": { "fi": "Timjami", "en": "Thyme" },
       "scientific_name": "Thymus vulgaris",
       "origin": { "native_in_finland": false, "store_bought": true },
-      "found": { "fi": "", "en": "" },
-      "parts_used": { "fi": "Lehdet ja kukat.", "en": "Leaves and flowers." },
-      "uses_make": {
-        "fi": "Teetä, siirappia, maustetta.",
-        "en": "Tea, syrup, seasoning."
-      },
+      "found": { "fi": null, "en": null },
+      "parts_used": { "fi": ["Lehdet", "kukat"], "en": ["Leaves", "flowers"] },
+      "uses_make": { "fi": ["Tee", "siirappi", "mauste"], "en": ["Tea", "syrup", "seasoning"] },
       "safety": { "fi": "Turvallinen pieninä määrinä.", "en": "Safe in small amounts." },
       "other": {
-        "fi": "Timjamitee on perinteinen flunssajuoma; timjami sisältää tymolia.",
-        "en": "Thyme tea is a traditional cold remedy; contains thymol."
-      }
+        "fi": "Perinteinen flunssajuoma; sisältää tymolia.",
+        "en": "Traditional cold tea; contains thymol."
+      },
+      "tags": ["store", "respiratory", "tea", "spice"]
     }
   ]
 }
