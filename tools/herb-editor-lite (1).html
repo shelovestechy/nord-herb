@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Herb Editor Lite (Offline) — v4</title>
+<style>
+  :root{
+    --bg:#0d0f12; --panel:#141821; --ink:#e9f0f3; --muted:#9fb0bb;
+    --accent:#78e8c8; --accent2:#ffbcd8; --danger:#ff6b6b; --warn:#ffd166;
+    --ok:#3ddc97; --chip:#1f2430; --card:#161b24;
+  }
+  *{box-sizing:border-box}
+  body{margin:0; font:14px/1.4 system-ui, -apple-system, Segoe UI, Roboto, Arial; color:var(--ink); background:linear-gradient(120deg,#0b0e12,#12151d 35%,#0e1117)}
+  header{position:sticky; top:0; z-index:10; background:rgba(13,15,18,.7); backdrop-filter: blur(8px); border-bottom:1px solid #202636}
+  .wrap{max-width:1200px; margin:0 auto; padding:14px 18px}
+  h1{margin:0; font-size:18px; letter-spacing:.3px}
+  .grid{display:grid; grid-template-columns:320px 1fr; gap:14px; padding:16px}
+  .panel{background:var(--panel); border:1px solid #202636; border-radius:14px; overflow:hidden; box-shadow:0 12px 40px rgba(0,0,0,.25)}
+  .panel .hd{display:flex; align-items:center; justify-content:space-between; padding:10px 12px; border-bottom:1px solid #22293a; background:linear-gradient(180deg,#181d27,#161a23)}
+  .panel .bd{padding:12px}
+  input[type="text"], input[type="search"], textarea, select{width:100%; background:#121722; border:1px solid #283248; color:var(--ink); padding:8px 10px; border-radius:10px; outline:none}
+  textarea{min-height:72px; resize:vertical}
+  .row{display:grid; grid-template-columns: 1fr 1fr; gap:10px}
+  .row3{display:grid; grid-template-columns: 1fr 1fr 1fr; gap:10px}
+  .row4{display:grid; grid-template-columns: repeat(4, 1fr); gap:10px}
+  .btn{appearance:none; border:1px solid #2b3246; background:#161b24; color:var(--ink); padding:8px 12px; border-radius:10px; cursor:pointer}
+  .btn:hover{border-color:#39415a}
+  .btn.accent{border-color: transparent; background:linear-gradient(90deg,#6df0c6,#a3fbe8); color:#122; font-weight:600}
+  .btn.pink{background:linear-gradient(90deg,#ffbcd8,#ffd6e7); color:#221}
+  .btn.warn{background:linear-gradient(90deg,#ffd166,#ffe8a1); color:#332}
+  .btn.danger{background:linear-gradient(90deg,#ff9aa2,#ff6b6b); color:#200}
+  .toolbar{display:flex; gap:8px; flex-wrap:wrap}
+  .list{height:calc(100vh - 190px); overflow:auto; padding:6px 10px}
+  .item{padding:8px 10px; border-radius:8px; border:1px solid #232a3a; margin-bottom:8px; cursor:pointer; background:var(--card)}
+  .item:hover{border-color:#39415a}
+  .item.active{outline:2px solid var(--accent); box-shadow:0 0 0 2px rgba(120,232,200,.25) inset}
+  .muted{color:var(--muted)}
+  .chip{display:inline-flex; align-items:center; gap:6px; background:var(--chip); color:var(--ink); border:1px solid #2b3246; padding:4px 8px; border-radius:999px; font-size:12px}
+  .dangerText{color:var(--danger); font-weight:700}
+  .imgs{display:flex; gap:10px; flex-wrap:wrap}
+  .thumb{width:96px; height:96px; border-radius:12px; border:1px solid #293148; background:#0f131b center/cover no-repeat; position:relative}
+  .thumb button{position:absolute; top:4px; right:4px; border:none; background:rgba(0,0,0,.55); color:#fff; border-radius:8px; padding:2px 6px; cursor:pointer}
+  .recipes .rc{border:1px dashed #31405b; border-radius:12px; padding:10px; margin:10px 0; background:#101522}
+  .help{font-size:12px; color:#9fb0bb}
+  .inline{display:flex; align-items:center; gap:8px}
+  .toggle{display:inline-flex; align-items:center; gap:8px; padding:8px 10px; border:1px solid #2b3246; border-radius:999px; background:var(--card)}
+  .toggle input{transform:scale(1.2)}
+  .two{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+  .kbd{font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; background:#0b0e14; padding:2px 6px; border-radius:6px; border:1px solid #243047}
+  .note{padding:10px; border:1px solid #2b3246; border-left:4px solid var(--accent2); border-radius:10px; background:#10141d; color:var(--muted)}
+  .sp{height:6px}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap">
+      <h1>🌿 Herb Editor Lite (Offline)</h1>
+      <div class="toolbar">
+        <button class="btn accent" id="btnImport">Import JSON</button>
+        <button class="btn pink" id="btnExport">Export JSON</button>
+        <button class="btn warn" id="btnNew">New Herb</button>
+        <button class="btn danger" id="btnDelete">Delete Herb</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="grid">
+    <!-- Sidebar -->
+    <section class="panel">
+      <div class="hd">
+        <div class="inline" style="gap:10px">
+          <strong>Herbs</strong>
+          <span class="muted" id="count">0</span>
+        </div>
+        <input id="q" type="search" placeholder="Search id / name / tag..." />
+      </div>
+      <div class="bd list" id="list"></div>
+      <div class="bd" style="border-top:1px solid #22293a">
+        <div class="note">
+          <div><strong>Tips</strong></div>
+          <div>- Works fully offline. Your edits autosave to <span class="kbd">localStorage</span>.</div>
+          <div>- Images are embedded as data‑URLs. Keep total JSON under ~15–25 MB.</div>
+          <div>- Use <strong>Export</strong> to save your master JSON file.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Editor -->
+    <section class="panel">
+      <div class="hd">
+        <strong id="currentTitle">No herb selected</strong>
+        <div class="inline">
+          <label class="toggle">
+            <input type="checkbox" id="toxicToggle" />
+            <span>☠ Toxic / Poisonous</span>
+          </label>
+          <select id="safetyLevel">
+            <option value="info">Safety level: info</option>
+            <option value="caution">Safety level: caution</option>
+            <option value="avoid_pregnancy">Safety: avoid in pregnancy</option>
+          </select>
+          <button class="btn" id="btnSave">Save</button>
+        </div>
+      </div>
+
+      <div class="bd">
+        <div class="row">
+          <div>
+            <label>ID</label>
+            <input id="id" type="text" placeholder="e.g., nettle" />
+          </div>
+          <div>
+            <label>Tieteellinen nimi / Scientific</label>
+            <input id="scientific_name" type="text" placeholder="e.g., Urtica dioica" />
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <label>Nimi (FI)</label>
+            <input id="name_fi" type="text" placeholder="Nokkonen" />
+          </div>
+          <div>
+            <label>Name (EN)</label>
+            <input id="name_en" type="text" placeholder="Nettle" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div>
+            <label>Luonnonvarainen vai Kauppayrtti?</label>
+            <div class="two">
+              <label class="toggle"><input type="checkbox" id="native_in_finland" /> <span>Luonnonvarainen Suomessa</span></label>
+              <label class="toggle"><input type="checkbox" id="store_bought" /> <span>Kauppayrtti / Store</span></label>
+            </div>
+          </div>
+          <div>
+            <label>Jokamiehenoikeus (FI)</label>
+            <select id="foraging_rights_fi">
+              <option value="allowed">allowed</option>
+              <option value="private_only">private_only</option>
+              <option value="unknown">unknown</option>
+              <option value="forbidden">forbidden</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div>
+            <label>Found (FI)</label>
+            <textarea id="found_fi" placeholder="Kasvupaikka Suomessa..."></textarea>
+          </div>
+          <div>
+            <label>Found (EN)</label>
+            <textarea id="found_en" placeholder="Where to find..."></textarea>
+          </div>
+        </div>
+
+        <div class="row">
+          <div>
+            <label>Osat (FI) – pilkulla eroteltu</label>
+            <input id="parts_fi" type="text" placeholder="Lehdet, juuret, kukat" />
+          </div>
+          <div>
+            <label>Parts (EN) – comma separated</label>
+            <input id="parts_en" type="text" placeholder="Leaves, roots, flowers" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div>
+            <label>Käyttö (FI) – pilkulla eroteltu</label>
+            <input id="uses_fi" type="text" placeholder="Tee, siirappi, voide" />
+          </div>
+          <div>
+            <label>Uses (EN) – comma separated</label>
+            <input id="uses_en" type="text" placeholder="Tea, syrup, salve" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div>
+            <label>Turvallisuus (FI)</label>
+            <textarea id="safety_fi" placeholder="Varoitukset suomeksi..."></textarea>
+          </div>
+          <div>
+            <label>Safety (EN)</label>
+            <textarea id="safety_en" placeholder="Safety notes in English..."></textarea>
+          </div>
+        </div>
+
+        <div class="row">
+          <div>
+            <label>Muut (FI)</label>
+            <textarea id="other_fi" placeholder="Muut tiedot..."></textarea>
+          </div>
+          <div>
+            <label>Other (EN)</label>
+            <textarea id="other_en" placeholder="Other info..."></textarea>
+          </div>
+        </div>
+
+        <div class="row">
+          <div>
+            <label>Tags (comma separated)</label>
+            <input id="tags" type="text" placeholder="wild, tea, finland, digestive" />
+            <div class="help">If ☠ Toxic is enabled, a <span class="kbd">toxic</span> tag is auto-added.</div>
+          </div>
+          <div>
+            <label>Safety quick‑chips</label>
+            <div class="inline" style="flex-wrap:wrap">
+              <button class="btn" data-chip="#first-aid">#first-aid</button>
+              <button class="btn" data-chip="#skin">#skin</button>
+              <button class="btn" data-chip="#tea">#tea</button>
+              <button class="btn" data-chip="#food">#food</button>
+              <button class="btn" data-chip="#digestive">#digestive</button>
+              <button class="btn" data-chip="#respiratory">#respiratory</button>
+              <button class="btn" data-chip="#avoid-pregnancy">#avoid-pregnancy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="sp"></div>
+        <hr style="border:0; border-top:1px solid #243047" />
+        <div class="sp"></div>
+
+        <h3>📷 Images (2–4 recommended)</h3>
+        <div class="inline" style="justify-content:space-between">
+          <input type="file" id="imgInput" accept="image/*" multiple />
+          <div class="help">Images are stored as data‑URLs in JSON. Max 4 shown.</div>
+        </div>
+        <div class="imgs" id="imgs"></div>
+
+        <div class="sp"></div>
+        <hr style="border:0; border-top:1px solid #243047" />
+        <div class="sp"></div>
+
+        <h3>🧪 Recipes per herb</h3>
+        <div class="help">Add bilingual recipes. Ingredients can be comma‑separated; Steps can be one per line.</div>
+        <div class="recipes" id="recipes"></div>
+        <button class="btn accent" id="btnAddRecipe">+ Add recipe</button>
+
+      </div>
+    </section>
+  </div>
+</main>
+
+<input id="filePicker" type="file" accept="application/json" style="display:none" />
+
+<script>
+(function(){
+  let data = {version:4, language_default:'fi', generated_at: new Date().toISOString(), notes:'Offline editor v4', herbs: []};
+  let currentIndex = -1;
+
+  // Load local if exists
+  try{
+    const saved = localStorage.getItem('herb_editor_v4');
+    if(saved){ data = JSON.parse(saved); }
+  }catch(e){ console.warn('Local load failed', e); }
+
+  const els = {
+    list: document.getElementById('list'),
+    count: document.getElementById('count'),
+    q: document.getElementById('q'),
+    currentTitle: document.getElementById('currentTitle'),
+    toxicToggle: document.getElementById('toxicToggle'),
+    safetyLevel: document.getElementById('safetyLevel'),
+    id: document.getElementById('id'),
+    scientific_name: document.getElementById('scientific_name'),
+    name_fi: document.getElementById('name_fi'),
+    name_en: document.getElementById('name_en'),
+    native_in_finland: document.getElementById('native_in_finland'),
+    store_bought: document.getElementById('store_bought'),
+    foraging_rights_fi: document.getElementById('foraging_rights_fi'),
+    found_fi: document.getElementById('found_fi'),
+    found_en: document.getElementById('found_en'),
+    parts_fi: document.getElementById('parts_fi'),
+    parts_en: document.getElementById('parts_en'),
+    uses_fi: document.getElementById('uses_fi'),
+    uses_en: document.getElementById('uses_en'),
+    safety_fi: document.getElementById('safety_fi'),
+    safety_en: document.getElementById('safety_en'),
+    other_fi: document.getElementById('other_fi'),
+    other_en: document.getElementById('other_en'),
+    tags: document.getElementById('tags'),
+    imgs: document.getElementById('imgs'),
+    imgInput: document.getElementById('imgInput'),
+    recipes: document.getElementById('recipes'),
+    btnAddRecipe: document.getElementById('btnAddRecipe'),
+    btnImport: document.getElementById('btnImport'),
+    btnExport: document.getElementById('btnExport'),
+    btnNew: document.getElementById('btnNew'),
+    btnDelete: document.getElementById('btnDelete'),
+    btnSave: document.getElementById('btnSave'),
+    filePicker: document.getElementById('filePicker'),
+  };
+
+  function persist(){
+    try{
+      data.generated_at = new Date().toISOString();
+      localStorage.setItem('herb_editor_v4', JSON.stringify(data));
+    }catch(e){ alert('Saving to localStorage failed. Data size might be too large. Consider exporting JSON.'); }
+  }
+
+  function renderList(){
+    const q = els.q.value.trim().toLowerCase();
+    els.list.innerHTML = '';
+    const items = data.herbs.map((h,i)=>({h,i})).filter(({h})=>{
+      if(!q) return true;
+      const inTags = (h.tags||[]).join(',').toLowerCase();
+      const nmfi = h.name?.fi?.toLowerCase() || '';
+      const nmen = h.name?.en?.toLowerCase() || '';
+      return (h.id||'').toLowerCase().includes(q) || nmfi.includes(q) || nmen.includes(q) || inTags.includes(q);
+    }).sort((a,b)=> (a.h.name?.fi||a.h.id||'').localeCompare(b.h.name?.fi||b.h.id||''));
+    items.forEach(({h,i})=>{
+      const div = document.createElement('div');
+      div.className = 'item' + (i===currentIndex?' active':'');
+      const tags = (h.tags||[]).slice(0,4).map(t=>`<span class="chip">${t}</span>`).join(' ');
+      const tox = h.toxic? '<span class="chip"><span class="dangerText">☠ toxic</span></span>' : '';
+      div.innerHTML = `<div style="display:flex; justify-content:space-between; gap:8px; align-items:center">
+          <div>
+            <div><strong>${h.name?.fi||h.name?.en||h.id||'(unnamed)'}</strong></div>
+            <div class="muted">${h.id||''} • ${h.scientific_name||''}</div>
+            <div style="margin-top:6px; display:flex; gap:6px; flex-wrap:wrap">${tox} ${tags}</div>
+          </div>
+          <div>${(h.images?.[0])? `<div class="thumb" style="width:56px;height:56px;background-image:url('${h.images[0]}')"></div>`:''}</div>
+        </div>`;
+      div.addEventListener('click', ()=>{ currentIndex=i; loadToForm(); renderList(); });
+      els.list.appendChild(div);
+    });
+    els.count.textContent = `${data.herbs.length}`;
+  }
+
+  function herbBlank(){
+    return {
+      id:'',
+      name:{fi:'', en:''},
+      scientific_name:'',
+      origin:{native_in_finland:false, store_bought:false},
+      found:{fi:'', en:''},
+      parts_used:{fi:[], en:[]},
+      uses_make:{fi:[], en:[]},
+      safety:{fi:'', en:''},
+      safety_level:'info',
+      other:{fi:'', en:''},
+      foraging_rights_fi:'unknown',
+      tags:[],
+      toxic:false,
+      images:[],           // array of data-URL strings
+      recipes:[],          // array of recipe objects
+      completion_status:'draft'
+    };
+  }
+
+  function loadToForm(){
+    if(currentIndex<0 || !data.herbs[currentIndex]){
+      els.currentTitle.textContent = 'No herb selected';
+      return;
+    }
+    const h = data.herbs[currentIndex];
+    els.currentTitle.textContent = (h.name?.fi||h.name?.en||h.id||'') + (h.toxic?' • ☠ TOXIC':'');
+    els.id.value = h.id || '';
+    els.scientific_name.value = h.scientific_name || '';
+    els.name_fi.value = h.name?.fi || '';
+    els.name_en.value = h.name?.en || '';
+    els.native_in_finland.checked = !!h.origin?.native_in_finland;
+    els.store_bought.checked = !!h.origin?.store_bought;
+    els.foraging_rights_fi.value = h.foraging_rights_fi || 'unknown';
+    els.found_fi.value = h.found?.fi || '';
+    els.found_en.value = h.found?.en || '';
+    els.parts_fi.value = (h.parts_used?.fi||[]).join(', ');
+    els.parts_en.value = (h.parts_used?.en||[]).join(', ');
+    els.uses_fi.value = (h.uses_make?.fi||[]).join(', ');
+    els.uses_en.value = (h.uses_make?.en||[]).join(', ');
+    els.safety_fi.value = h.safety?.fi || '';
+    els.safety_en.value = h.safety?.en || '';
+    els.other_fi.value = h.other?.fi || '';
+    els.other_en.value = h.other?.en || '';
+    els.tags.value = (h.tags||[]).join(', ');
+    els.toxicToggle.checked = !!h.toxic;
+    els.safetyLevel.value = h.safety_level || 'info';
+
+    // images
+    els.imgs.innerHTML = '';
+    (h.images||[]).slice(0,4).forEach((src,idx)=>{
+      const d = document.createElement('div');
+      d.className = 'thumb';
+      d.style.backgroundImage = `url('${src}')`;
+      const b = document.createElement('button');
+      b.textContent = '×';
+      b.title = 'Remove image';
+      b.addEventListener('click', ()=>{
+        h.images.splice(idx,1);
+        persist(); loadToForm(); renderList();
+      });
+      d.appendChild(b);
+      els.imgs.appendChild(d);
+    });
+
+    // recipes
+    renderRecipes(h);
+  }
+
+  function renderRecipes(h){
+    els.recipes.innerHTML = '';
+    (h.recipes||[]).forEach((r,idx)=>{
+      const c = document.createElement('div');
+      c.className = 'rc';
+      c.innerHTML = `
+        <div class="row">
+          <div><label>Otsikko (FI)</label><input type="text" value="${escapeHtml(r.title?.fi||'')}" data-r="${idx}" data-k="title.fi" /></div>
+          <div><label>Title (EN)</label><input type="text" value="${escapeHtml(r.title?.en||'')}" data-r="${idx}" data-k="title.en" /></div>
+        </div>
+        <div class="row">
+          <div><label>Ainekset (FI) – pilkuilla</label><input type="text" value="${escapeHtml((r.ingredients?.fi||[]).join(', '))}" data-r="${idx}" data-k="ingredients.fi" /></div>
+          <div><label>Ingredients (EN) – commas</label><input type="text" value="${escapeHtml((r.ingredients?.en||[]).join(', '))}" data-r="${idx}" data-k="ingredients.en" /></div>
+        </div>
+        <div class="row">
+          <div><label>Vaiheet (FI) – yksi per rivi)</label><textarea data-r="${idx}" data-k="steps.fi">${escapeHtml((r.steps?.fi||[]).join('\n'))}</textarea></div>
+          <div><label>Steps (EN) – one per line</label><textarea data-r="${idx}" data-k="steps.en">${escapeHtml((r.steps?.en||[]).join('\n'))}</textarea></div>
+        </div>
+        <div class="inline" style="justify-content:space-between">
+          <div class="help">Tip: keep recipes short and practical.</div>
+          <button class="btn danger" data-del="${idx}">Delete recipe</button>
+        </div>
+      `;
+      c.querySelectorAll('input, textarea').forEach(el=>{
+        el.addEventListener('input', (ev)=>{
+          const i = Number(ev.target.getAttribute('data-r'));
+          const k = ev.target.getAttribute('data-k'); // e.g. "title.fi"
+          setRecipeField(h, i, k, ev.target.value);
+          persist();
+        });
+      });
+      c.querySelector('[data-del]').addEventListener('click', (ev)=>{
+        const i = Number(ev.target.getAttribute('data-del'));
+        h.recipes.splice(i,1); persist(); renderRecipes(h);
+      });
+      els.recipes.appendChild(c);
+    });
+  }
+
+  function setRecipeField(h, i, keyPath, raw){
+    const seg = keyPath.split('.'); // [title, fi]
+    if(!h.recipes[i]) return;
+    if(seg[0]==='title'){
+      h.recipes[i].title = h.recipes[i].title || {fi:'',en:''};
+      h.recipes[i].title[seg[1]] = raw;
+    }else if(seg[0]==='ingredients'){
+      h.recipes[i].ingredients = h.recipes[i].ingredients || {fi:[],en:[]};
+      h.recipes[i].ingredients[seg[1]] = csvToArray(raw);
+    }else if(seg[0]==='steps'){
+      h.recipes[i].steps = h.recipes[i].steps || {fi:[],en:[]};
+      h.recipes[i].steps[seg[1]] = textToLines(raw);
+    }
+  }
+
+  function escapeHtml(s){
+    return (s||'').replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  }
+
+  function csvToArray(s){
+    return (s||'').split(',').map(x=>x.trim()).filter(Boolean);
+  }
+  function arrayToCsv(a){
+    return (a||[]).join(', ');
+  }
+  function textToLines(s){
+    return (s||'').split('\n').map(x=>x.trim()).filter(Boolean);
+  }
+
+  function collectFromForm(){
+    if(currentIndex<0 || !data.herbs[currentIndex]) return;
+    const h = data.herbs[currentIndex];
+    h.id = els.id.value.trim();
+    h.scientific_name = els.scientific_name.value.trim();
+    h.name = {fi: els.name_fi.value.trim(), en: els.name_en.value.trim()};
+    h.origin = {native_in_finland: !!els.native_in_finland.checked, store_bought: !!els.store_bought.checked};
+    h.foraging_rights_fi = els.foraging_rights_fi.value;
+    h.found = {fi: els.found_fi.value.trim(), en: els.found_en.value.trim()};
+    h.parts_used = {fi: csvToArray(els.parts_fi.value), en: csvToArray(els.parts_en.value)};
+    h.uses_make = {fi: csvToArray(els.uses_fi.value), en: csvToArray(els.uses_en.value)};
+    h.safety = {fi: els.safety_fi.value.trim(), en: els.safety_en.value.trim()};
+    h.safety_level = els.safetyLevel.value;
+    h.other = {fi: els.other_fi.value.trim(), en: els.other_en.value.trim()};
+    h.tags = csvToArray(els.tags.value);
+    h.toxic = !!els.toxicToggle.checked;
+    if(h.toxic && !h.tags.includes('toxic')) h.tags.push('toxic');
+    if(!h.toxic) h.tags = (h.tags||[]).filter(t=>t!=='toxic');
+    h.completion_status = h.completion_status || 'draft';
+    persist();
+    renderList();
+    loadToForm();
+  }
+
+  // Event wiring
+  els.q.addEventListener('input', renderList);
+  document.querySelectorAll('[data-chip]').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const tag = btn.getAttribute('data-chip').replace('#','');
+      const cur = csvToArray(els.tags.value);
+      if(!cur.includes(tag)) cur.push(tag);
+      els.tags.value = cur.join(', ');
+    });
+  });
+  els.toxicToggle.addEventListener('change', collectFromForm);
+  els.safetyLevel.addEventListener('change', collectFromForm);
+  ['id','scientific_name','name_fi','name_en','found_fi','found_en','parts_fi','parts_en','uses_fi','uses_en','safety_fi','safety_en','other_fi','other_en','tags']
+    .forEach(k=> els[k].addEventListener('input', ()=>{ /* debounce? */ }));
+  els.btnSave.addEventListener('click', ()=>{ collectFromForm(); alert('Saved ✔'); });
+
+  els.imgInput.addEventListener('change', async (ev)=>{
+    if(currentIndex<0) return;
+    const files = Array.from(ev.target.files||[]);
+    if(!files.length) return;
+    for(const f of files.slice(0,4)){
+      const dataUrl = await fileToDataURL(f);
+      const h = data.herbs[currentIndex];
+      h.images = h.images || [];
+      if(h.images.length<4) h.images.push(dataUrl);
+    }
+    persist(); loadToForm(); renderList();
+    ev.target.value='';
+  });
+
+  function fileToDataURL(file){
+    return new Promise((res,rej)=>{
+      const r = new FileReader();
+      r.onload = ()=> res(r.result);
+      r.onerror = rej;
+      r.readAsDataURL(file);
+    });
+  }
+
+  els.btnAddRecipe.addEventListener('click', ()=>{
+    if(currentIndex<0) return;
+    const h = data.herbs[currentIndex];
+    h.recipes = h.recipes||[];
+    h.recipes.push({ title:{fi:'',en:''}, ingredients:{fi:[],en:[]}, steps:{fi:[],en:[]} });
+    persist(); renderRecipes(h);
+  });
+
+  els.btnNew.addEventListener('click', ()=>{
+    data.herbs.push(herbBlank());
+    currentIndex = data.herbs.length-1;
+    persist(); renderList(); loadToForm();
+  });
+
+  els.btnDelete.addEventListener('click', ()=>{
+    if(currentIndex<0) return;
+    const h = data.herbs[currentIndex];
+    if(confirm(`Delete herb "${h.name?.fi||h.id}"? This cannot be undone.`)){
+      data.herbs.splice(currentIndex,1);
+      currentIndex = -1;
+      persist(); renderList(); loadToForm();
+    }
+  });
+
+  // Import / Export
+  els.btnImport.addEventListener('click', ()=> els.filePicker.click());
+  els.filePicker.addEventListener('change', async (ev)=>{
+    const f = ev.target.files?.[0];
+    if(!f) return;
+    try{
+      const text = await f.text();
+      const imported = JSON.parse(text);
+      if(!imported.herbs){ alert('Invalid JSON: missing "herbs" array'); return; }
+      // Migrate existing records to include new fields if absent
+      imported.herbs = imported.herbs.map(migrateHerb);
+      data = {...imported};
+      persist(); currentIndex = 0; renderList(); loadToForm();
+      alert('Imported ✔');
+    }catch(e){
+      alert('Import failed: '+e.message);
+    }finally{
+      ev.target.value='';
+    }
+  });
+
+  function migrateHerb(h){
+    const base = herbBlank();
+    // Merge while preserving existing structure
+    const merged = {
+      ...base,
+      ...h,
+      name: {fi:h?.name?.fi||h?.name_fi||'', en:h?.name?.en||h?.name_en||''},
+      found: {fi:h?.found?.fi||'', en:h?.found?.en||''},
+      parts_used: {fi:h?.parts_used?.fi||[], en:h?.parts_used?.en||[]},
+      uses_make: {fi:h?.uses_make?.fi||[], en:h?.uses_make?.en||[]},
+      safety: {fi:h?.safety?.fi||'', en:h?.safety?.en||''},
+      other: {fi:h?.other?.fi||'', en:h?.other?.en||''},
+      origin: {native_in_finland: !!h?.origin?.native_in_finland, store_bought: !!h?.origin?.store_bought},
+      safety_level: h?.safety_level || 'info',
+      foraging_rights_fi: h?.foraging_rights_fi || 'unknown',
+      tags: Array.isArray(h?.tags)? h.tags : [],
+      toxic: !!h?.toxic,
+      images: Array.isArray(h?.images)? h.images : [],
+      recipes: Array.isArray(h?.recipes)? h.recipes : []
+    };
+    if(merged.toxic && !merged.tags.includes('toxic')) merged.tags.push('toxic');
+    return merged;
+  }
+
+  els.btnExport.addEventListener('click', ()=>{
+    try{
+      const out = JSON.stringify(data, null, 2);
+      const blob = new Blob([out], {type:'application/json'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      const dt = new Date().toISOString().slice(0,19).replace(/[:T]/g,'-');
+      a.href = url;
+      a.download = `herbs_v4_${dt}.json`;
+      a.click();
+      URL.revokeObjectURL(url);
+    }catch(e){
+      alert('Export failed: '+e.message);
+    }
+  });
+
+  // Auto-save form on blur to avoid lost edits
+  document.addEventListener('blur', (ev)=>{
+    if(ev.target && (ev.target.tagName==='INPUT' || ev.target.tagName==='TEXTAREA' || ev.target.tagName==='SELECT')){
+      collectFromForm();
+    }
+  }, true);
+
+  // Initial dataset seed: create list and try to load the first herb
+  // If empty, show a prompt to import
+  if(!data.herbs.length){
+    // Seed with one example to show UI
+    data.herbs.push(herbBlank());
+    data.herbs[0].id = 'example-herb';
+    data.herbs[0].name = {fi:'Esimerkki', en:'Example'};
+    currentIndex = 0;
+  } else {
+    // Ensure migration for existing records
+    data.herbs = data.herbs.map(migrateHerb);
+    currentIndex = 0;
+  }
+  persist();
+  renderList();
+  loadToForm();
+})();
+</script>
+</body>
+</html>
