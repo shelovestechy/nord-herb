@@ -1,10 +1,78 @@
-# 🌿 Herb App  
-### Nature’s medicine, in your pocket.
+🌿 Herb App
+Nature’s medicine, in your pocket.
 
-📱 **Platform:** Android & iOS  
-🌍 **Languages:** Finnish 🇫🇮 & English 🇬🇧  
-🧠 **Built with:** HTML · CSS · JavaScript · React Native  
-📦 **Data source:** JSON · SQLite  
-🌸 **Status:** In Development  
-🌿 **Herbs in database:** 175+  
-💡 **Type:** Personal learning & research project  
+📱 Platform: Android & iOS
+🌍 Languages: Finnish 🇫🇮 & English 🇬🇧
+🧠 Built with: HTML · CSS · JavaScript · React Native
+📦 Data source: JSON · SQLite
+🌸 Status: In Development
+🌿 Herbs in database: 175+
+💡 Type: Personal learning & research project
+
+🌸 About the project
+
+Herb App is my ongoing project — a bilingual (Finnish & English) phone app that helps people recognize herbs, plants, and berries found in nature.
+It’s meant to be a calm, informative, and beautiful tool for anyone curious about natural remedies, edible wild plants, and plant safety.
+
+You’ll be able to:
+
+> Identify herbs and plants by name or image
+> Learn what’s edible, medicinal, or toxic
+> Read how each plant is used in teas, salves, and traditional remedies
+> See which parts of the plant are safe to use
+> Save your own notes or favorite recipes
+The idea is to make plant knowledge easy to access — even offline — and to bring together both folk wisdom and modern herbal information in one place.
+
+🪴 What I’m building
+
+Right now, the app is being shaped piece by piece.
+The mobile version will be made with React Native, and the plant data comes from a JSON file I maintain separately (which I am most likely going to switch to SQLite later).
+For now, that data is managed using a smaller helper tool I built myself — Herb Editor Lite.
+
+🧰 Herb Editor Lite (tool)
+
+This is the offline HTML tool that I use to build and organize all the herb data.
+It helps me add new herbs, edit bilingual descriptions, attach recipes, mark toxicity, and manage the overall structure before the data is imported into the mobile app.
+
+You can find it under:
+tools/herb-editor-lite/
+
+🧩 Project structure
+Herb-app/
+│
+├── data/
+│   └── herbs_140.json          # Herbal data (FI & EN)
+│
+├── tools/
+│   └── herb-editor-lite/       # Offline editor for herb data
+│
+├── PROJECT_PLAN.md             # My notes & ideas for future updates
+├── README.md                   # This file
+└── .gitignore                  # Keeps the repo clean
+
+
+🔮 Plans and goals
+
+Create full bilingual herb library (FI & EN)
+Add toxicity levels and color indicators
+Include recipes and folk uses per herb
+Build the phone app in React Native
+Add image recognition for identifying plants
+Offline browsing for nature use
+
+
+🪶 Author
+
+Karita J. - SheLovesTechy 🌸
+Building my path through tech — one command, one herb, one discovery at a time.
+
+🖼️ Preview
+
+(Screenshots and UI previews will be added later)
+
+
+🪷 Notes
+
+This is a personal project made for learning, documenting, and sharing.
+All herb texts and translations are written by me, based on reliable sources and research.
+I’ll keep updating the structure, data, and design as the app evolves.
