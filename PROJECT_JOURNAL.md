@@ -17,8 +17,11 @@ Yarrow: generally safe, but can trigger allergies.
 To fix this, I’ll replace the single toggle with nuanced safety categories:
 
 🟢 Safe – suitable for general use.
+
 🟡 Caution – mildly toxic, or unsuitable in specific conditions.
+
 🟠 Toxic – avoid internal use, external use possible only with guidance.
+
 🔴 Deadly – highly poisonous, strictly educational entry.
 
 Each level will have a color, symbol, and tooltip.
