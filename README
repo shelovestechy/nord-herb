@@ -1,7 +1,10 @@
-[![Status](https://img.shields.io/badge/Status-In%20Development-ff69b4?style=for-the-badge)]()  
-[![Platform](https://img.shields.io/badge/Platform-Android%20%7C%20iOS-228B22?style=for-the-badge)]()  
-[![Language](https://img.shields.io/badge/Bilingual-FI%20%7C%20EN-2E8B57?style=for-the-badge)]()  
-[![Built%20With](https://img.shields.io/badge/Built%20With-HTML%20%7C%20CSS%20%7C%20JS%20%7C%20React%20Native-D2691E?style=for-the-badge)]()  
-[![Data%20Source](https://img.shields.io/badge/Data-JSON%20%7C%20SQLite-8B4513?style=for-the-badge)]()  
-[![Herbs%20in%20Database](https://img.shields.io/badge/Herbs%20in%20Database-175%2B-6B8E23?style=for-the-badge)]()  
-[![Project%20Type](https://img.shields.io/badge/Personal%20Learning%20Project-%F0%9F%8C%BFLight-FFB6C1?style=for-the-badge)]()  
+# 🌿 Herb App  
+### Nature’s medicine, in your pocket.
+
+📱 **Platform:** Android & iOS  
+🌍 **Languages:** Finnish 🇫🇮 & English 🇬🇧  
+🧠 **Built with:** HTML · CSS · JavaScript · React Native  
+📦 **Data source:** JSON · SQLite  
+🌸 **Status:** In Development  
+🌿 **Herbs in database:** 175+  
+💡 **Type:** Personal learning & research project  
