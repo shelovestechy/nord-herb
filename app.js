@@ -542,17 +542,16 @@ function closeDetailView() {
   CURRENT_DETAIL = null;
 }
 
-function syncLanguageButton() {
-  const langBtn = $("#langBtn");
-  if (!langBtn) return;
-  langBtn.setAttribute("aria-pressed", LANG === "en" ? "true" : "false");
-  const label = langBtn.querySelector(".lang-toggle__label");
-  if (label) {
-    label.textContent = LANG.toUpperCase();
-  } else {
-    langBtn.textContent = LANG.toUpperCase();
-  }
+function updateLangButton() {
+  // Näytä napissa SE kieli, johon vaihdetaan seuraavaksi
+  const btn = document.getElementById("langBtn");
+  if (!btn) return;
+  const next = (LANG === "fi") ? "EN" : "FI";
+  btn.textContent = next;
+  // aria-pressed = true kun EN on aktiivinen (eli nykyinen kieli on EN)
+  btn.setAttribute("aria-pressed", LANG === "en" ? "true" : "false");
 }
+
 
 function updateStatus(total, visible, query, toxicActive) {
   const statusEl = $("#statusMessage");
@@ -693,5 +692,7 @@ boot().catch((err) => {
   if (statusEl) {
     statusEl.textContent = "Could not load herb data.";
     statusEl.hidden = false;
+    updateLangButton();
+
   }
 });
