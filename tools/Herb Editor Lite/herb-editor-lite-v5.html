@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Herb Editor Lite 🌿</title>
+<style>
+  :root{
+    --bg:#202020; --panel:#2a2a2a; --muted:#bdbdbd; --text:#e8e8e8;
+    --accent:#4d8f54; --accent2:#3b7541; --danger:#a44848; --warn:#976e2c;
+  }
+  *{ box-sizing: border-box; }
+  body{
+    font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+    background: var(--bg); color: var(--text); margin:0; padding:24px;
+  }
+  h1{ color:#a4ffb0; margin:0 0 12px; }
+  .grid{ display:grid; grid-template-columns: 1fr 1fr; gap:18px; }
+  .card{
+    background: var(--panel); padding:16px; border:1px solid #444; border-radius:10px;
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.02) inset;
+  }
+  label{ font-weight:600; display:inline-block; margin-top:6px; }
+  input[type=text], textarea{
+    width:100%; background:#1f1f1f; border:1px solid #555; color:var(--text);
+    padding:8px; border-radius:6px; margin-top:6px; margin-bottom:10px;
+  }
+  textarea{ height:56px; }
+  .row{ display:grid; grid-template-columns: 1fr 1fr; gap:12px; }
+  .checkboxes label{ font-weight:500; margin-right:14px; }
+  .btnbar{ display:flex; flex-wrap:wrap; gap:8px; margin-top:8px; }
+  button{
+    background: var(--accent2); color:#fff; border:none; padding:10px 14px;
+    border-radius:8px; cursor:pointer; font-weight:600;
+  }
+  button:hover{ background: var(--accent); }
+  .ghost{ background:#3a3a3a; }
+  .danger{ background: var(--danger); }
+  .danger:hover{ filter:brightness(1.05); }
+  .warn{ background: var(--warn); }
+  hr{ border:0; border-top:1px solid #4a4a4a; margin:14px 0; }
+
+  /* Table */
+  .toolbar{ display:flex; gap:10px; align-items:center; justify-content:space-between; margin-bottom:10px; }
+  .toolbar input{ max-width:340px; }
+  table{ width:100%; border-collapse: collapse; }
+  th, td{
+    border-bottom:1px solid #3a3a3a; padding:8px 10px; text-align:left; vertical-align:top;
+    font-size:14px;
+  }
+  th{ color:#bfe8c4; font-weight:700; }
+  tr:hover{ background:#242424; }
+  .tag{ display:inline-block; padding:2px 8px; border-radius:999px; font-size:12px; margin-right:6px; }
+  .tag.toxic{ background:#512; color:#f9c; }
+  .tag.store{ background:#253c28; color:#b8f2bf; }
+  .muted{ color:var(--muted); font-size:12px; }
+  .nowrap{ white-space:nowrap; }
+  @media (max-width: 1024px){
+    .grid{ grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+  <h1>🌿 Herb Editor Lite</h1>
+
+  <div class="grid">
+    <!-- Editor Card -->
+    <div class="card">
+      <h2 style="margin:0 0 6px;">Editor</h2>
+      <div class="muted" id="modeHint">Mode: <b>New herb</b></div>
+      <hr>
+
+      <label>ID:</label>
+      <input type="text" id="id" placeholder="nokkonen" />
+
+      <div class="row">
+        <div>
+          <label>Name (FI):</label>
+          <input type="text" id="nameFi" />
+        </div>
+        <div>
+          <label>Name (EN):</label>
+          <input type="text" id="nameEn" />
+        </div>
+      </div>
+
+      <label>Scientific Name:</label>
+      <input type="text" id="scientificName" placeholder="Urtica dioica" />
+
+      <div class="row">
+        <div>
+          <label>Found (FI):</label>
+          <textarea id="foundFi" placeholder="Koko Suomessa; niityt, pientareet..."></textarea>
+        </div>
+        <div>
+          <label>Found (EN):</label>
+          <textarea id="foundEn" placeholder="Common; meadows, roadsides..."></textarea>
+        </div>
+      </div>
+
+      <div class="row">
+        <div>
+          <label>Collecting Season (FI):</label>
+          <input type="text" id="seasonFi" placeholder="Touko–heinäkuu; nuoret lehdet ennen kukintaa" />
+        </div>
+        <div>
+          <label>Collecting Season (EN):</label>
+          <input type="text" id="seasonEn" placeholder="May–July; young leaves before flowering" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div>
+          <label>Parts (FI):</label>
+          <textarea id="partsFi" placeholder="lehdet; versot; kukat; juuri; pihka..."></textarea>
+        </div>
+        <div>
+          <label>Parts (EN):</label>
+          <textarea id="partsEn" placeholder="leaves; shoots; flowers; root; resin..."></textarea>
+        </div>
+      </div>
+
+      <div class="row">
+        <div>
+          <label>Uses (FI):</label>
+          <textarea id="usesFi" placeholder="tee; tinktuura; öljy; salva; haude..."></textarea>
+        </div>
+        <div>
+          <label>Uses (EN):</label>
+          <textarea id="usesEn" placeholder="tea; tincture; oil; salve; compress..."></textarea>
+        </div>
+      </div>
+
+      <div class="row">
+        <div>
+          <label>Safety (FI):</label>
+          <textarea id="safetyFi" placeholder="varoitukset; ohjeet..."></textarea>
+        </div>
+        <div>
+          <label>Safety (EN):</label>
+          <textarea id="safetyEn" placeholder="warnings; cautions..."></textarea>
+        </div>
+      </div>
+
+      <div class="row">
+        <div>
+          <label>Other (FI):</label>
+          <textarea id="otherFi" placeholder="muuta hyödyllistä tietoa..."></textarea>
+        </div>
+        <div>
+          <label>Other (EN):</label>
+          <textarea id="otherEn" placeholder="other helpful notes..."></textarea>
+        </div>
+      </div>
+
+      <div class="checkboxes">
+        <label><input type="checkbox" id="storeBought" /> Store Bought</label>
+        <label><input type="checkbox" id="toxic" /> Toxic</label>
+      </div>
+
+      <hr>
+
+      <label>Recipes (FI/EN):</label>
+      <textarea id="recipes" placeholder="Yrttitee; öljy; salva; valkosipulihunaja..."></textarea>
+
+      <label>Image (URL or description):</label>
+      <input type="text" id="imageUrl" placeholder="kuva.jpg tai lyhyt kuvaus" />
+
+      <div class="btnbar">
+        <button id="btnSave">💾 Save</button>
+        <button id="btnNew" class="ghost" type="button">➕ New</button>
+        <button id="btnDownload" type="button">⬇️ Download JSON</button>
+        <button id="btnLoad" type="button">📂 Load JSON</button>
+      </div>
+
+      <input type="file" id="fileInput" style="display:none" accept=".json" />
+    </div>
+
+    <!-- List Card -->
+    <div class="card">
+      <h2 style="margin:0 0 6px;">Saved Herbs</h2>
+      <div class="toolbar">
+        <input id="search" type="text" placeholder="Search by ID, Name, Season..." />
+        <div class="muted"><span id="countInfo">0 items</span></div>
+      </div>
+      <div style="max-height:60vh; overflow:auto; border:1px solid #3a3a3a; border-radius:8px;">
+        <table id="herbTable" aria-label="Saved herbs">
+          <thead>
+            <tr>
+              <th class="nowrap">ID</th>
+              <th>Name (FI)</th>
+              <th>Season (FI)</th>
+              <th>Status</th>
+              <th style="width:140px;">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="tbody">
+            <!-- rows render here -->
+          </tbody>
+        </table>
+      </div>
+      <div class="muted" style="margin-top:8px;">Tip: click <b>Edit</b> to load the herb into the editor; <b>Delete</b> removes it from memory.</div>
+    </div>
+  </div>
+
+<script>
+  // --- App state ---
+  let herbs = [];            // array of herb objects
+  let editIndex = -1;        // -1 = creating new, >=0 = editing that index
+
+  // --- Helpers ---
+  function qs(id){ return document.getElementById(id); }
+
+  function readForm(){
+    return {
+      id: qs("id").value.trim(),
+      name: { fi: qs("nameFi").value.trim(), en: qs("nameEn").value.trim() },
+      scientific_name: qs("scientificName").value.trim(),
+      found: { fi: qs("foundFi").value.trim(), en: qs("foundEn").value.trim() },
+      collecting_season: { fi: qs("seasonFi").value.trim(), en: qs("seasonEn").value.trim() },
+      parts: { fi: qs("partsFi").value.trim(), en: qs("partsEn").value.trim() },
+      uses: { fi: qs("usesFi").value.trim(), en: qs("usesEn").value.trim() },
+      safety: { fi: qs("safetyFi").value.trim(), en: qs("safetyEn").value.trim() },
+      other: { fi: qs("otherFi").value.trim(), en: qs("otherEn").value.trim() },
+      recipes: qs("recipes").value.trim(),
+      image: qs("imageUrl").value.trim(),
+      store_bought: qs("storeBought").checked,
+      toxic: qs("toxic").checked
+    };
+  }
+
+  function writeForm(h){
+    qs("id").value = h.id || "";
+    qs("nameFi").value = h.name?.fi || "";
+    qs("nameEn").value = h.name?.en || "";
+    qs("scientificName").value = h.scientific_name || "";
+    qs("foundFi").value = h.found?.fi || "";
+    qs("foundEn").value = h.found?.en || "";
+    qs("seasonFi").value = h.collecting_season?.fi || "";
+    qs("seasonEn").value = h.collecting_season?.en || "";
+    qs("partsFi").value = h.parts?.fi || "";
+    qs("partsEn").value = h.parts?.en || "";
+    qs("usesFi").value = h.uses?.fi || "";
+    qs("usesEn").value = h.uses?.en || "";
+    qs("safetyFi").value = h.safety?.fi || "";
+    qs("safetyEn").value = h.safety?.en || "";
+    qs("otherFi").value = h.other?.fi || "";
+    qs("otherEn").value = h.other?.en || "";
+    qs("recipes").value = h.recipes || "";
+    qs("imageUrl").value = h.image || "";
+    qs("storeBought").checked = !!h.store_bought;
+    qs("toxic").checked = !!h.toxic;
+  }
+
+  function clearForm(){
+    writeForm({});
+    editIndex = -1;
+    qs("modeHint").innerHTML = 'Mode: <b>New herb</b>';
+  }
+
+  function upsertHerb(h){
+    if(!h.id){
+      alert("Please set an ID (e.g., 'nokkonen').");
+      return false;
+    }
+    // If editing, replace; else add or replace by same ID
+    if(editIndex >= 0){
+      herbs[editIndex] = h;
+    }else{
+      const existingIdx = herbs.findIndex(x => x.id === h.id);
+      if(existingIdx >= 0) herbs[existingIdx] = h;
+      else herbs.push(h);
+    }
+    return true;
+  }
+
+  // --- Table rendering & actions ---
+  function renderTable(){
+    const q = qs("search").value.toLowerCase();
+    const tbody = qs("tbody");
+    tbody.innerHTML = "";
+    let shown = 0;
+
+    herbs.forEach((h, idx) => {
+      const hay = [
+        h.id, h.name?.fi, h.name?.en,
+        h.collecting_season?.fi, h.collecting_season?.en
+      ].map(v => (v||"").toLowerCase()).join(" ");
+
+      if(q && !hay.includes(q)) return;
+
+      const tr = document.createElement("tr");
+      tr.innerHTML = `
+        <td class="nowrap"><b>${escapeHtml(h.id||"")}</b></td>
+        <td>${escapeHtml(h.name?.fi||"")}</td>
+        <td>${escapeHtml(h.collecting_season?.fi||"")}</td>
+        <td>
+          ${h.toxic ? '<span class="tag toxic">toxic</span>' : ''}
+          ${h.store_bought ? '<span class="tag store">store</span>' : ''}
+        </td>
+        <td>
+          <button class="ghost" data-act="edit" data-idx="${idx}">Edit</button>
+          <button class="danger" data-act="del" data-idx="${idx}">Delete</button>
+        </td>
+      `;
+      tbody.appendChild(tr);
+      shown++;
+    });
+
+    qs("countInfo").textContent = `${shown} item${shown===1?"":"s"}${q ? " (filtered)": ""}`;
+  }
+
+  function escapeHtml(s){
+    return (s||"").replace(/[&<>"']/g, m => ({
+      '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+    }[m]));
+  }
+
+  // --- JSON I/O ---
+  function downloadJSON(){
+    const blob = new Blob([JSON.stringify({ herbs }, null, 2)], {type:"application/json"});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url; a.download = "herbs.json"; a.click();
+    URL.revokeObjectURL(url);
+  }
+
+  function loadJSON(){
+    const input = qs("fileInput");
+    input.value = "";
+    input.click();
+    input.onchange = e => {
+      const file = e.target.files[0];
+      if(!file) return;
+      const reader = new FileReader();
+      reader.onload = ev => {
+        try{
+          const data = JSON.parse(ev.target.result);
+          const incoming = Array.isArray(data) ? data : (data.herbs || []);
+          // merge by ID (replace on id match, append new)
+          incoming.forEach(h => {
+            if(!h || !h.id) return;
+            const i = herbs.findIndex(x => x.id === h.id);
+            if(i >= 0) herbs[i] = h; else herbs.push(h);
+          });
+          renderTable();
+          alert(`✅ Imported ${incoming.length} items (merged by ID).`);
+        }catch(err){
+          alert("JSON read failed: " + err.message);
+        }
+      };
+      reader.readAsText(file);
+    };
+  }
+
+  // --- Events ---
+  qs("btnSave").onclick = () => {
+    const herb = readForm();
+    if(upsertHerb(herb)){
+      renderTable();
+      qs("modeHint").innerHTML = editIndex>=0 ? 'Mode: <b>Edited</b>' : 'Mode: <b>Saved new</b>';
+      if(editIndex<0) clearForm(); // after adding new, clear form for next
+    }
+  };
+  qs("btnNew").onclick = clearForm;
+  qs("btnDownload").onclick = downloadJSON;
+  qs("btnLoad").onclick = loadJSON;
+
+  qs("search").addEventListener("input", renderTable);
+
+  qs("tbody").addEventListener("click", (e) => {
+    const btn = e.target.closest("button");
+    if(!btn) return;
+    const act = btn.getAttribute("data-act");
+    const idx = +btn.getAttribute("data-idx");
+    if(act === "edit"){
+      editIndex = idx;
+      writeForm(herbs[idx]);
+      qs("modeHint").innerHTML = `Mode: <b>Editing (${escapeHtml(herbs[idx].id)})</b>`;
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }else if(act === "del"){
+      if(confirm(`Delete herb "${herbs[idx].id}"?`)){
+        herbs.splice(idx,1);
+        if(editIndex === idx) clearForm();
+        renderTable();
+      }
+    }
+  });
+
+  // Start
+  renderTable();
+</script>
+</body>
+</html>
