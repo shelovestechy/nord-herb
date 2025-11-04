@@ -3,16 +3,41 @@ const FALLBACK_SVG =
   'data:image/svg+xml;utf8,' +
   encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360">
   <defs><style>
-    .a{fill:#1c1c1c;}.b{fill:#3a3a3a;}.t{fill:#c7f5cc;font:700 28px system-ui;}
+    .bg{fill:#f1f7f3;} .frame{fill:#dbe8e0;stroke:#c0d3c7;stroke-width:6;} .leaf{fill:none;stroke:#89b38f;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;}
+    .txt{fill:#2f6c3c;font:600 30px 'Inter',sans-serif;letter-spacing:4px;}
   </style></defs>
-  <rect class="a" width="640" height="360"/>
-  <rect class="b" x="18" y="18" width="604" height="324" rx="18"/>
-  <text class="t" x="50%" y="54%" dominant-baseline="middle" text-anchor="middle">No image</text>
+  <rect class="bg" width="640" height="360" rx="36"/>
+  <rect class="frame" x="36" y="40" width="568" height="280" rx="28"/>
+  <path class="leaf" d="M160 220c60-140 180-140 240 0M250 140c36-36 72-36 108 0"/>
+  <text class="txt" x="50%" y="54%" dominant-baseline="middle" text-anchor="middle">NORD HERB</text>
 </svg>`);
 
 // Global UI state
 let LANG = localStorage.getItem("nordherb_lang") || "fi"; // "fi" or "en"
 let HIDE_TOXIC = localStorage.getItem("nordherb_hide_toxic") === "1";
+let HERBS = [];
+let HERB_MAP = new Map();
+let CURRENT_DETAIL = null;
+
+const SAFETY_ALIASES = new Map(
+  Object.entries({
+    safe: "safe",
+    turvallinen: "safe",
+    turvallisesti: "safe",
+    caution: "caution",
+    cautionary: "caution",
+    varovaisuus: "caution",
+    varoitus: "caution",
+    warning: "caution",
+    toxic: "toxic",
+    poisonous: "toxic",
+    myrkyllinen: "toxic",
+    danger: "toxic",
+    deadly: "deadly",
+    fatal: "deadly",
+    hengenvaarallinen: "deadly",
+  })
+);
 
 // DOM helpers
 const $ = (s) => document.querySelector(s);
@@ -21,64 +46,169 @@ const $$ = (s) => Array.from(document.querySelectorAll(s));
 // ----- Utilities -----
 function get(obj, path, fallback) {
   try {
-    const val = path.split(".").reduce((o,k)=>o?.[k], obj);
+    const val = path.split(".").reduce((o, k) => o?.[k], obj);
     return val ?? fallback;
-  } catch { return fallback; }
+  } catch {
+    return fallback;
+  }
 }
-function textFrom(x, lang="fi", fallback="") {
+
+function textFrom(x, lang = "fi", fallback = "") {
   if (x == null) return fallback;
   if (typeof x === "string") return x;
   if (Array.isArray(x)) return x.join(", ");
   return x[lang] ?? x.fi ?? x.en ?? fallback;
 }
-function normSafety(herb) {
-  // Accept: herb.safety (string or {fi/en}) OR herb.toxic boolean
-  const s = herb.safety;
-  if (typeof s === "string") return s.toLowerCase();
-  if (s && (s.fi || s.en)) return String(s.en || s.fi).toLowerCase();
 
-  // if there's only a boolean toxic switch
-  if (herb.toxic === true) return "toxic";
-  return "safe"; // default
+function slugify(value) {
+  return value
+    .toString()
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
 }
+
+function normalizeSafetyTag(raw) {
+  if (!raw) return null;
+  const key = String(raw).toLowerCase().trim();
+  if (SAFETY_ALIASES.has(key)) return SAFETY_ALIASES.get(key);
+  for (const [alias, mapped] of SAFETY_ALIASES.entries()) {
+    if (alias !== key && key.includes(alias)) {
+      return mapped;
+    }
+  }
+  return null;
+}
+
+function normSafety(herb) {
+  const s = herb.safety;
+  let normalized = null;
+  if (typeof s === "string") normalized = normalizeSafetyTag(s) || "unknown";
+  else if (s && (s.fi || s.en)) normalized = normalizeSafetyTag(s.en || s.fi) || "unknown";
+
+  if (!normalized && (herb.toxic === true || herb.toxic === "true")) {
+    normalized = "toxic";
+  }
+
+  return normalized || "safe";
+}
+
 function safetyLabel(tag) {
   const labels = {
-    safe:   { fi: "Turvallinen",  en: "Safe" },
-    caution:{ fi: "Varovaisuus",  en: "Caution" },
-    toxic:  { fi: "Myrkyllinen",  en: "Toxic" },
-    deadly: { fi: "Erittäin myrkyllinen", en: "Deadly" }
+    safe: { fi: "Turvallinen", en: "Safe" },
+    caution: { fi: "Varovaisuus", en: "Caution" },
+    toxic: { fi: "Myrkyllinen", en: "Toxic" },
+    deadly: { fi: "Erittäin myrkyllinen", en: "Deadly" },
   };
-  return labels[tag] || { fi:"Tuntematon", en:"Unknown" };
+  return labels[tag];
 }
-function herbNameFI(h){ return textFrom(get(h,"name",""),"fi", get(h,"fi","")); }
-function herbNameEN(h){ return textFrom(get(h,"name",""),"en", get(h,"en","")); }
+
+function herbNameFI(h) {
+  return textFrom(get(h, "name", ""), "fi", get(h, "fi", ""));
+}
+
+function herbNameEN(h) {
+  return textFrom(get(h, "name", ""), "en", get(h, "en", ""));
+}
+
+function herbKey(herb) {
+  if (herb.__key) return herb.__key;
+  let key = null;
+  if (herb.id) key = herb.id;
+  else if (herb.scientific_name) key = slugify(herb.scientific_name);
+  else {
+    const fi = herbNameFI(herb);
+    if (fi) key = slugify(fi);
+    else {
+      const en = herbNameEN(herb);
+      if (en) key = slugify(en);
+    }
+  }
+
+  if (!key) {
+    key = `herb-${Math.random().toString(36).slice(2)}`;
+  }
+
+  Object.defineProperty(herb, "__key", {
+    value: key,
+    enumerable: false,
+    configurable: true,
+  });
+  return key;
+}
+
+function partsText(herb, lang) {
+  const partsRaw = herb.parts;
+  if (Array.isArray(partsRaw)) return partsRaw.join(", ");
+  if (typeof partsRaw === "object" && partsRaw) {
+    return partsRaw[lang] || partsRaw.fi || partsRaw.en || "";
+  }
+  if (partsRaw != null) return String(partsRaw);
+  return "";
+}
+
+function createDetail(title, content, icon) {
+  const section = document.createElement("section");
+  section.className = "detail";
+
+  const heading = document.createElement("h3");
+  if (icon) {
+    const iconSpan = document.createElement("span");
+    iconSpan.className = "detail__icon";
+    iconSpan.setAttribute("aria-hidden", "true");
+    iconSpan.textContent = icon;
+    heading.appendChild(iconSpan);
+  }
+  heading.appendChild(document.createTextNode(title));
+
+  const paragraph = document.createElement("p");
+  if (content) {
+    paragraph.textContent = content;
+  } else {
+    const placeholder = document.createElement("span");
+    placeholder.className = "meta";
+    placeholder.textContent = "—";
+    paragraph.appendChild(placeholder);
+  }
+
+  section.appendChild(heading);
+  section.appendChild(paragraph);
+  return section;
+}
 
 // Image picking with graceful fallback
-function buildImageEl(herb) {
+function buildImageEl(herb, options = {}) {
+  const { lazy = true, className = "card__photo" } = options;
   const img = document.createElement("img");
-  img.loading = "lazy";
+  img.loading = lazy ? "lazy" : "eager";
+  if (className) {
+    img.className = className;
+  }
 
-  // Choose source
   let src = null;
-  const images = herb.images; // array of filenames (preferred)
+  const images = herb.images;
   if (images && images.length) {
     src = `./images/${images[0]}`;
   } else {
     const guess =
-      (herb.id) ||
-      (herb.scientific_name || "").toLowerCase().replace(/\s+/g,"_") ||
+      herb.id ||
+      (herb.scientific_name || "").toLowerCase().replace(/\s+/g, "_") ||
       "";
     if (guess) src = `./images/${guess}.jpg`;
   }
 
   if (!src) {
     img.src = FALLBACK_SVG;
+    img.alt = "Illustrated herb placeholder";
     return img;
   }
 
   img.src = src;
-  img.alt = herbNameFI(herb) || herbNameEN(herb) || (herb.scientific_name || "");
-  img.onerror = () => { img.src = FALLBACK_SVG; }; // kill “broken image” icon
+  img.alt = herbNameFI(herb) || herbNameEN(herb) || herb.scientific_name || "";
+  img.onerror = () => {
+    img.src = FALLBACK_SVG;
+  };
   return img;
 }
 
@@ -90,9 +220,11 @@ async function loadData() {
       const r = await fetch(url);
       if (r.ok) {
         const j = await r.json();
-        return Array.isArray(j) ? j : (j.herbs || []);
+        return Array.isArray(j) ? j : j.herbs || [];
       }
-    } catch {}
+    } catch (err) {
+      console.warn(`Could not load ${url}`, err);
+    }
   }
   throw new Error("Could not find herbs JSON under ./data/");
 }
@@ -100,124 +232,466 @@ async function loadData() {
 function renderCard(h) {
   const wrap = document.createElement("article");
   const tag = normSafety(h);
+  const key = herbKey(h);
   wrap.className = "card";
   wrap.dataset.safety = tag;
+  wrap.dataset.herbId = key;
+  wrap.tabIndex = 0;
+  wrap.setAttribute("role", "button");
 
-  // Title line
+  const imageShell = document.createElement("div");
+  imageShell.className = "card__image";
+  imageShell.appendChild(buildImageEl(h));
+
+  const isToxic = tag === "toxic" || tag === "deadly" || h.toxic === true || h.toxic === "true";
+  if (isToxic) {
+    const toxicBadge = document.createElement("span");
+    toxicBadge.className = "card__toxic";
+    toxicBadge.setAttribute("aria-hidden", "true");
+    toxicBadge.textContent = "☠";
+    imageShell.appendChild(toxicBadge);
+  }
+  wrap.appendChild(imageShell);
+
+  const body = document.createElement("div");
+  body.className = "card__body";
+
+  const header = document.createElement("div");
+  header.className = "card__header";
+
+  const titles = document.createElement("div");
+  titles.className = "card__titles";
+
   const title = document.createElement("h2");
   const fi = herbNameFI(h);
   const en = herbNameEN(h);
-  title.textContent = LANG === "fi" ? (fi || en || "—") : (en || fi || "—");
+  title.textContent = LANG === "fi" ? fi || en || "—" : en || fi || "—";
+  titles.appendChild(title);
 
-  // Scientific name
-  const sciEl = document.createElement("div");
-  sciEl.className = "sci";
-  sciEl.textContent = h.scientific_name || "";
+  if (h.scientific_name) {
+    const sciEl = document.createElement("div");
+    sciEl.className = "sci";
+    sciEl.textContent = h.scientific_name;
+    titles.appendChild(sciEl);
+  }
 
-  // Safety pill
-  const pill = document.createElement("div");
-  pill.className = `safety ${tag}`;
+  header.appendChild(titles);
   const sTxt = safetyLabel(tag);
-  pill.textContent = LANG === "fi" ? sTxt.fi : sTxt.en;
+  if (sTxt) {
+    const pill = document.createElement("div");
+    pill.className = `safety ${tag}`;
+    pill.textContent = LANG === "fi" ? sTxt.fi : sTxt.en;
+    header.appendChild(pill);
+  }
+  body.appendChild(header);
 
-  // Blocks (Found, Parts, Uses, Other)
-  const found = document.createElement("div");
-  found.className = "block";
-  found.innerHTML = `
-    <h3>${LANG==="fi" ? "Kasvupaikka" : "Found"}</h3>
-    <p>${textFrom(h.found, LANG, "") || "<span class='meta'>—</span>"}</p>
-  `;
+  const details = document.createElement("div");
+  details.className = "card__details";
 
-  const parts = document.createElement("div");
-  parts.className = "block";
-  const partsText = (() => {
-    const v = h.parts;
-    if (!v) return "";
-    if (Array.isArray(v)) return v.join(", ");
-    if (typeof v === "object") return v[LANG] || v.fi || v.en || "";
-    return String(v);
-  })();
-  parts.innerHTML = `
-    <h3>${LANG==="fi" ? "Osat" : "Parts"}</h3>
-    <p>${partsText || "<span class='meta'>—</span>"}</p>
-  `;
+  const foundText = textFrom(h.found, LANG, "");
+  const partsInfo = partsText(h, LANG);
+  const usesText = textFrom(h.uses, LANG, "");
+  const otherText = textFrom(h.other, LANG, "");
 
-  const uses = document.createElement("div");
-  uses.className = "block";
-  uses.innerHTML = `
-    <h3>${LANG==="fi" ? "Käyttö" : "Uses"}</h3>
-    <p>${textFrom(h.uses, LANG, "") || "<span class='meta'>—</span>"}</p>
-  `;
+  details.appendChild(
+    createDetail(LANG === "fi" ? "Kasvupaikka" : "Found", foundText, "📍")
+  );
+  details.appendChild(
+    createDetail(LANG === "fi" ? "Osat" : "Parts", partsInfo, "🌿")
+  );
+  details.appendChild(
+    createDetail(LANG === "fi" ? "Käyttö" : "Uses", usesText, "🍽")
+  );
+  details.appendChild(
+    createDetail(LANG === "fi" ? "Muut" : "Other", otherText, "💡")
+  );
 
-  const other = document.createElement("div");
-  other.className = "block";
-  other.innerHTML = `
-    <h3>${LANG==="fi" ? "Muut" : "Other"}</h3>
-    <p>${textFrom(h.other, LANG, "") || "<span class='meta'>—</span>"}</p>
-  `;
+  body.appendChild(details);
+  wrap.appendChild(body);
 
-  // Compose
-  const img = buildImageEl(h);
-  wrap.appendChild(img);
-  wrap.appendChild(title);
-  if (h.scientific_name) wrap.appendChild(sciEl);
-  wrap.appendChild(pill);
-  wrap.appendChild(found);
-  wrap.appendChild(parts);
-  wrap.appendChild(uses);
-  wrap.appendChild(other);
+  const labelParts = [];
+  if (LANG === "fi" && fi) labelParts.push(fi);
+  else if (LANG === "en" && en) labelParts.push(en);
+  if (h.scientific_name) labelParts.push(h.scientific_name);
+  wrap.setAttribute("aria-label", `${labelParts.join(" — ") || "Herb"}.`);
+
+  const openDetailHandler = () => {
+    openDetailView(key);
+  };
+
+  wrap.addEventListener("click", openDetailHandler);
+  wrap.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      openDetailHandler();
+    }
+  });
 
   return wrap;
 }
 
-function applySearchAndToxicFilter() {
-  const q = ($("#searchBox").value || "").toLowerCase();
-  $$(".card").forEach(card => {
-    const txt = card.textContent.toLowerCase();
-    const isToxic = ["toxic","deadly"].includes(card.dataset.safety);
-    const toxicOK = HIDE_TOXIC ? !isToxic : true;
-    card.style.display = (txt.includes(q) && toxicOK) ? "" : "none";
+function renderGrid(container, herbList = HERBS) {
+  if (!container) return;
+  container.innerHTML = "";
+  HERB_MAP = new Map();
+  herbList.forEach((herb) => {
+    const key = herbKey(herb);
+    HERB_MAP.set(key, herb);
+    container.appendChild(renderCard(herb));
   });
 }
 
+function renderDetailCard(herb) {
+  const detail = document.createElement("div");
+  detail.className = "detail-card";
+
+  const hero = document.createElement("div");
+  hero.className = "detail-card__hero";
+
+  const imageWrap = document.createElement("div");
+  imageWrap.className = "detail-card__image";
+  const heroImg = buildImageEl(herb, { lazy: false, className: "" });
+  imageWrap.appendChild(heroImg);
+
+  const tag = normSafety(herb);
+  const isToxic = tag === "toxic" || tag === "deadly" || herb.toxic === true || herb.toxic === "true";
+  if (isToxic) {
+    const toxicBadge = document.createElement("span");
+    toxicBadge.className = "card__toxic";
+    toxicBadge.setAttribute("aria-hidden", "true");
+    toxicBadge.textContent = "☠";
+    imageWrap.appendChild(toxicBadge);
+  }
+
+  hero.appendChild(imageWrap);
+
+  const infoWrap = document.createElement("div");
+  infoWrap.className = "detail-card__info";
+
+  const fi = herbNameFI(herb);
+  const en = herbNameEN(herb);
+  const title = document.createElement("h2");
+  title.id = "detailTitle";
+  title.textContent = LANG === "fi" ? fi || en || "—" : en || fi || "—";
+  infoWrap.appendChild(title);
+
+  if (herb.scientific_name) {
+    const sci = document.createElement("div");
+    sci.className = "detail-card__sci";
+    sci.textContent = herb.scientific_name;
+    infoWrap.appendChild(sci);
+  }
+
+  const meta = document.createElement("div");
+  meta.className = "detail-card__meta";
+
+  const label = safetyLabel(tag);
+  if (label) {
+    const pill = document.createElement("div");
+    pill.className = `safety ${tag}`;
+    pill.textContent = LANG === "fi" ? label.fi : label.en;
+    meta.appendChild(pill);
+  }
+
+  if (isToxic) {
+    const toxic = document.createElement("span");
+    toxic.className = "detail-card__badge detail-card__badge--toxic";
+    const icon = document.createElement("span");
+    icon.className = "detail-card__badge-icon";
+    icon.textContent = "☠";
+    toxic.appendChild(icon);
+    toxic.appendChild(
+      document.createTextNode(LANG === "fi" ? "Myrkyllinen" : "Toxic")
+    );
+    meta.appendChild(toxic);
+  }
+
+  const seasonText = textFrom(herb.collecting_season, LANG, "");
+  if (seasonText) {
+    const season = document.createElement("span");
+    season.className = "detail-card__badge";
+    const icon = document.createElement("span");
+    icon.className = "detail-card__badge-icon";
+    icon.textContent = "🗓";
+    season.appendChild(icon);
+    season.appendChild(
+      document.createTextNode(
+        LANG === "fi" ? "Keruuaika: " + seasonText : "Season: " + seasonText
+      )
+    );
+    meta.appendChild(season);
+  }
+
+  if (meta.children.length) {
+    infoWrap.appendChild(meta);
+  }
+
+  const description = textFrom(herb.description, LANG, "");
+  if (description) {
+    const intro = document.createElement("p");
+    intro.className = "detail-card__intro";
+    intro.textContent = description;
+    infoWrap.appendChild(intro);
+  }
+
+  const actions = document.createElement("div");
+  actions.className = "detail-card__actions";
+
+  const recipeBtn = document.createElement("button");
+  recipeBtn.type = "button";
+  recipeBtn.className = "recipe-button";
+  recipeBtn.disabled = true;
+  recipeBtn.textContent =
+    LANG === "fi" ? "Reseptit tulossa" : "Recipes coming soon";
+  recipeBtn.setAttribute(
+    "aria-label",
+    LANG === "fi"
+      ? "Reseptitoiminto on tulossa myöhemmin"
+      : "Recipe feature is coming soon"
+  );
+  actions.appendChild(recipeBtn);
+  infoWrap.appendChild(actions);
+
+  hero.appendChild(infoWrap);
+  detail.appendChild(hero);
+
+  const content = document.createElement("div");
+  content.className = "detail-card__content";
+
+  const grid = document.createElement("div");
+  grid.className = "detail-card__grid";
+
+  const sections = [
+    {
+      title: LANG === "fi" ? "Kasvupaikka" : "Found",
+      content: textFrom(herb.found, LANG, ""),
+      icon: "📍",
+    },
+    {
+      title: LANG === "fi" ? "Keruuaika" : "Collecting season",
+      content: seasonText,
+      icon: "🗓",
+    },
+    {
+      title: LANG === "fi" ? "Osat" : "Parts",
+      content: partsText(herb, LANG),
+      icon: "🌿",
+    },
+    {
+      title: LANG === "fi" ? "Käyttö" : "Uses",
+      content: textFrom(herb.uses, LANG, ""),
+      icon: "🍽",
+    },
+    {
+      title: LANG === "fi" ? "Muut tiedot" : "Other",
+      content: textFrom(herb.other, LANG, ""),
+      icon: "💡",
+    },
+  ];
+
+  sections.forEach((section) => {
+    grid.appendChild(createDetail(section.title, section.content, section.icon));
+  });
+
+  content.appendChild(grid);
+
+  const note = document.createElement("p");
+  note.className = "detail-card__note";
+  note.innerHTML =
+    LANG === "fi"
+      ? "<strong>Vinkki:</strong> Sulje ikkuna palataksesi kaikkiin yrtteihin."
+      : "<strong>Tip:</strong> Close this view to return to all herbs.";
+  content.appendChild(note);
+
+  detail.appendChild(content);
+
+  return detail;
+}
+
+function openDetailView(id) {
+  const overlay = $("#detailOverlay");
+  const content = $("#detailContent");
+  if (!overlay || !content) return;
+  const herb = HERB_MAP.get(id);
+  if (!herb) return;
+
+  CURRENT_DETAIL = herb;
+  content.innerHTML = "";
+  content.appendChild(renderDetailCard(herb));
+
+  overlay.hidden = false;
+  document.body.classList.add("detail-open");
+
+  const panel = overlay.querySelector(".detail-panel");
+  if (panel) {
+    panel.setAttribute("tabindex", "-1");
+  }
+
+  setTimeout(() => {
+    $("#detailClose")?.focus();
+  }, 50);
+}
+
+function closeDetailView() {
+  const overlay = $("#detailOverlay");
+  if (!overlay || overlay.hidden) return;
+  overlay.hidden = true;
+  document.body.classList.remove("detail-open");
+  const content = $("#detailContent");
+  if (content) content.innerHTML = "";
+  CURRENT_DETAIL = null;
+}
+
+function syncLanguageButton() {
+  const langBtn = $("#langBtn");
+  if (!langBtn) return;
+  langBtn.setAttribute("aria-pressed", LANG === "en" ? "true" : "false");
+  const label = langBtn.querySelector(".lang-toggle__label");
+  if (label) {
+    label.textContent = LANG.toUpperCase();
+  } else {
+    langBtn.textContent = LANG.toUpperCase();
+  }
+}
+
+function updateStatus(total, visible, query, toxicActive) {
+  const statusEl = $("#statusMessage");
+  if (!statusEl) return;
+
+  const queryActive = query.length > 0;
+
+  if (!total) {
+    statusEl.textContent = "Herbs are still loading...";
+    statusEl.hidden = false;
+    return;
+  }
+
+  if (!visible) {
+    let message = "No herbs match your filters.";
+    const parts = [];
+    if (queryActive) parts.push(`search "${query}"`);
+    if (toxicActive) parts.push("toxic filter");
+    if (parts.length) {
+      message += ` Try adjusting the ${parts.join(" and ")}.`;
+    }
+    statusEl.textContent = message;
+    statusEl.hidden = false;
+    return;
+  }
+
+  if (queryActive || toxicActive) {
+    const parts = [];
+    if (queryActive) parts.push(`search "${query}"`);
+    if (toxicActive) parts.push("toxic filter");
+    statusEl.textContent = `${visible} of ${total} herbs shown (${parts.join(" + ")}).`;
+    statusEl.hidden = false;
+  } else {
+    statusEl.hidden = true;
+  }
+}
+
+function applySearchAndToxicFilter() {
+  const searchInput = $("#searchBox");
+  const queryRaw = (searchInput?.value || "").trim();
+  const query = queryRaw.toLowerCase();
+  const cards = $$("#herbGrid .card");
+  let visibleCount = 0;
+
+  cards.forEach((card) => {
+    const text = card.textContent.toLowerCase();
+    const isToxic = ["toxic", "deadly"].includes(card.dataset.safety);
+    const matchesQuery = text.includes(query);
+    const toxicAllowed = HIDE_TOXIC ? !isToxic : true;
+    const shouldShow = matchesQuery && toxicAllowed;
+    card.style.display = shouldShow ? "" : "none";
+    if (shouldShow) visibleCount += 1;
+  });
+
+  updateStatus(cards.length, visibleCount, queryRaw, HIDE_TOXIC);
+}
+
+function updateSearchClearVisibility() {
+  const input = $("#searchBox");
+  const clearBtn = $("#searchClear");
+  if (!clearBtn || !input) return;
+  clearBtn.hidden = !input.value;
+}
+
 async function boot() {
-  // Restore UI state
-  $("#langBtn").setAttribute("aria-pressed", LANG === "en" ? "true" : "false");
-  $("#langBtn").textContent = LANG.toUpperCase();
-  $("#hideToxic").checked = HIDE_TOXIC;
+  const searchInput = $("#searchBox");
+  const clearButton = $("#searchClear");
+  const langButton = $("#langBtn");
+  const hideToxic = $("#hideToxic");
 
-  // Load & render
-  const herbs = await loadData();
+  syncLanguageButton();
+  if (hideToxic) hideToxic.checked = HIDE_TOXIC;
+  updateSearchClearVisibility();
+
   const grid = $("#herbGrid");
-  grid.innerHTML = "";
-  herbs.forEach(h => grid.appendChild(renderCard(h)));
+  HERBS = await loadData();
+  renderGrid(grid, HERBS);
 
-  // Wire search
-  $("#searchBox").addEventListener("input", applySearchAndToxicFilter);
+  const heroCount = $("#herbCount");
+  if (heroCount) {
+    heroCount.textContent = HERBS.length;
+  }
 
-  // Wire hide toxic
-  $("#hideToxic").addEventListener("change", (e) => {
+  updateStatus(HERBS.length, HERBS.length, "", HIDE_TOXIC);
+
+  searchInput?.addEventListener("input", () => {
+    updateSearchClearVisibility();
+    applySearchAndToxicFilter();
+  });
+
+  clearButton?.addEventListener("click", () => {
+    if (searchInput) {
+      searchInput.value = "";
+      searchInput.focus();
+    }
+    updateSearchClearVisibility();
+    applySearchAndToxicFilter();
+  });
+
+  hideToxic?.addEventListener("change", (e) => {
     HIDE_TOXIC = e.target.checked;
     localStorage.setItem("nordherb_hide_toxic", HIDE_TOXIC ? "1" : "0");
     applySearchAndToxicFilter();
   });
 
-  // Wire language toggle
-  $("#langBtn").addEventListener("click", () => {
-    LANG = (LANG === "fi" ? "en" : "fi");
+  langButton?.addEventListener("click", () => {
+    LANG = LANG === "fi" ? "en" : "fi";
     localStorage.setItem("nordherb_lang", LANG);
-    $("#langBtn").textContent = LANG.toUpperCase();
-    $("#langBtn").setAttribute("aria-pressed", LANG === "en" ? "true" : "false");
-    // re-render all cards in new language (cheapest: rebuild)
-    grid.innerHTML = "";
-    herbs.forEach(h => grid.appendChild(renderCard(h)));
+    syncLanguageButton();
+    renderGrid(grid);
     applySearchAndToxicFilter();
+    if (CURRENT_DETAIL) {
+      const detailKey = herbKey(CURRENT_DETAIL);
+      openDetailView(detailKey);
+    }
+  });
+
+  $("#detailClose")?.addEventListener("click", closeDetailView);
+  $("#detailOverlay")?.addEventListener("click", (event) => {
+    if (event.target?.dataset?.closeDetail !== undefined) {
+      closeDetailView();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeDetailView();
+    }
   });
 
   applySearchAndToxicFilter();
 }
 
-boot().catch(err => {
+boot().catch((err) => {
   console.error(err);
-  $("#herbGrid").innerHTML = `<div class="meta block">Could not load data. Check <code>data/herbs.json</code>.</div>`;
+  $("#herbGrid").innerHTML = `<div class="meta">Could not load data. Check <code>data/herbs.json</code>.</div>`;
+  const statusEl = $("#statusMessage");
+  if (statusEl) {
+    statusEl.textContent = "Could not load herb data.";
+    statusEl.hidden = false;
+  }
 });

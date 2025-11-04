@@ -5,8 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>NordHerb 🌿</title>
 
-  <meta name="theme-color" content="#4d8f54" />
+  <meta name="theme-color" content="#15271f" />
   <meta name="description" content="Nordic herbs — identify, learn safety, and collect recipes (offline)." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet" />
 
   <link rel="manifest" href="./manifest.webmanifest" />
   <link rel="icon" href="./icons/icon-192.png" type="image/png" />
@@ -14,27 +18,84 @@
 </head>
 <body>
   <header class="topbar">
-    <h1>NordHerb</h1>
-    <p class="subtitle">Nordic herbs — offline & bilingual.</p>
+    <div class="shell topbar__inner">
+      <div class="brand">
+        <h1>NordHerb</h1>
+        <p class="subtitle">Nordic herbs — offline &amp; bilingual.</p>
+      </div>
+      <div class="topbar__actions">
+        <nav class="topbar__nav" aria-label="Social links">
+          <a href="https://github.com/shelovestechy/nord-herb" class="topbar__link">GitHub</a>
+          <a href="#herbGrid" class="topbar__link">Skip to herbs</a>
+        </nav>
+        <button id="langBtn" class="lang-toggle" type="button" aria-pressed="false">
+          <span class="lang-toggle__label">FI</span>
+        </button>
+      </div>
+    </div>
   </header>
 
-  <section class="controls">
-    <div class="controls-row">
-      <input id="searchBox" type="search" placeholder="🔍 Hae / Search" aria-label="Search herbs" />
-      <button id="langBtn" class="chip" aria-pressed="false">EN</button>
-    </div>
-    <div class="controls-row">
-      <label class="toggle">
-        <input id="hideToxic" type="checkbox" />
-        <span>Hide toxic</span>
-      </label>
-    </div>
-  </section>
+  <main>
+    <section class="hero shell">
+      <div class="hero__content">
+        <p class="eyebrow">Nordic botany for food &amp; folklore</p>
+        <h2>Discover safe, seasonal plants in two languages.</h2>
+        <p class="hero__lede">
+          NordHerb helps you identify and compare wild edibles from across the Nordic region.
+          Browse safety notes, traditional uses, and preparation tips — even offline.
+        </p>
+        <a class="cta" href="#filters">Browse all <span id="herbCount">0</span> herbs</a>
+      </div>
+    </section>
 
-  <main id="herbGrid" class="grid" aria-live="polite"></main>
+    <section id="filters" class="controls">
+      <div class="shell">
+        <div class="controls-card" role="search">
+          <header class="controls-card__header">
+            <h3>Find a herb</h3>
+            <p>Search in Finnish or English, toggle language, and hide toxic species.</p>
+          </header>
+          <div class="controls-card__body">
+            <label class="field" for="searchBox">
+              <span class="field__label">Search</span>
+              <div class="search">
+                <input id="searchBox" type="search" placeholder="Type common, Finnish, or scientific names" aria-label="Search herbs" />
+                <button id="searchClear" type="button" class="icon-button" aria-label="Clear search" hidden>&times;</button>
+              </div>
+            </label>
+            <label class="field field--inline toggle" for="hideToxic">
+              <input id="hideToxic" type="checkbox" />
+              <span>Hide toxic herbs</span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="shell">
+      <p id="statusMessage" class="status" role="status" aria-live="polite" hidden></p>
+    </div>
+
+  <section class="grid-wrap">
+      <div class="shell">
+        <div id="herbGrid" class="grid" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="detailOverlay" class="detail-overlay" hidden>
+    <div class="detail-overlay__backdrop" data-close-detail></div>
+    <div class="detail-panel" role="dialog" aria-modal="true" aria-labelledby="detailTitle">
+      <button type="button" class="detail-panel__close" id="detailClose" aria-label="Close detail">&times;</button>
+      <div id="detailContent" class="detail-card"></div>
+    </div>
+  </div>
 
   <footer class="footer">
-    <p>© 2025 NordHerb — Educational use. Images © their owners (see CREDITS.md).</p>
+    <div class="shell footer__inner">
+      <p>© 2025 NordHerb — Educational use only. Images © their owners (see CREDITS.md).</p>
+      <p class="footer__note">Built with love for curious foragers.</p>
+    </div>
   </footer>
 
   <script src="./app.js"></script>
