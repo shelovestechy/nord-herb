@@ -3,6 +3,10 @@
 An offline HTML tool for managing and editing herb data for the upcoming Herb App.
 Built with simplicity and clarity in mind — this version lets me edit, add, and organize herbal information directly from the browser without needing any database or backend connection.
 
+((Herb editor lite v5 have image adding tool))
+((Herb tool v6 is for mass information production))
+
+
 🪴 Overview
 
 The goal of this project is to create a small, local editor that helps me maintain and structure data for a future mobile Herb App.
