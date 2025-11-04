@@ -1,0 +1,59 @@
+:root{
+  --bg:#202020; --panel:#2a2a2a; --text:#e8e8e8; --muted:#bdbdbd;
+  --accent:#4d8f54; --accent-2:#3b7541;
+  --safe:#2e7d32; --caution:#b8860b; --toxic:#9c5a1a; --deadly:#a02222;
+}
+
+*{ box-sizing:border-box; }
+html, body { margin:0; padding:0; background:var(--bg); color:var(--text); font-family:system-ui, -apple-system, Segoe UI, Arial, sans-serif; }
+
+.topbar { padding:18px 16px 8px; text-align:center; }
+.topbar h1 { margin:0; color:#a4ffb0; font-weight:700; }
+.subtitle { margin:6px 0 0; color:var(--muted); font-size:.95rem; }
+
+.controls { display:grid; gap:10px; padding:10px 16px; max-width:980px; margin:0 auto; }
+#searchBox {
+  width:100%; padding:12px 14px; border-radius:14px; border:1px solid #3a3a3a;
+  background:#141414; color:var(--text); font-size:1rem;
+}
+.filters { display:flex; flex-wrap:wrap; gap:8px; }
+.chip {
+  border:1px solid #3a3a3a; background:#1a1a1a; color:var(--text);
+  padding:8px 12px; border-radius:999px; cursor:pointer; font-size:.95rem;
+}
+.chip.active { background:var(--accent); border-color:var(--accent-2); }
+
+.grid {
+  max-width:980px; margin:12px auto 40px; padding:0 16px;
+  display:grid; grid-template-columns: repeat(3, 1fr); gap:14px;
+}
+@media (max-width: 900px){ .grid{ grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 620px){ .grid{ grid-template-columns: 1fr; } }
+
+.card {
+  background:var(--panel); border:1px solid #3a3a3a; border-radius:16px; padding:12px;
+  display:flex; flex-direction:column; gap:8px; box-shadow:0 0 10px rgba(0,0,0,.25);
+}
+.card h2 { margin:2px 0 0; font-size:1.05rem; }
+.card i { color:#cfe7cf; }
+.card .sci { color:#a6d0a6; }
+.card .safety {
+  display:inline-flex; align-items:center; gap:6px;
+  padding:4px 10px; border-radius:999px; font-size:.85rem; border:1px solid #444;
+  width:max-content;
+}
+.safety.safe   { background:rgba(46,125,50,.15); border-color:var(--safe); color:#c7f5cc; }
+.safety.caution{ background:rgba(184,134,11,.15); border-color:var(--caution); color:#ffe9b3; }
+.safety.toxic  { background:rgba(156,90,26,.15); border-color:var(--toxic); color:#ffd9b8; }
+.safety.deadly { background:rgba(160,34,34,.18); border-color:var(--deadly); color:#ffb8b8; }
+
+.card img {
+  width:100%; height:auto; border-radius:12px; object-fit:cover; max-height:220px; background:#111;
+  border:1px solid #3a3a3a;
+}
+
+.meta { color:var(--muted); font-size:.92rem; }
+.uses { font-size:.95rem; }
+
+.footer { text-align:center; color:var(--muted); padding:24px 12px; font-size:.9rem; }
+.hidden { display:none !important; }
