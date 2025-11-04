@@ -693,6 +693,10 @@ boot().catch((err) => {
     statusEl.textContent = "Could not load herb data.";
     statusEl.hidden = false;
     updateLangButton();
+    function syncLanguageButton(){
+  updateLangButton();
+}
+
 
   }
 });
