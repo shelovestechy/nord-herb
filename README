@@ -1,4 +1,4 @@
-🌿 Herb App
+🌿 NordHerb App
 Nature’s medicine, in your pocket.
 
 📱 Platform: Android & iOS
@@ -38,7 +38,7 @@ You can find it under:
 tools/herb-editor-lite/
 
 🧩 Project structure
-Herb-app/
+NordHerb-app/
 │
 ├── data/
 │   └── herbs_140.json          # Herbal data (FI & EN)
