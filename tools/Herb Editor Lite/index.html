@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Herb Editor Lite</title>
+
+  <!-- PWA -->
+  <link rel="manifest" href="./manifest.json" />
+  <meta name="theme-color" content="#2f5d3a" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <header>
+    <h1>🌿 Herb Editor Lite</h1>
+    <p>Offline herb data editor for NordHerb</p>
+  </header>
+
+  <main>
+    <section id="status">
+      <strong>Status:</strong>
+      <span id="connection-status">Checking connection…</span>
+    </section>
+
+    <section id="editor">
+      <h2>Herb data</h2>
+
+      <label>
+        Name (EN):
+        <input type="text" id="name-en" />
+      </label>
+
+      <label>
+        Name (FI):
+        <input type="text" id="name-fi" />
+      </label>
+
+      <label>
+        Description (EN):
+        <textarea id="desc-en" rows="4"></textarea>
+      </label>
+
+      <label>
+        Description (FI):
+        <textarea id="desc-fi" rows="4"></textarea>
+      </label>
+
+      <label>
+        Toxic:
+        <select id="toxic">
+          <option value="no">No</option>
+          <option value="mild">Mild</option>
+          <option value="yes">Yes</option>
+        </select>
+      </label>
+
+      <button id="save-btn">Save locally</button>
+      <button id="load-btn">Load saved data</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      Herb Editor Lite · Offline-first tool<br />
+      © 2026 Karita J.
+    </p>
+  </footer>
+
+  <!-- App logic -->
+  <script src="./app.js"></script>
+
+  <!-- Service Worker -->
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("./service-worker.js");
+    }
+
+    function updateConnectionStatus() {
+      const el = document.getElementById("connection-status");
+      el.textContent = navigator.onLine ? "Online" : "Offline";
+    }
+
+    window.addEventListener("online", updateConnectionStatus);
+    window.addEventListener("offline", updateConnectionStatus);
+    updateConnectionStatus();
+  </script>
+</body>
+</html>
