@@ -1,0 +1,8 @@
+{
+  "name": "Herb Editor Lite",
+  "short_name": "HerbEditor",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2f5d3a"
+}
