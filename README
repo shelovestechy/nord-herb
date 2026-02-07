@@ -1,86 +1,132 @@
-🌿 NordHerb App
-Nature’s medicine, in your pocket.
+# 🌿 NordHerb App  
+**Nature’s medicine, in your pocket.**
 
-📱 Platform: Android & iOS
-🌍 Languages: Finnish 🇫🇮 & English 🇬🇧
-🧠 Built with: HTML · CSS · JavaScript · React Native
-📦 Data source: JSON · SQLite
-🌸 Status: In Development
-🌿 Herbs in database: 175+
-💡 Type: Personal learning & research project
+📱 **Platform:** Android & iOS  
+🌍 **Languages:** Finnish 🇫🇮 & English 🇬🇧  
+🧠 **Built with:** HTML · CSS · JavaScript · React Native  
+📦 **Data source:** JSON (moving toward SQLite)  
+🌸 **Status:** In development  
+🌿 **Herbs in database:** 175+  
+💡 **Type:** Personal learning & research project  
 
-🌸 About the project
+---
 
-Herb App is my ongoing project — a bilingual (Finnish & English) phone app that helps people recognize herbs, plants, and berries found in nature.
-It’s meant to be a calm, informative, and beautiful tool for anyone curious about natural remedies, edible wild plants, and plant safety.
+## 🌸 About the project
 
-You’ll be able to:
+**NordHerb** is an ongoing bilingual mobile app designed to help people recognize herbs, wild plants, and berries found in nature.
 
-> Identify herbs and plants by name or image
-> Learn what’s edible, medicinal, or toxic
-> Read how each plant is used in teas, salves, and traditional remedies
-> See which parts of the plant are safe to use
-> Save your own notes or favorite recipes
-The idea is to make plant knowledge easy to access — even offline — and to bring together both folk wisdom and modern herbal information in one place.
+The goal is to create a calm, informative, and visually clear tool for anyone interested in edible wild plants, traditional herbal uses, natural remedies, and plant safety.
 
-🪴 What I’m building
+The app brings together folk knowledge and modern herbal information in one place, with offline access in mind — so it can be used outdoors, where it actually matters.
 
-Right now, the app is being shaped piece by piece.
-The mobile version will be made with React Native, and the plant data comes from a JSON file I maintain separately (which I am most likely going to switch to SQLite later).
-For now, that data is managed using a smaller helper tool I built myself — Herb Editor Lite.
+---
 
-🧰 Herb Editor Lite (tool)
+## 🌿 What the app will allow you to do
 
-This is the offline HTML tool that I use to build and organize all the herb data.
-It helps me add new herbs, edit bilingual descriptions, attach recipes, mark toxicity, and manage the overall structure before the data is imported into the mobile app.
+- Identify herbs and plants by name or image  
+- Learn whether a plant is edible, medicinal, or toxic  
+- Read traditional uses for teas, salves, and remedies  
+- See which parts of the plant are safe to use  
+- Save personal notes, observations, or favorite recipes  
 
-You can find it under:
-tools/herb-editor-lite/
+The aim is to make plant knowledge accessible, grounded, and practical — without overwhelming the user.
 
-🧩 Project structure
+---
+
+## 🪴 Current development focus
+
+Development happens in phases.  
+While the repository may appear quiet at times, this is intentional.
+
+At the moment, a large part of the work is focused on **collecting and organizing original image material**.  
+Building a herb identification app turned out to be a much larger image-collection process than initially expected.
+
+High-quality plant images require correct identification, seasonal awareness, consistency across species, and real-world fieldwork.
+
+Because of this, development has temporarily shifted from code to groundwork.  
+Active feature development will continue once a solid image base is ready.
+
+This pause is not abandonment — it is foundation work.
+
+---
+
+## 🧠 Technical overview
+
+The mobile app is built with **React Native**.  
+Plant data is currently stored in a structured **JSON file**, which is maintained separately and likely to be migrated to **SQLite** later for better scalability and offline performance.
+
+To manage this data efficiently, I built a small helper tool.
+
+---
+
+## 🧰 Herb Editor Lite
+
+**Herb Editor Lite** is an offline HTML tool used to create and maintain the herb database.
+
+It allows me to:
+- add and edit herbs  
+- write bilingual descriptions (FI & EN)  
+- attach recipes and traditional uses  
+- mark toxicity and safety notes  
+- maintain consistent data structure  
+
+The editor acts as a staging environment before data is imported into the mobile app.
+
+📁 Location in repo:  
+`tools/herb-editor-lite/`
+
+---
+
+## 🧩 Project structure
 NordHerb-app/
 │
 ├── data/
-│   └── herbs_140.json          # Herbal data (FI & EN)
+│ └── herbs_140.json # Herbal data (FI & EN)
 │
 ├── tools/
-│   └── herb-editor-lite/       # Offline editor for herb data
+│ └── herb-editor-lite/ # Offline editor for herb data
 │
-├── PROJECT_PLAN.md             # My notes & ideas for future updates
-├── README.md                   # This file
-└── .gitignore                  # Keeps the repo clean
-
-
-🔮 Plans and goals
-
-Create full bilingual herb library (FI & EN)
-Add toxicity levels and color indicators
-Include recipes and folk uses per herb
-Build the phone app in React Native
-Add image recognition for identifying plants
-Offline browsing for nature use
-
-
-🪶 Author
-
-Karita J. - SheLovesTechy 🌸
-Building my path through tech — one command, one herb, one discovery at a time.
-
-🖼️ Preview
-
-(Screenshots and UI previews will be added later)
-
-
-🪷 Notes
-
-This is a personal project made for learning, documenting, and sharing.
-All herb texts and translations are written by me, based on reliable sources and research.
-I’ll keep updating the structure, data, and design as the app evolves.
-
+├── PROJECT_PLAN.md # Notes & future ideas
+├── README.md # This file
+└── .gitignore # Keeps the repo clean
 
 
 ---
-🪷 *All original text and code © 2025 Karita J.  
-Images belong to their respective creators.  
-This project is shared for learning and inspiration — not for reuse or redistribution.*
 
+## 🔮 Plans and goals
+
+- Build a complete bilingual herb library (FI & EN)  
+- Add toxicity levels and visual indicators  
+- Include recipes and traditional uses per herb  
+- Finalize the React Native mobile app  
+- Add image recognition for plant identification  
+- Enable full offline browsing  
+
+---
+
+## 🪶 Author
+
+**Karita J. — SheLovesTechy 🌸**  
+Building my path through tech —  
+*one command, one herb, one discovery at a time.*
+
+---
+
+## 🖼️ Preview
+
+Screenshots and UI previews will be added later.
+
+---
+
+## 🪷 Notes
+
+This is a personal project created for learning, documentation, and sharing knowledge.  
+All herb texts and translations are written by me, based on careful research and reliable sources.
+
+The structure, data, and design will continue to evolve as the project grows.
+
+---
+
+🪷 *All original text and code © 2026 Karita J.*  
+*Images belong to their respective creators.*  
+*This project is shared for learning and inspiration — not for reuse or redistribution.*
