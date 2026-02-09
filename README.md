@@ -78,6 +78,7 @@ The editor acts as a staging environment before data is imported into the mobile
 ---
 
 ## 🧩 Project structure
+```
 NordHerb-app/
 │
 ├── data/
@@ -89,7 +90,7 @@ NordHerb-app/
 ├── PROJECT_PLAN.md # Notes & future ideas
 ├── README.md # This file
 └── .gitignore # Keeps the repo clean
-
+```
 
 ---
 
