@@ -1,51 +1,42 @@
-🌿 Herb Editor Lite
+# 🌿 Herb Editor Lite
 
-An offline HTML tool for managing and editing herb data for the upcoming Herb App.
+An offline HTML tool for managing and editing herb data for the upcoming Herb App.  
 Built with simplicity and clarity in mind — this version lets me edit, add, and organize herbal information directly from the browser without needing any database or backend connection.
 
-((Herb editor lite v5 have image adding tool))
-((Herb tool v6 is for mass information production))
+### Version History
+* **v5:** Added image adding tool.
+* **v6:** Optimized for mass information production.
 
+---
 
-🪴 Overview
+## 🪴 Overview
 
-The goal of this project is to create a small, local editor that helps me maintain and structure data for a future mobile Herb App.
-Each herb has bilingual entries in Finnish and English and includes:
+The goal of this project is to create a small, local editor that helps me maintain and structure data for a future mobile Herb App. Each herb has bilingual entries in **Finnish** and **English**.
 
-Name (FI / EN)
+### Data Fields
+* **Name:** (FI / EN)
+* **Scientific name**
+* **Origin type:** Native or cultivated
+* **Locations:** Found in nature / common locations
+* **Parts used**
+* **Uses:** (FI / EN)
+* **Safety & Toxicity:** Safety notes and toxicity information
+* **Notes:** Other / cultural notes
+* **Media:** Recipes and images
 
-Scientific name
+> **Data Source:** The current version uses a JSON file (`herbs.json`) as its data source.
 
-Origin type (native or cultivated)
+---
 
-Found in nature / common locations
+## ⚙️ Features
 
-Parts used
+* **Edit & Manage:** Edit, add, and delete herb entries directly in the browser.
+* **Bilingual:** Fields for both Finnish and English content.
+* **Safety Toggle:** "Toxic" button for marking dangerous or restricted herbs.
+* **Media Support:** Image upload support.
+* **Recipes:** Dedicated section to attach herbal remedies or tea formulas per herb.
+* **Data Portability:** Simple export/import to JSON.
 
-Uses (FI / EN)
-
-Safety notes
-
-Other / cultural notes
-
-Toxicity information
-
-Recipes and images
-
-The current version uses a JSON file (herbs.json) as its data source.
-
-⚙️ Features
-
-Edit, add, and delete herb entries directly in the browser
-
-Bilingual fields for Finnish and English
-
-“Toxic” button for marking dangerous or restricted herbs
-
-Image upload support
-
-“Recipes” button to attach herbal remedies or tea formulas per herb
-
-Simple export/import to JSON
+---
 
 This tool helps me maintain a clean and consistent herb database for future use in the mobile app.
