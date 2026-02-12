@@ -54,7 +54,7 @@ How to open:
 
 
 Planned base:
-'''
+```
 tools/
 │
 ├── herb-editor-lite/
@@ -68,7 +68,7 @@ tools/
 ├── sentence-consistency-checker/ # (planned)
 ├── image-optimizer/ # (planned)
 └── csv-importer/ # (planned)
-'''
+```
 
 🗺️ Next steps for tools
 - Define final toxicity levels + short definitions
